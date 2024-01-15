@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>13</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>401</width>
+     <height>651</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(16,16,16,255);
+border-radius:20px;
+</string>
+   </property>
+   <widget class="QLineEdit" name="tb3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>209</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(47,49,52,200);
+color:rgb(255,255,255);
+border-radius:2px;
+padding-left:10px;
+border:1px solid rgba(0,0,0);
+border-bottom-color:rgb(46,82,102,255);
+padding-bottom:3px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your email</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tb4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(47,49,52,200);
+color:rgb(255,255,255);
+border-radius:2px;
+padding-left:10px;
+border:1px solid rgba(0,0,0);
+border-bottom-color:rgb(46,82,102,255);
+padding-bottom:3px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your password</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b3">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>500</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#b3 {
+    background-color: rgb(255, 191, 16);
+    color: rgb(135, 60, 0);
+    border-radius: 5px;
+}
+
+QPushButton#b3:pressed {
+    background-color: rgb(255, 255, 16);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>R e g i s t e r  a s  S t u d e n t</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>60</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>49</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 191, 16);</string>
+    </property>
+    <property name="text">
+     <string></string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>570</y>
+      <width>251</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,191,16);</string>
+    </property>
+    <property name="text">
+     <string>Already Registered &gt; Please</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b4">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>560</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#b4 {
+    background-color: rgb(255, 191, 16);
+    color: rgb(135, 60, 0);
+    border-radius: 5px;
+}
+
+QPushButton#b4:pressed {
+    background-color: rgb(255, 255, 16);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>L o g i n  Now</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tb5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(47,49,52,200);
+color:rgb(255,255,255);
+border-radius:2px;
+padding-left:10px;
+border:1px solid rgba(0,0,0);
+border-bottom-color:rgb(46,82,102,255);
+padding-bottom:3px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your Name</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tb6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(47,49,52,200);
+color:rgb(255,255,255);
+border-radius:2px;
+padding-left:10px;
+border:1px solid rgba(0,0,0);
+border-bottom-color:rgb(46,82,102,255);
+padding-bottom:3px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your Surname</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tb8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>450</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(47,49,52,200);
+color:rgb(255,255,255);
+border-radius:2px;
+padding-left:10px;
+border:1px solid rgba(0,0,0);
+border-bottom-color:rgb(46,82,102,255);
+padding-bottom:3px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your phone number together with '+country code'</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>0</y>
+      <width>231</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(253, 189, 16);</string>
+    </property>
+    <property name="text">
+     <string>SMART SCHOOL</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>331</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 191, 16);</string>
+    </property>
+    <property name="text">
+     <string>School-Learning-Enhancement-System</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tb_sId">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>139</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(47,49,52,200);
+color:rgb(255,255,255);
+border-radius:2px;
+padding-left:10px;
+border:1px solid rgba(0,0,0);
+border-bottom-color:rgb(46,82,102,255);
+padding-bottom:3px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,191,16);</string>
+    </property>
+    <property name="text">
+     <string>StudentID</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,191,16);</string>
+    </property>
+    <property name="text">
+     <string>Fill your details</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tb7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(47,49,52,200);
+color:rgb(255,255,255);
+border-radius:2px;
+padding-left:10px;
+border:1px solid rgba(0,0,0);
+border-bottom-color:rgb(46,82,102,255);
+padding-bottom:3px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your birthdate</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cb1_reg">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(40, 41, 44);
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="maxVisibleItems">
+     <number>8</number>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+    </property>
+    <property name="placeholderText" stdset="0">
+     <string>Add/Select Teacher</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Select</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Male</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Female</string>
+     </property>
+    </item>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>tb3</zorder>
+   <zorder>tb4</zorder>
+   <zorder>b3</zorder>
+   <zorder>label_2</zorder>
+   <zorder>b4</zorder>
+   <zorder>tb5</zorder>
+   <zorder>tb6</zorder>
+   <zorder>tb8</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>tb_sId</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>tb7</zorder>
+   <zorder>cb1_reg</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
