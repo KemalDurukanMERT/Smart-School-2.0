@@ -2,7 +2,7 @@ from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QDialog, QMessageBox
 from PyQt5.QtCore import pyqtSignal
 from user import *
-import bcrypt
+import hashlib
 
 class LoginApp(QDialog):
     authentication = pyqtSignal(object)
@@ -46,16 +46,12 @@ WHERE email = '{email}'
 
         self.conn.commit()
 
-    def hash_password(self, password):
-        salt = bcrypt.gensalt()
-        hashed_password = bcrypt.hashpw(password.encode('utf-8'), salt)
-        return hashed_password
-
     def verify_password(self, entered_password, hashed_password):
-        entered_password = self.hash_password(entered_password)
-        print(hashed_password)
-        print(entered_password)
-        return entered_password == hashed_password
+        return self.hash_password(entered_password) == hashed_password
 
+    
+    def hash_password(self, password):
+        return hashlib.sha256(password.encode()).hexdigest()
+    
     def show_reg(self):
         self.register.emit(True)
