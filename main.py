@@ -53,7 +53,7 @@ class SchoolSystem():
             pass
         elif self.user.user_type == "teacher":
             print('teacher')
-            self.teacher_app = TeacherApp(self.conn, self.user)
+            self.teacher_app = TeacherApp(self.conn, self.cur, self.database, self.user)
             self.teacher_app.show()
             self.teacher_app.login.connect(self.show_login)
 
