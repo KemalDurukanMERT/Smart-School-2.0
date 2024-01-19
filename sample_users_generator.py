@@ -21,8 +21,12 @@ class Database:
 
     def add_sample_users(self):
         sample_users = [
-            ('teacher@example.com', 'Teacher', 'Teacher', 'teacher'),
-            ('student@example.com', 'Student', 'Student', 'student'),
+            ('teacher1@example.com', 'Teacher1', 'Teacher1', 'teacher'),
+            ('student1@example.com', 'Student1', 'Student1', 'student'),
+            ('teacher2@example.com', 'Teacher2', 'Teacher2', 'teacher'),
+            ('student2@example.com', 'Student2', 'Student2', 'student'),
+            ('teacher3@example.com', 'Teacher3', 'Teacher3', 'teacher'),
+            ('student3@example.com', 'Student3', 'Student3', 'student'),
             ('admin@example.com', 'Admin', 'Admin', 'admin')
         ]
 

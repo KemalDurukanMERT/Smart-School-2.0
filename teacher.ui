@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1115</width>
-    <height>833</height>
+    <width>1114</width>
+    <height>862</height>
    </rect>
   </property>
   <property name="font">
@@ -78,7 +78,7 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -767,11 +767,16 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <bool>false</bool>
        </attribute>
        <attribute name="horizontalHeaderDefaultSectionSize">
-        <number>273</number>
+        <number>218</number>
        </attribute>
        <column>
         <property name="text">
-         <string>Lesson Name</string>
+         <string>Lesson ID</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Lesson</string>
         </property>
         <property name="font">
          <font>
@@ -795,10 +800,13 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
           <bold>true</bold>
          </font>
         </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
        </column>
        <column>
         <property name="text">
-         <string>Time</string>
+         <string>Time Slot</string>
         </property>
         <property name="font">
          <font>
@@ -806,6 +814,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
           <weight>75</weight>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
         </property>
        </column>
        <column>
@@ -818,6 +829,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
           <weight>75</weight>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
         </property>
        </column>
       </widget>
@@ -1014,8 +1028,8 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QLabel" name="label_57">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>10</y>
+        <x>20</x>
+        <y>20</y>
         <width>481</width>
         <height>21</height>
        </rect>
@@ -1034,131 +1048,12 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <string>Add/Edit Lesson Attandence Details</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_60">
+     <widget class="QPushButton" name="markAttendanceBtn">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>100</y>
-        <width>81</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Student</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_49">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>90</y>
-        <width>201</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>-1</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb23_3">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>140</y>
-        <width>201</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_59">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>150</y>
-        <width>101</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Student ID</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb24_3">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>190</y>
-        <width>201</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_61">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>200</y>
-        <width>111</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Student Email</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="b6_4_att">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>240</y>
-        <width>341</width>
+        <x>980</x>
+        <y>120</y>
+        <width>131</width>
         <height>41</height>
        </rect>
       </property>
@@ -1173,615 +1068,64 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;
        <string notr="true">background-color: rgb(255, 191, 16);</string>
       </property>
       <property name="text">
-       <string>Save/Update Attendance details</string>
+       <string>Save/Update</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="cb22_t_50">
+     <widget class="QComboBox" name="lessonComboBox">
       <property name="geometry">
        <rect>
-        <x>940</x>
-        <y>90</y>
-        <width>131</width>
-        <height>31</height>
+        <x>150</x>
+        <y>120</y>
+        <width>581</width>
+        <height>41</height>
        </rect>
       </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
      </widget>
-     <widget class="QComboBox" name="cb22_t_51">
+     <widget class="QComboBox" name="studentComboBox">
       <property name="geometry">
        <rect>
-        <x>940</x>
-        <y>130</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_52">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>170</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_53">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>210</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_56">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>330</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_55">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>290</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_54">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>250</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_57">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>370</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_60">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>490</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_59">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>450</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_58">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>410</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_61">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>530</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_64">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>650</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_62">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>570</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_63">
-      <property name="geometry">
-       <rect>
-        <x>940</x>
-        <y>610</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="label_97">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
+        <x>150</x>
         <y>60</y>
-        <width>161</width>
+        <width>351</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_103">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>130</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 191, 16);</string>
+      </property>
+      <property name="text">
+       <string>Select Lesson</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_109">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>121</width>
         <height>21</height>
        </rect>
       </property>
@@ -1799,988 +1143,174 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;
        <string>Select Student</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_98">
+     <widget class="QLabel" name="label_110">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>60</y>
-        <width>51</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 191, 16);</string>
-      </property>
-      <property name="text">
-       <string>Date</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_99">
-      <property name="geometry">
-       <rect>
-        <x>750</x>
-        <y>60</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 191, 16);</string>
-      </property>
-      <property name="text">
-       <string>Time slot</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_100">
-      <property name="geometry">
-       <rect>
-        <x>970</x>
-        <y>60</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 191, 16);</string>
-      </property>
-      <property name="text">
-       <string>Status</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb219_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>450</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb223_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>530</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb212_course_2">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
-        <y>530</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLineEdit" name="tb221_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>490</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb217_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>410</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb215_course_2">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
-        <y>650</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb28_course_2">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
-        <y>370</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb21_course_2">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
+        <x>770</x>
         <y>90</y>
-        <width>271</width>
-        <height>31</height>
+        <width>161</width>
+        <height>21</height>
        </rect>
       </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
+       <string notr="true">color: rgb(255, 191, 16);</string>
       </property>
-      <property name="currentIndex">
-       <number>0</number>
+      <property name="text">
+       <string>Mark Attendance</string>
       </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
+     </widget>
+     <widget class="QComboBox" name="statusComboBox">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>120</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
       </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
       </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <item>
        <property name="text">
-        <string>Select time slot</string>
+        <string>Present</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
+        <string>Absent</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
+        <string>Late</string>
        </property>
       </item>
      </widget>
-     <widget class="QLineEdit" name="tb227_course_2">
+     <widget class="QListWidget" name="recordsList">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>610</y>
-        <width>271</width>
-        <height>31</height>
+        <x>20</x>
+        <y>240</y>
+        <width>1091</width>
+        <height>401</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
      </widget>
-     <widget class="QLineEdit" name="tb213_course_2">
+     <widget class="QLabel" name="label_111">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>330</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb22_course_2">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
-        <y>130</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLineEdit" name="tb23_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>130</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb210_course_2">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
-        <y>450</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb214_course_2">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
-        <y>610</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLineEdit" name="tb225_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>570</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb23_course_2">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
-        <y>170</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb29_course_2">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
-        <y>410</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLineEdit" name="tb215_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>370</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb27_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
+        <x>20</x>
         <y>210</y>
-        <width>271</width>
-        <height>31</height>
+        <width>181</width>
+        <height>21</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb211_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>290</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">color: rgb(255, 191, 16);</string>
       </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb25_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>170</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
+      <property name="text">
+       <string>Attendance Records</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="cb211_course_2">
+     <widget class="QPushButton" name="deleteAttendanceBtn">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>490</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb27_course_2">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
-        <y>330</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb26_course_2">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
-        <y>290</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLineEdit" name="tb229_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
+        <x>20</x>
         <y>650</y>
-        <width>271</width>
-        <height>31</height>
+        <width>201</width>
+        <height>41</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb29_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>250</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb25_course_2">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
-        <y>250</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="toolTipDuration">
        <number>-1</number>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
+       <string notr="true">background-color: rgb(255, 191, 16);</string>
       </property>
-      <property name="currentIndex">
-       <number>0</number>
+      <property name="text">
+       <string>Delete a selected record</string>
       </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
      </widget>
-     <widget class="QComboBox" name="cb213_course_2">
+     <widget class="QPushButton" name="deleteAllAttendanceBtn">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>570</y>
-        <width>271</width>
-        <height>31</height>
+        <x>950</x>
+        <y>650</y>
+        <width>161</width>
+        <height>41</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="toolTipDuration">
        <number>-1</number>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
+       <string notr="true">background-color: rgb(255, 191, 16);</string>
       </property>
-      <property name="currentIndex">
-       <number>0</number>
+      <property name="text">
+       <string>Delete All Records</string>
       </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
      </widget>
-     <widget class="QComboBox" name="cb24_course_2">
+     <widget class="QPushButton" name="deleteSelectedStudentAttendanceBtn">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>210</y>
-        <width>271</width>
-        <height>31</height>
+        <x>290</x>
+        <y>650</y>
+        <width>341</width>
+        <height>41</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="toolTipDuration">
        <number>-1</number>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
+       <string notr="true">background-color: rgb(255, 191, 16);</string>
       </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Afternoon: 12:00 -17:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Evening:     21:00 - 22:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLineEdit" name="tb21_course_2">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>90</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
+      <property name="text">
+       <string>Delete all records for the selected student</string>
       </property>
      </widget>
     </widget>
@@ -2824,7 +1354,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;
 font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="placeholderText">
-        <string>Please select a date for the meeting</string>
+        <string>Please select a date for a meeting</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="meetingTitle">
@@ -2851,7 +1381,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
 font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="placeholderText">
-        <string>Please add/select a a meeting</string>
+        <string>Please add a meeting</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="meetingTimeSlot">
@@ -2891,7 +1421,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <string notr="true">background-color: rgb(255, 191, 16);</string>
        </property>
        <property name="text">
-        <string>Add/Edit Lesson</string>
+        <string>Add/Edit Meeting</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_4">
@@ -2922,7 +1452,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="geometry">
         <rect>
          <x>370</x>
-         <y>610</y>
+         <y>620</y>
          <width>141</width>
          <height>41</height>
         </rect>
@@ -2945,7 +1475,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="geometry">
         <rect>
          <x>930</x>
-         <y>610</y>
+         <y>620</y>
          <width>161</width>
          <height>41</height>
         </rect>
@@ -2968,7 +1498,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="geometry">
         <rect>
          <x>370</x>
-         <y>70</y>
+         <y>90</y>
          <width>721</width>
          <height>521</height>
         </rect>
@@ -2984,7 +1514,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
        <attribute name="horizontalHeaderDefaultSectionSize">
-        <number>240</number>
+        <number>239</number>
        </attribute>
        <column>
         <property name="text">
@@ -3012,6 +1542,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
           <bold>true</bold>
          </font>
         </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
        </column>
        <column>
         <property name="text">
@@ -3023,6 +1556,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
           <weight>75</weight>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
         </property>
        </column>
       </widget>
@@ -3131,79 +1667,10 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <attribute name="title">
       <string>Meeting Attendance</string>
      </attribute>
-     <widget class="QLabel" name="label_101">
-      <property name="geometry">
-       <rect>
-        <x>730</x>
-        <y>60</y>
-        <width>121</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 191, 16);</string>
-      </property>
-      <property name="text">
-       <string>Time slot</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_102">
-      <property name="geometry">
-       <rect>
-        <x>450</x>
-        <y>60</y>
-        <width>51</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 191, 16);</string>
-      </property>
-      <property name="text">
-       <string>Date</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_104">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>60</y>
-        <width>191</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 191, 16);</string>
-      </property>
-      <property name="text">
-       <string>Select Student</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_106">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>20</x>
         <y>10</y>
         <width>461</width>
         <height>21</height>
@@ -3223,12 +1690,38 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <string>Add/Edit Meeting Attandence Details</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_107">
+     <widget class="QPushButton" name="deleteAttendanceBtn_2">
       <property name="geometry">
        <rect>
-        <x>970</x>
+        <x>20</x>
+        <y>640</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="toolTipDuration">
+       <number>-1</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 191, 16);</string>
+      </property>
+      <property name="text">
+       <string>Delete a selected record</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_112">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
         <y>60</y>
-        <width>81</width>
+        <width>121</width>
         <height>21</height>
        </rect>
       </property>
@@ -3243,154 +1736,38 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <string notr="true">color: rgb(255, 191, 16);</string>
       </property>
       <property name="text">
-       <string>Status</string>
+       <string>Select Student</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="cb22_t_65">
+     <widget class="QComboBox" name="meetingComboBox_2">
       <property name="geometry">
        <rect>
-        <x>950</x>
-        <y>210</y>
-        <width>131</width>
-        <height>31</height>
+        <x>150</x>
+        <y>110</y>
+        <width>581</width>
+        <height>41</height>
        </rect>
       </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
      </widget>
-     <widget class="QComboBox" name="cb22_t_66">
+     <widget class="QComboBox" name="statusComboBox_2">
       <property name="geometry">
        <rect>
-        <x>950</x>
-        <y>490</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="label_62">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>200</y>
-        <width>111</width>
-        <height>20</height>
+        <x>770</x>
+        <y>110</y>
+        <width>171</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>11</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Student Email</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb225_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>570</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_67">
-      <property name="geometry">
-       <rect>
-        <x>950</x>
-        <y>130</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
       </property>
       <item>
        <property name="text">
@@ -3402,585 +1779,80 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;
         <string>Absent</string>
        </property>
       </item>
-     </widget>
-     <widget class="QLineEdit" name="tb219_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>450</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb227_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>610</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_68">
-      <property name="geometry">
-       <rect>
-        <x>950</x>
-        <y>530</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
       <item>
        <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
+        <string>Late</string>
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="cb22_t_69">
+     <widget class="QPushButton" name="deleteSelectedStudentAttendanceBtn_2">
       <property name="geometry">
        <rect>
-        <x>950</x>
-        <y>410</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_70">
-      <property name="geometry">
-       <rect>
-        <x>950</x>
-        <y>610</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_71">
-      <property name="geometry">
-       <rect>
-        <x>950</x>
-        <y>90</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_72">
-      <property name="geometry">
-       <rect>
-        <x>950</x>
-        <y>650</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLineEdit" name="tb223_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>530</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb211_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>290</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_73">
-      <property name="geometry">
-       <rect>
-        <x>950</x>
-        <y>250</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_74">
-      <property name="geometry">
-       <rect>
-        <x>950</x>
-        <y>170</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLineEdit" name="tb221_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>490</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb24_4">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>190</y>
-        <width>201</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_75">
-      <property name="geometry">
-       <rect>
-        <x>950</x>
-        <y>290</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_76">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>90</y>
-        <width>201</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>-1</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb25_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>170</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb21_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>90</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="label_63">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>100</y>
-        <width>81</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Student</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb29_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>250</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb229_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>650</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="b6_4_att_2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>240</y>
+        <x>290</x>
+        <y>640</y>
         <width>341</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="toolTipDuration">
+       <number>-1</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 191, 16);</string>
+      </property>
+      <property name="text">
+       <string>Delete all records for the selected student</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="studentComboBox_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>50</y>
+        <width>351</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_113">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>80</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 191, 16);</string>
+      </property>
+      <property name="text">
+       <string>Mark Attendance</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="markAttendanceBtn_2">
+      <property name="geometry">
+       <rect>
+        <x>980</x>
+        <y>110</y>
+        <width>131</width>
         <height>41</height>
        </rect>
       </property>
@@ -3995,1138 +1867,93 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;
        <string notr="true">background-color: rgb(255, 191, 16);</string>
       </property>
       <property name="text">
-       <string>Save/Update Attendance details</string>
+       <string>Save/Update</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tb215_course_4">
+     <widget class="QLabel" name="label_114">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>370</y>
-        <width>271</width>
-        <height>31</height>
+        <x>20</x>
+        <y>200</y>
+        <width>241</width>
+        <height>21</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 191, 16);</string>
+      </property>
+      <property name="text">
+       <string>Meeting Attendance Records</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="cb22_t_77">
+     <widget class="QPushButton" name="deleteAllAttendanceBtn_2">
       <property name="geometry">
        <rect>
         <x>950</x>
-        <y>570</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_78">
-      <property name="geometry">
-       <rect>
-        <x>950</x>
-        <y>450</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="label_64">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>150</y>
-        <width>101</width>
-        <height>20</height>
+        <y>640</y>
+        <width>161</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="toolTipDuration">
+       <number>-1</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 191, 16);</string>
+      </property>
+      <property name="text">
+       <string>Delete All Records</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_104">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
+       <string notr="true">color: rgb(255, 191, 16);</string>
       </property>
       <property name="text">
-       <string>Student ID</string>
+       <string>Select Meeting</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tb213_course_4">
+     <widget class="QListWidget" name="recordsList_2">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>330</y>
-        <width>271</width>
-        <height>31</height>
+        <x>20</x>
+        <y>230</y>
+        <width>1091</width>
+        <height>401</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb217_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>410</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb23_4">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>140</y>
-        <width>201</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="tb27_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>210</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_79">
-      <property name="geometry">
-       <rect>
-        <x>950</x>
-        <y>330</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLineEdit" name="tb21_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>90</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb22_t_80">
-      <property name="geometry">
-       <rect>
-        <x>950</x>
-        <y>370</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Present</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Absent</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLineEdit" name="tb23_course_4">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>130</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the date as xx/xx/xxxx</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb22_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>130</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb24_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>210</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb23_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>170</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb28_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>370</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb26_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>290</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb27_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>330</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb25_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>250</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb212_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>530</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb210_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>450</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb211_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>490</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb29_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>410</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb214_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>610</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb215_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>650</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cb213_course_4">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>570</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="maxVisibleItems">
-       <number>8</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="placeholderText" stdset="0">
-       <string>Add/Select Teacher</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Select time slot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18:00 -19:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>19:00 - 20:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>20:00 - 21:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>21:00 - 22:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>22:00 - 23:00</string>
-       </property>
-      </item>
      </widget>
     </widget>
     <widget class="QWidget" name="tab">
@@ -5553,7 +2380,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1115</width>
+     <width>1114</width>
      <height>50</height>
     </rect>
    </property>

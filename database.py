@@ -30,6 +30,7 @@ lesson_id SERIAL PRIMARY KEY,
 lesson_name VARCHAR(255) NOT NULL,
 lesson_date DATE NOT NULL,
 lesson_time_slot VARCHAR(11) NOT NULL,
+lesson_instructor VARCHAR(50),
 created_by INTEGER NOT NULL REFERENCES users(user_id),
 created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 '''), 
