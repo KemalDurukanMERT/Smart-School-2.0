@@ -33,8 +33,8 @@ class RegisterApp(QDialog):
 
         try:
             command = '''
-INSERT INTO users (email, hashed_password, name, surname, user_type_id)
-VALUES (%s, %s, %s, %s, 3)
+INSERT INTO users (email, hashed_password, name, surname, user_type)
+VALUES (%s, %s, %s, %s, 'student')
 '''
             cur.execute(command, (email, password, name, surname))
 

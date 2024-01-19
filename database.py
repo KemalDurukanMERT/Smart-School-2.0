@@ -30,6 +30,7 @@ lesson_id SERIAL PRIMARY KEY,
 lesson_name VARCHAR(255) NOT NULL,
 lesson_date DATE NOT NULL,
 lesson_time_slot VARCHAR(11) NOT NULL,
+lesson_instructor VARCHAR(50),
 created_by INTEGER NOT NULL REFERENCES users(user_id),
 created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 '''), 
@@ -70,7 +71,7 @@ created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
   content TEXT NOT NULL,
   sender_id INTEGER NOT NULL REFERENCES users(user_id),
   receiver_id INTEGER NOT NULL REFERENCES users(user_id),
-  created_by INTEGER NOT NULL REFERENCES users(user_id),
+  message_read BOOLEAN NOT NULL DEFAULT false,  
   created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 '''),
             ('todolist', '''
@@ -180,6 +181,11 @@ email, hashed_password, name, surname, user_type
     
     def hash_password(self, password):
         return hashlib.sha256(password.encode()).hexdigest()
+    
+    def get_teachers(self, cur):
+        cur.execute("SELECT name, surname FROM users WHERE user_type = 'teacher'")
+        teachers = cur.fetchall()
+        return teachers
 
 
 
