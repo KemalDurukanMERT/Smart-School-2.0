@@ -88,14 +88,17 @@ Requirements
 Diagrams:
 
 Class Diagram 
+
 ![](image1.png)
 
 
-Use Case Diagram  
+Use Case Diagram 
+
 ![](image2.png)
 
 
-ERD Diagram  
+ERD Diagram
+
 ![](image3.png)
 
 
