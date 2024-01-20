@@ -61,6 +61,7 @@ created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 '''), 
             ('announcement', '''
   announcement_id SERIAL PRIMARY KEY,
+  title VARCHAR(50) NOT NULL,
   message TEXT NOT NULL,
   deadline TIMESTAMP NOT NULL,
   created_by INTEGER NOT NULL REFERENCES users(user_id),
