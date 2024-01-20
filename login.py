@@ -33,7 +33,6 @@ WHERE email = %s
 
         row = cur.fetchone()
         if row:
-            # Assuming the status is in the 9th column (index 8)
             status = row[8]
 
             if status == 'Pending':
