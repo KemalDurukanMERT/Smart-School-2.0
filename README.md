@@ -85,13 +85,18 @@ Requirements
 •	Experience with PyQt5 is a plus
 
 
-Links for Diagrams:
+Diagrams:
 
-Class Diagram  ![](image1.png)
+Class Diagram 
+![](image1.png)
 
-Use Case Diagram  ![](image2.png)
 
-ERD Diagram  ![](image3.png)
+Use Case Diagram  
+![](image2.png)
+
+
+ERD Diagram  
+![](image3.png)
 
 
 
