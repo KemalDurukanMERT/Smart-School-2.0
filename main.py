@@ -8,6 +8,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication 
 from database import *
 from teacher import *
+from student import *
 
 
 class SchoolSystem():
@@ -38,6 +39,8 @@ class SchoolSystem():
         
         self.login_form.teacher_registration.connect(self.show_reg2)
         self.teacher_registration.login.connect(self.show_login)
+
+
         
         
         
@@ -67,6 +70,10 @@ class SchoolSystem():
             self.teacher_app.login.connect(self.show_login)
 
         elif self.user.user_type == "student":
+            print('student')
+            self.student_app = StudentApp(self.conn, self.cur, self.database, self.user)
+            self.student_app.show()
+            self.student_app.login.connect(self.show_login)
             pass
 
 
