@@ -2,9 +2,9 @@ from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QDialog, QMessageBox
 from PyQt5.QtCore import pyqtSignal
 from user import *
-import bcrypt
-import re
+import hashlib
 import psycopg2
+from validator import *
 
 class RegisterApp(QDialog):
     login = pyqtSignal(bool)
@@ -24,16 +24,17 @@ class RegisterApp(QDialog):
 
         cur = self.conn.cursor()
 
-        if not self.is_valid_email(email) or not self.is_valid_password(password):
+        if not is_valid_email(email) or not is_valid_password(password):
             QMessageBox.warning(self, "Registration Error", "Invalid input format")
             return
         
         password = self.hash_password(password)
+        print(password)
 
         try:
             command = '''
-INSERT INTO users (email, hashed_password, name, surname, user_type_id)
-VALUES (%s, %s, %s, %s, 3)
+INSERT INTO users (email, hashed_password, name, surname, user_type)
+VALUES (%s, %s, %s, %s, 'student')
 '''
             cur.execute(command, (email, password, name, surname))
 
@@ -41,12 +42,12 @@ VALUES (%s, %s, %s, %s, 3)
 
             self.conn.commit()
 
-            QMessageBox.information(self, "Registration Successfully")
+            QMessageBox.information(self, "Registration Successfully", "User created succesfully")
 
             self.show_login()
 
         except (Exception, psycopg2.DatabaseError) as error:
-            QMessageBox.warning(self, "Registration Error", error)
+            QMessageBox.warning(self, "Registration Error", f"{error}")
         
         
         
@@ -54,15 +55,6 @@ VALUES (%s, %s, %s, %s, 3)
 
     def show_login(self):
         self.login.emit(True)
-
-    def is_valid_password(self, password):
-        pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+={}[\]:;<>,.?/~\\-]).{8,}$"
-        return re.match(pattern, password)
-    
-    def is_valid_email(self, email):
-        return re.match(r"[^@]+@[^@]+\.[^@]+", email)
     
     def hash_password(self, password):
-        salt = bcrypt.gensalt()
-        hashed_password = bcrypt.hashpw(password.encode('utf-8'), salt)
-        return hashed_password
+        return hashlib.sha256(password.encode()).hexdigest()
