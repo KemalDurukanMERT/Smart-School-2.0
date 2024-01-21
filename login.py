@@ -33,10 +33,10 @@ WHERE email = %s
 
         row = cur.fetchone()
         if row:
-            # Assuming the status is in the 9th column (index 8)
             status = row[8]
+            user_type = row[7]
 
-            if status == 'Pending':
+            if status == 'Pending' and user_type == 'teacher':
                 QMessageBox.warning(self, "Login Error", "Your account is pending approval.")
                 return
 

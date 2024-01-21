@@ -2,9 +2,12 @@ from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QMainWindow, QListWidgetItem, QComboBox, QListWidget, QHeaderView, QMessageBox, QWidget, QCalendarWidget, QLineEdit, QPushButton, QTableWidget, QTableWidgetItem
 from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5 import QtGui
+from PyQt5.QtGui import QStandardItemModel, QStandardItem, QColor
 import psycopg2
 import re
 import datetime
+from message import BorderDelegate
+
 
 class TeacherApp(QMainWindow):
     login = pyqtSignal(bool)
@@ -55,6 +58,7 @@ class TeacherApp(QMainWindow):
 
     def setupButtonActions(self):
         self.b6.clicked.connect(self.updateTeacherDetails)
+        self.sendButton3_t.clicked.connect(self.send_message)
 
     def setupCalendar(self):
         self.calendar = QCalendarWidget(self)
@@ -98,10 +102,13 @@ class TeacherApp(QMainWindow):
         self.lesson_name = self.findChild(QLineEdit, 'lessonName')
         self.time_slot = self.findChild(QLineEdit, 'timeSlot')
         self.add_lesson_btn = self.findChild(QPushButton, 'addLessonBtn')
+        # self.edit_lesson_btn = self.findChild(QPushButton, 'editLessonBtn')
+        self.reset_lesson_btn = self.findChild(QPushButton, 'resetLessonBtn')
         self.delete_lesson_btn = self.findChild(QPushButton, 'deleteLessonBtn')
         self.delete_all_lessons_btn = self.findChild(QPushButton, 'deleteAllLessonsBtn')
         self.comboBox_instructor = self.findChild(QComboBox, 'comboBox_instructor')
         self.lesson_table = self.findChild(QTableWidget, 'lessonTable')
+        self.populate_instructors()
 
         self.lesson_table.setColumnCount(5)
         self.lesson_table.setHorizontalHeaderLabels(["Lesson ID","Lesson Name", "Date", "Time Slot", "Instructor"])
@@ -109,6 +116,8 @@ class TeacherApp(QMainWindow):
         header.setSectionResizeMode(QHeaderView.Interactive)
         
         self.add_lesson_btn.clicked.connect(self.addLesson)
+        # self.edit_lesson_btn.clicked.connect(self.editLesson)
+        self.reset_lesson_btn.clicked.connect(self.resetButton)
         self.date_input.mousePressEvent = self.showCalendar
         self.delete_lesson_btn.clicked.connect(self.deleteLesson)
         self.delete_all_lessons_btn.clicked.connect(self.deleteAllLessons)
@@ -133,7 +142,7 @@ class TeacherApp(QMainWindow):
     def loadLessons(self):
         try:
             self.lesson_table.setRowCount(0)  # Clear the table before repopulating
-            query = "SELECT lesson_id, lesson_name, lesson_date, lesson_time_slot, lesson_instructor FROM lesson"
+            query = "SELECT lesson_id, lesson_name, lesson_date, lesson_time_slot, lesson_instructor FROM lesson ORDER BY lesson_date ASC"
             self.cur.execute(query)
             lessons = self.cur.fetchall()
             for lesson in lessons:
@@ -159,7 +168,7 @@ class TeacherApp(QMainWindow):
         instructor_id = self.getInstructorId(instructor_name)
         created_by = self.user.id  # Assuming self.user.id holds the ID of the current user
 
-        if not lesson_name or not date or not time_slot or instructor_name is None:
+        if not lesson_name or not date or not time_slot or not instructor_name :
             QMessageBox.warning(self, "Input Error", "All fields must be filled out and a valid instructor must be selected.")
             return
 
@@ -168,7 +177,7 @@ class TeacherApp(QMainWindow):
             return
 
         try:
-            if self.selected_lesson_index is None:  # Add new lesson
+            if not self.selected_lesson_index:
                 query = """
                 INSERT INTO lesson (lesson_name, lesson_date, lesson_time_slot, lesson_instructor, created_by)
                 VALUES (%s, %s, %s, %s, %s)
@@ -176,7 +185,8 @@ class TeacherApp(QMainWindow):
                 self.cur.execute(query, (lesson_name, date, time_slot, instructor_name, created_by))
                 self.conn.commit()
                 QMessageBox.information(self, 'Success', 'Lesson added successfully')
-            else:  # Update existing lesson
+
+            else:
                 lesson_id = self.getLessonIdFromTable(self.selected_lesson_index)
                 query = """
                 UPDATE lesson
@@ -186,6 +196,7 @@ class TeacherApp(QMainWindow):
                 self.cur.execute(query, (lesson_name, date, time_slot, instructor_name, created_by, lesson_id))
                 self.conn.commit()
                 QMessageBox.information(self, 'Success', 'Lesson updated successfully')
+            
 
             self.loadLessons()  # Reload the lessons to reflect changes
         except psycopg2.Error as e:
@@ -256,10 +267,6 @@ class TeacherApp(QMainWindow):
     def getLessonIdFromTable(self, row_index):
         lesson_id_item = self.lesson_table.item(row_index, 0)  # Assuming lesson_id is in the first column
         return int(lesson_id_item.text()) if lesson_id_item else None
-
-    def isValidTimeSlot(self, time_slot):
-        pattern = re.compile(r'^\d{2}:\d{2}-\d{2}:\d{2}$')
-        return pattern.match(time_slot) is not None
 
     def showCalendar(self, event):
         calendar_pos = self.date_input.mapToGlobal(self.date_input.rect().bottomLeft())
@@ -552,6 +559,7 @@ class TeacherApp(QMainWindow):
             self.meeting_title = self.findChild(QLineEdit, 'meetingTitle')
             self.meeting_time_slot = self.findChild(QLineEdit, 'meetingTimeSlot')
             self.add_meeting_btn = self.findChild(QPushButton, 'addMeetingBtn')
+            self.reset_meeting_btn = self.findChild(QPushButton, 'resetMeetingBtn')
             self.delete_meeting_btn = self.findChild(QPushButton, 'deleteMeetingBtn')
             self.delete_all_meetings_btn = self.findChild(QPushButton, 'deleteAllMeetingsBtn')
             self.meeting_table = self.findChild(QTableWidget, 'meetingTable')
@@ -565,6 +573,7 @@ class TeacherApp(QMainWindow):
             
             # Connect buttons to their respective functions
             self.add_meeting_btn.clicked.connect(self.addMeeting)
+            self.reset_meeting_btn.clicked.connect(self.resetMeetingButton)
             self.meeting_date_input.mousePressEvent = self.showMeetingCalendar
             self.delete_meeting_btn.clicked.connect(self.deleteMeeting)
             self.delete_all_meetings_btn.clicked.connect(self.deleteAllMeetings)
@@ -598,8 +607,8 @@ class TeacherApp(QMainWindow):
         self.meeting_calendar.hide()
 
     def isValidTimeSlot(self, time_slot):
-        pattern = re.compile(r'^\d{2}:\d{2}-\d{2}:\d{2}$')
-        return pattern.match(time_slot) is not None
+        pattern = r'^\d{2}:\d{2}-\d{2}:\d{2}$'
+        return re.match(pattern, time_slot)
 
     def showMeetingCalendar(self, event):
         meeting_calendar_pos = self.meeting_date_input.mapToGlobal(self.meeting_date_input.rect().bottomLeft())
@@ -627,7 +636,7 @@ class TeacherApp(QMainWindow):
     def loadMeetings(self):
         self.meeting_table.clearContents()
         self.meeting_table.setRowCount(0)
-        query = "SELECT meeting_id, meeting_name, meeting_date, meeting_time_slot FROM meeting WHERE teacher_id = %s"
+        query = "SELECT meeting_id, meeting_name, meeting_date, meeting_time_slot FROM meeting WHERE teacher_id = %s ORDER BY meeting_date ASC"
         self.cur.execute(query, (self.user.id,))
         meetings = self.cur.fetchall()
         for meeting_id, meeting_name, meeting_date, meeting_time_slot in meetings:
@@ -676,6 +685,12 @@ class TeacherApp(QMainWindow):
         self.meeting_date_input.clear()
         self.meeting_time_slot.clear()
         self.selected_meeting_index = None  # Reset the selected meeting index
+
+    def resetMeetingButton(self):
+        self.meeting_title.clear()
+        self.meeting_date_input.clear()
+        self.meeting_time_slot.clear()
+        self.selected_meeting_index = None
 
     def deleteMeeting(self):
         selected_rows = set()
@@ -995,10 +1010,282 @@ class TeacherApp(QMainWindow):
         self.tabWidget.setCurrentIndex(7)
 
     def add_message_tab(self):
+        self.chattedUser = 0
         self.tabWidget.setCurrentIndex(8)
+        self.messageCombobox = self.findChild(QComboBox, 'messageCombobox')
+        self.listView_t.clicked.connect(self.read_message)
 
+        
+        self.load_chat_persons()
+        self.populateMessageCombobox()
+
+        self.messageCombobox.setCurrentIndex(0)
+        self.messageCombobox.activated.connect(lambda index: self.chatUser(self.messageCombobox.itemData(index)))
+
+    def read_message(self):
+        self.model = QStandardItemModel()
+        self.list_view_3_t.setModel(self.model)
+
+        selected_indexes = self.listView_t.selectedIndexes()
+        for index in selected_indexes:
+            item = self.model2.itemFromIndex(index)
+            item.setBackground(QColor("white"))
+    
+    def chatUser(self, user):
+        if not user:
+            user = 0
+        self.chattedUser =  user
+        self.cur.execute(f'''
+SELECT name, surname, email FROM users WHERE user_id = {user}
+''')
+       
+        data = self.cur.fetchone()
+        if data:
+            self.message_username.setText(f'{data[0]} {data[1]}')
+            self.message_usermail.setText(f'{data[2]}')
+        else:
+            self.message_username.clear()
+            self.message_usermail.clear()
+        
+        print(user)
+        self.loadMessages(user)
+        self.cur.execute(f'''UPDATE message SET message_read = true WHERE receiver_id = {self.user.id} and sender_id = {user}''')
+
+    def send_message(self):
+        message_text = self.LineEdit_3_t.text()
+
+        try:
+            self.cur.execute(f'''
+INSERT INTO message (
+content, sender_id, receiver_id
+) VALUES ('{message_text}', {self.user.id}, {self.chattedUser})
+''')
+            self.LineEdit_3_t.clear()
+            self.loadMessages(self.chattedUser)
+        except (Exception, psycopg2.DatabaseError) as error:
+            QMessageBox.warning(self, "Message Send Error", str(error))
+        
+        
+
+
+    def loadMessages(self, user):
+        if not user:
+            user = 0
+        self.cur.execute(f'''SELECT users.name, message.content, message.message_read, message.created_time, message.sender_id FROM
+message full JOIN users ON  users.user_id = message.sender_id
+WHERE sender_id = {self.user.id} and receiver_id = {user} or sender_id = {user} and receiver_id = {self.user.id}
+ORDER BY created_time ASC''')
+        
+        messages = self.cur.fetchall()
+        
+
+        self.model = QStandardItemModel()
+        self.list_view_3_t.setModel(self.model)
+        self.list_view_3_t.setItemDelegate(BorderDelegate())
+
+        if messages:
+            for name, content, message_read, created_time, sender_id in messages:
+                display_text = f'''
+    Sender: {name}
+    Content: {content}
+    Time: {created_time}
+    '''
+                item = QStandardItem(display_text)
+                if sender_id == self.user.id:
+                    item.setTextAlignment(Qt.AlignRight)
+                self.model.appendRow(item)
+        
+        # self.list_view_3_t.setModel(self.model)
+
+
+
+
+    def populateMessageCombobox(self):
+        self.messageCombobox.clear()
+        self.messageCombobox.addItem("Search User for Chat", 0)
+        self.cur.execute('''
+SELECT user_id, name, surname, email FROM users
+''')
+        users = self.cur.fetchall()
+        for user_id, name, surname, email in users:
+            display_text = f"{name} - {email}"
+            self.messageCombobox.addItem(display_text, user_id)
+
+    def load_chat_persons(self):
+        self.model2 = QStandardItemModel()
+        self.listView_t.setModel(self.model2)
+        self.cur.execute(f'''
+SELECT DISTINCT users.user_id, users.email, users.name
+FROM users
+JOIN (
+    SELECT DISTINCT sender_id AS chat_partner_id
+    FROM message
+    WHERE receiver_id = {self.user.id}
+    UNION
+    SELECT DISTINCT receiver_id AS chat_partner_id
+    FROM message
+    WHERE sender_id = {self.user.id}
+) AS chat_partners
+ON users.user_id = chat_partners.chat_partner_id; 
+''')
+        chat_persons = self.cur.fetchall()
+        for user_id, email, name in chat_persons:
+            self.cur.execute(f'''SELECT users.name, message.content, message.message_read, message.created_time, message.sender_id FROM
+message full JOIN users ON  users.user_id = message.sender_id
+WHERE sender_id = {user_id} and receiver_id = {self.user.id} and message_read = false''')
+            messages = self.cur.fetchall()
+            display_text = f"{name} - {email}"
+            item = QStandardItem(display_text)
+            if messages:
+                item.setBackground(QColor('green'))
+            item.setData(user_id, Qt.UserRole)
+            self.model2.appendRow(item)
+
+        self.listView_t.clicked.connect(self.on_list_item_clicked)
+
+    def on_list_item_clicked(self, index):
+        # Retrieve the selected user_id
+        selected_index = index.row()
+        selected_user_id = self.model2.item(selected_index).data(Qt.UserRole)
+        self.chatUser(selected_user_id)    
+        
     def add_announce_tab(self):
         self.tabWidget.setCurrentIndex(6)
+        self.edittedAnnouncement = None
+        self.populateAnnouncementCombobox()
+        self.announcementCombobox = self.findChild(QComboBox, 'announcementCombobox')
+        self.load_announcement()
+        self.date_input = self.findChild(QLineEdit, 'announcementDate')
+        self.date_input.mousePressEvent = self.showCalendarAnnouncement
+        self.addButton.clicked.connect(self.add_announcement)
+        self.editButton.clicked.connect(self.edit_announcement)
+        self.deleteButton.clicked.connect(self.delete_announcement)
+
+        self.announcementCombobox.setCurrentIndex(0)
+        self.announcementCombobox.activated.connect(lambda index: self.selectAnnouncement(self.announcementCombobox.itemData(index)))
+
+
+    def showCalendarAnnouncement(self, event):
+        calendar_pos = self.date_input.mapToGlobal(self.date_input.rect().bottomLeft())
+        self.calendar.move(calendar_pos)
+        self.calendar.show()
+
+    def load_announcement(self):
+        self.model = QStandardItemModel()
+        self.announcementListView.setModel(self.model)
+
+        self.cur.execute('''
+SELECT message, deadline, created_by, title, users.email 
+FROM announcement JOIN users ON created_by = users.user_id
+''')
+        announcements = self.cur.fetchall()
+        for message, deadline, created_by, title, author in announcements:
+            display_text = f'''
+Author: {author}
+Title: {title}
+Message: {message}
+'''
+            item = QStandardItem(display_text)
+            self.model.appendRow(item)
+
+    def selectAnnouncement(self, id):
+        if not id:
+            id = 0
+        self.edittedAnnouncement = id
+        text = self.announcementCombobox.currentText()
+        if text != 'Select Announcement for Edit':
+            self.announcementTitle.setText(text)
+        
+
+        self.cur.execute(f'''
+SELECT message, deadline FROM announcement
+WHERE announcement_id = {id} 
+''')
+        self.textEdit.clear()
+        data = self.cur.fetchone()
+        if data:
+            context = data[0]
+            self.textEdit.append(context)
+            self.date_input.setText(str(data[1]))
+
+
+    def add_announcement(self):
+        text = self.textEdit.toPlainText()
+        title = self.announcementTitle.text()
+        date = self.date_input.text().strip()
+
+        try:
+
+            self.cur.execute(f'''
+    INSERT INTO announcement (
+    message, deadline, created_by, title
+    ) VALUES (
+    '{text}', '{date}', {self.user.id}, '{title}'
+    );''')
+            QMessageBox.warning(self, 'Success', 'Announcement Added Successfully')
+            self.load_announcement()
+            self.populateAnnouncementCombobox()
+            self.textEdit.clear()
+            self.announcementTitle.clear()
+        except psycopg2.Error as e:
+            QMessageBox.critical(self, 'Insert Error', f'Error: {e}')
+
+    def edit_announcement(self):
+        text = self.textEdit.toPlainText()
+        title = self.announcementTitle.text()
+        date = self.date_input.text().strip()
+
+        if self.edittedAnnouncement:
+            if self.edittedAnnouncement != 0:
+                print(self.edittedAnnouncement)
+                try:
+                    self.cur.execute(f'''
+            UPDATE announcement 
+            SET message = '{text}', deadline = '{date}', title = '{title}'
+            WHERE announcement_id = {self.edittedAnnouncement};''')
+                    QMessageBox.warning(self, 'Success', 'Announcement Updated Successfully')
+                    self.load_announcement()
+                    self.populateAnnouncementCombobox()
+                    self.textEdit.clear()
+                    self.announcementTitle.clear()
+                except psycopg2.Error as e:
+                    QMessageBox.critical(self, 'Edit Error', f'Error: {e}')
+
+    def delete_announcement(self):
+        if self.edittedAnnouncement and self.edittedAnnouncement != 0:
+            reply = QMessageBox.question(self, 'Confirm Delete', 'Are you sure you want to delete announcement?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+            if reply == QMessageBox.Yes:
+                try:
+                    self.cur.execute(f'''
+DELETE FROM announcement WHERE announcement_id = {self.edittedAnnouncement}            
+''')
+                    QMessageBox.warning(self, 'Success', 'Announcement Deleted Successfully')
+                    self.load_announcement()
+                    self.populateAnnouncementCombobox()
+                    self.textEdit.clear()
+                    self.announcementTitle.clear()
+                except psycopg2.Error as e:
+                    QMessageBox.critical(self, 'Edit Error', f'Error: {e}')
+        else:
+            QMessageBox.warning(self, 'Error', 'There is no selected announcement')
+
+
+
+
+        
+        
+
+    def populateAnnouncementCombobox(self):
+        self.announcementCombobox.clear()
+        self.announcementCombobox.addItem('Select Announcement for Edit', 0)
+#         
+        self.cur.execute('''
+SELECT title, announcement_id FROM announcement
+''')
+        announcement_titles = self.cur.fetchall()
+        for title, announcement_id in announcement_titles:
+            text = f'''{title}'''
+            self.announcementCombobox.addItem(text, announcement_id)
 
     def logout(self):
         self.close()
