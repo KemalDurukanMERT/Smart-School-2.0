@@ -117,7 +117,7 @@ class TeacherApp(QMainWindow):
         
         self.add_lesson_btn.clicked.connect(self.addLesson)
         # self.edit_lesson_btn.clicked.connect(self.editLesson)
-        self.reset_lesson_btn.clicked.connect(self.resetButton)
+        self.reset_lesson_btn.clicked.connect(self.resetForm)
         self.date_input.mousePressEvent = self.showCalendar
         self.delete_lesson_btn.clicked.connect(self.deleteLesson)
         self.delete_all_lessons_btn.clicked.connect(self.deleteAllLessons)
