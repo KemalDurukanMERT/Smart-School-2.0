@@ -205,46 +205,6 @@ class TeacherApp(QMainWindow):
 
         self.resetForm()
         self.selected_lesson_index = None  # Reset the selected index
-
-    def editLesson(self):
-        lesson_name = self.lesson_name.text().strip()
-        date = self.date_input.text().strip()
-        time_slot = self.time_slot.text().strip()
-        instructor_name = self.comboBox_instructor.currentText()
-        instructor_id = self.getInstructorId(instructor_name)
-        created_by = self.user.id  # Assuming self.user.id holds the ID of the current user
-
-        if not lesson_name or not date or not time_slot or not instructor_name :
-            QMessageBox.warning(self, "Input Error", "All fields must be filled out and a valid instructor must be selected.")
-            return
-
-        if not self.isValidTimeSlot(time_slot):
-            QMessageBox.warning(self, "Input Error", "Time slot must be in the format xx:xx-xx:xx.")
-            return
-
-        try:
-            # Update existing lesson
-            lesson_id = self.getLessonIdFromTable(self.selected_lesson_index)
-            query = """
-            UPDATE lesson
-            SET lesson_name = %s, lesson_date = %s, lesson_time_slot = %s, lesson_instructor = %s, created_by = %s
-            WHERE lesson_id = %s
-            """
-            self.cur.execute(query, (lesson_name, date, time_slot, instructor_name, created_by, lesson_id))
-            self.conn.commit()
-            QMessageBox.information(self, 'Success', 'Lesson updated successfully')
-
-            self.loadLessons()  # Reload the lessons to reflect changes
-        except psycopg2.Error as e:
-            self.conn.rollback()
-            QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
-
-        self.resetForm()
-        self.selected_lesson_index = None  # Reset the selected index
-
-    def resetButton(self):
-        self.resetForm()
-        self.selected_lesson_index = None
     
     def selectLesson(self, item):
         current_row = self.lesson_table.row(item)

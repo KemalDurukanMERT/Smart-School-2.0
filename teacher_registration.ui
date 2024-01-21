@@ -10,45 +10,41 @@
     <height>650</height>
    </rect>
   </property>
-  <property name="minimumSize">
+  <property name="maximumSize">
    <size>
-    <width>0</width>
-    <height>0</height>
+    <width>400</width>
+    <height>650</height>
    </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>13</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <widget class="QWidget" name="widget" native="true">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
-     <height>641</height>
+     <width>401</width>
+     <height>651</height>
     </rect>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>400</width>
-     <height>650</height>
-    </size>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color:rgb(16,16,16,255);
 border-radius:20px;
 </string>
    </property>
-   <widget class="QLineEdit" name="tb1">
+   <widget class="QLineEdit" name="tb3">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>270</y>
+      <y>199</y>
       <width>361</width>
-      <height>40</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -75,13 +71,13 @@ padding-bottom:3px</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="tb2">
+   <widget class="QLineEdit" name="tb4">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>320</y>
+      <y>250</y>
       <width>361</width>
-      <height>40</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -108,68 +104,66 @@ padding-bottom:3px</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="b1">
+   <widget class="QPushButton" name="b3">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>370</y>
-      <width>361</width>
-      <height>41</height>
+      <x>150</x>
+      <y>510</y>
+      <width>231</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <pointsize>11</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton#b1 {
+     <string notr="true">QPushButton#b3 {
     background-color: rgb(255, 191, 16);
     color: rgb(135, 60, 0);
     border-radius: 5px;
 }
 
-QPushButton#b1:pressed {
+QPushButton#b3:pressed {
     background-color: rgb(255, 255, 16);
 }
 </string>
     </property>
     <property name="text">
-     <string>L o g i n</string>
+     <string>R e g i s t e r  a s  Teacher</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>110</y>
-      <width>121</width>
-      <height>171</height>
+      <x>160</x>
+      <y>70</y>
+      <width>81</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>92</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <pointsize>59</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 191, 16);</string>
     </property>
     <property name="text">
-     <string></string>
+     <string></string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QPushButton" name="b4">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>450</y>
-      <width>121</width>
-      <height>16</height>
+      <x>240</x>
+      <y>580</y>
+      <width>141</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -180,56 +174,132 @@ QPushButton#b1:pressed {
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:rgb(255,191,16);</string>
-    </property>
-    <property name="text">
-     <string>Student Sign up !!!</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>470</y>
-      <width>161</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton#b2 {
+     <string notr="true">QPushButton#b4 {
     background-color: rgb(255, 191, 16);
     color: rgb(135, 60, 0);
     border-radius: 5px;
 }
 
-QPushButton#b2:pressed {
+QPushButton#b4:pressed {
     background-color: rgb(255, 255, 16);
 }
 </string>
     </property>
     <property name="text">
-     <string>Sign Up as Student</string>
+     <string>B a c k  t o  L o g i n</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tb5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>361</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(47,49,52,200);
+color:rgb(255,255,255);
+border-radius:2px;
+padding-left:10px;
+border:1px solid rgba(0,0,0);
+border-bottom-color:rgb(46,82,102,255);
+padding-bottom:3px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your Name</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tb6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>361</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(47,49,52,200);
+color:rgb(255,255,255);
+border-radius:2px;
+padding-left:10px;
+border:1px solid rgba(0,0,0);
+border-bottom-color:rgb(46,82,102,255);
+padding-bottom:3px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your Surname</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tb8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>450</y>
+      <width>361</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(47,49,52,200);
+color:rgb(255,255,255);
+border-radius:2px;
+padding-left:10px;
+border:1px solid rgba(0,0,0);
+border-bottom-color:rgb(46,82,102,255);
+padding-bottom:3px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your phone number together with '+ Country Code'</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>20</y>
-      <width>271</width>
+      <x>120</x>
+      <y>0</y>
+      <width>171</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>20</pointsize>
+      <pointsize>15</pointsize>
       <weight>75</weight>
       <bold>true</bold>
       <strikeout>false</strikeout>
@@ -239,21 +309,21 @@ QPushButton#b2:pressed {
      <string notr="true">color: rgb(253, 189, 16);</string>
     </property>
     <property name="text">
-     <string>SMART SCHOOL 2.0</string>
+     <string>SMART SCHOOL</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>70</y>
-      <width>331</width>
+      <x>70</x>
+      <y>40</y>
+      <width>251</width>
       <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -263,45 +333,13 @@ QPushButton#b2:pressed {
      <string>School-Learning-Enhancement-System</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="b2_2">
+   <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>470</y>
-      <width>161</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton#b2_2 {
-    background-color: rgb(255, 191, 16);
-    color: rgb(135, 60, 0);
-    border-radius: 5px;
-}
-
-QPushButton#b2_2:pressed {
-    background-color: rgb(255, 255, 16);
-}
-</string>
-    </property>
-    <property name="text">
-     <string>Sign Up as Teacher</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>450</y>
-      <width>121</width>
-      <height>16</height>
+      <x>20</x>
+      <y>170</y>
+      <width>131</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -315,19 +353,54 @@ QPushButton#b2_2:pressed {
      <string notr="true">color:rgb(255,191,16);</string>
     </property>
     <property name="text">
-     <string>Teacher Sign up !!!</string>
+     <string>Fill your details</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tb7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>400</y>
+      <width>361</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(47,49,52,200);
+color:rgb(255,255,255);
+border-radius:2px;
+padding-left:10px;
+border:1px solid rgba(0,0,0);
+border-bottom-color:rgb(46,82,102,255);
+padding-bottom:3px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your City</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
     </property>
    </widget>
    <zorder>label</zorder>
-   <zorder>tb1</zorder>
-   <zorder>tb2</zorder>
-   <zorder>b1</zorder>
-   <zorder>label_2</zorder>
-   <zorder>b2</zorder>
+   <zorder>tb3</zorder>
+   <zorder>tb4</zorder>
+   <zorder>b3</zorder>
+   <zorder>b4</zorder>
+   <zorder>tb5</zorder>
+   <zorder>tb6</zorder>
+   <zorder>tb8</zorder>
    <zorder>label_3</zorder>
    <zorder>label_4</zorder>
-   <zorder>b2_2</zorder>
-   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>tb7</zorder>
   </widget>
  </widget>
  <resources/>

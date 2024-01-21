@@ -6,13 +6,16 @@ import hashlib
 
 class LoginApp(QDialog):
     authentication = pyqtSignal(object)
-    register = pyqtSignal(bool)
+    student_registration = pyqtSignal(bool)
+    teacher_registration = pyqtSignal(bool)
 
     def __init__(self, conn):
         super(LoginApp, self).__init__()
         loadUi("login_form.ui", self)
         self.b1.clicked.connect(self.login)
         self.b2.clicked.connect(self.show_reg)
+        self.b2_2.clicked.connect(self.show_reg2)
+
         self.tb2.returnPressed.connect(self.login)
         self.conn = conn
 
@@ -22,36 +25,40 @@ class LoginApp(QDialog):
 
         cur = self.conn.cursor()
 
-        command = f'''
+        command = '''
 SELECT * FROM users 
-WHERE email = '{email}'
+WHERE email = %s
 '''
-        cur.execute(command)
+        cur.execute(command, (email,))
 
         row = cur.fetchone()
         if row:
+            status = row[8]
+            user_type = row[7]
+
+            if status == 'Pending' and user_type == 'teacher':
+                QMessageBox.warning(self, "Login Error", "Your account is pending approval.")
+                return
+
             if self.verify_password(password, row[2]):
                 user = User(*row)
                 self.authentication.emit(user)
-
             else:
                 QMessageBox.warning(self, "Login Error", "Incorrect Password")    
-        
         else:
             QMessageBox.warning(self, "Login Error", "There is no user matched")
 
-
-
         cur.close()
-
         self.conn.commit()
 
     def verify_password(self, entered_password, hashed_password):
         return self.hash_password(entered_password) == hashed_password
 
-    
     def hash_password(self, password):
         return hashlib.sha256(password.encode()).hexdigest()
     
     def show_reg(self):
-        self.register.emit(True)
+        self.student_registration.emit(True)
+        
+    def show_reg2(self):
+        self.teacher_registration.emit(True)

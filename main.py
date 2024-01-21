@@ -1,12 +1,14 @@
 import sys
 import re
 from login import *
-from register import *
+from student_registration import *
+from teacher_registration import *
 import psycopg2
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication 
 from database import *
 from teacher import *
+from student import *
 
 
 class SchoolSystem():
@@ -28,15 +30,25 @@ class SchoolSystem():
         
         
         self.login_form = LoginApp(self.conn)
-        self.register_form = RegisterApp(self.conn)
+        self.student_registration = RegisterApp(self.conn)
+        self.teacher_registration = RegisterApp(self.conn)
 
         self.login_form.authentication.connect(self.login_success)
-        self.login_form.register.connect(self.show_reg)
-        self.register_form.login.connect(self.show_login)
+        self.login_form.student_registration.connect(self.show_reg)
+        self.student_registration.login.connect(self.show_login)
+        
+        self.login_form.teacher_registration.connect(self.show_reg2)
+        self.teacher_registration.login.connect(self.show_login)
+
+
+        
+        
         
 
         widget.addWidget(self.login_form)
-        widget.addWidget(self.register_form)
+        widget.addWidget(self.student_registration)
+        widget.addWidget(self.teacher_registration)
+
         widget.show()
         widget.setFixedWidth(400)
         widget.setFixedHeight(650)
@@ -58,13 +70,22 @@ class SchoolSystem():
             self.teacher_app.login.connect(self.show_login)
 
         elif self.user.user_type == "student":
+            print('student')
+            self.student_app = StudentApp(self.conn, self.cur, self.database, self.user)
+            self.student_app.show()
+            self.student_app.login.connect(self.show_login)
             pass
 
 
     def show_reg(self):
         global widget
         widget.setCurrentIndex(1)
-
+        
+    def show_reg2(self):
+        global widget
+        widget.setCurrentIndex(1)
+        
+        
     def show_login(self):
         global widget
         self.login_form.tb1.clear()
