@@ -50,6 +50,7 @@ class SchoolSystem():
         widget.show()
         widget.setFixedWidth(400)
         widget.setFixedHeight(650)
+        sys.exit(app.exec_())
 
     def login_success(self, user):
         self.user = user
@@ -72,7 +73,7 @@ class SchoolSystem():
             self.student_app = StudentApp(self.conn, self.cur, self.database, self.user)
             self.student_app.show()
             self.student_app.login.connect(self.show_login)
-            pass
+        
 
 
     def show_reg(self):
@@ -81,7 +82,7 @@ class SchoolSystem():
         
     def show_reg2(self):
         global widget
-        widget.setCurrentIndex(1)
+        widget.setCurrentIndex(2)
         
         
     def show_login(self):
@@ -99,7 +100,7 @@ if __name__ == "__main__":
     system = SchoolSystem()
     widget.setFixedWidth(400)
     widget.setFixedHeight(650)
-    sys.exit(app.exec_())
+    
 
 
 

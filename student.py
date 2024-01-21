@@ -7,6 +7,18 @@ import hashlib
 from validator import *
 import re
 import datetime
+import sys
+import traceback
+
+def exception_hook(exctype, value, tb):
+    traceback_details = '\n'.join(traceback.format_tb(tb))
+    error_msg = f"Exception type: {exctype}\n"
+    error_msg += f"Exception value: {value}\n"
+    error_msg += f"Traceback: {traceback_details}"
+    QMessageBox.critical(None, 'Unhandled Exception', error_msg)
+    sys.exit(1)
+
+sys.excepthook = exception_hook
 
 class StudentApp(QMainWindow):
     login = pyqtSignal(bool)
@@ -35,7 +47,9 @@ class StudentApp(QMainWindow):
         self.menu22_2.triggered.connect(self.view_lesson_attendance)
         self.menu31_2.triggered.connect(self.view_meeting_schedule)
         self.menu32.triggered.connect(self.view_meeting_attendance)
-        self.menu71.triggered.connect(self.close)
+        self.menu71.triggered.connect(self.logout)
+
+
 
         # Button actions
         self.b6.clicked.connect(self.update_student_details) 
@@ -55,6 +69,13 @@ class StudentApp(QMainWindow):
         
         self.tabWidget.setCurrentIndex(0)
         self.tabWidget.tabBar().setVisible(False)
+
+    def logout(self):
+        self.close()
+        self.show_login()
+
+    def show_login(self):
+        self.login.emit(True)
 
     def initializeUi(self):
         # Initialize UI elements if needed
@@ -100,7 +121,7 @@ class StudentApp(QMainWindow):
         self.lesson_table.setRowCount(0)  # Clear the table
         try:
             self.lesson_table.setRowCount(0)  # Clear the table before repopulating
-            query = "SELECT lesson_id, lesson_name, lesson_date, lesson_time_slot, lesson_instructor FROM lesson"
+            query = "SELECT lesson_id, lesson_name, lesson_date, lesson_time_slot, lesson_instructor FROM lesson ORDER BY lesson_date ASC"
             self.cur.execute(query)
             lessons = self.cur.fetchall()
             for lesson in lessons:
@@ -127,7 +148,7 @@ class StudentApp(QMainWindow):
             SELECT la.attendance_id, l.lesson_name, l.lesson_date, l.lesson_time_slot, la.status
             FROM lessonattendance la
             JOIN lesson l ON la.lesson_id = l.lesson_id
-            WHERE la.user_id = %s
+            WHERE la.user_id = %s ORDER BY l.lesson_date ASC
             """
             self.cur.execute(query, (self.user.id,))
             records = self.cur.fetchall()
@@ -144,7 +165,7 @@ class StudentApp(QMainWindow):
         self.tabWidget.setCurrentIndex(4)  # Adjust the index according to your tab order
         self.meeting_table.setRowCount(0)  # Clear the table
         try:
-            query = "SELECT meeting_id, meeting_name, meeting_date, meeting_time_slot FROM meeting"
+            query = "SELECT meeting_id, meeting_name, meeting_date, meeting_time_slot FROM meeting ORDER BY meeting_date ASC"
             self.cur.execute(query)
             meetings = self.cur.fetchall()
             for meeting_id, meeting_name, meeting_date, meeting_time_slot in meetings:
@@ -167,7 +188,7 @@ class StudentApp(QMainWindow):
             SELECT ma.attendance_id, m.meeting_name, m.meeting_date, m.meeting_time_slot, ma.status
             FROM meetingattendance ma
             JOIN meeting m ON ma.meeting_id = m.meeting_id
-            WHERE ma.user_id = %s
+            WHERE ma.user_id = %s ORDER BY m.meeting_date ASC
             """
             self.cur.execute(query, (self.user.id,))
             records = self.cur.fetchall()
