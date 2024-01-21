@@ -387,13 +387,13 @@ background-color: rgb(40, 41, 44);</string>
        <rect>
         <x>40</x>
         <y>30</y>
-        <width>181</width>
-        <height>21</height>
+        <width>201</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <pointsize>17</pointsize>
         <weight>75</weight>
         <bold>true</bold>
         <underline>true</underline>
@@ -538,12 +538,12 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
          <x>10</x>
          <y>10</y>
          <width>231</width>
-         <height>21</height>
+         <height>31</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>17</pointsize>
          <weight>75</weight>
          <bold>true</bold>
          <underline>true</underline>
@@ -943,14 +943,15 @@ color: rgb(255, 255, 255)</string>
         <x>20</x>
         <y>20</y>
         <width>481</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>17</pointsize>
         <weight>75</weight>
         <bold>true</bold>
+        <underline>true</underline>
        </font>
       </property>
       <property name="styleSheet">
@@ -1341,13 +1342,13 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <rect>
          <x>10</x>
          <y>20</y>
-         <width>231</width>
-         <height>21</height>
+         <width>241</width>
+         <height>31</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>14</pointsize>
+         <pointsize>17</pointsize>
          <weight>75</weight>
          <bold>true</bold>
          <underline>true</underline>
@@ -1555,12 +1556,12 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
          <x>370</x>
          <y>20</y>
          <width>231</width>
-         <height>21</height>
+         <height>31</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>14</pointsize>
+         <pointsize>17</pointsize>
          <weight>75</weight>
          <bold>true</bold>
          <underline>true</underline>
@@ -1612,14 +1613,15 @@ color: rgb(255, 255, 255)</string>
         <x>20</x>
         <y>10</y>
         <width>461</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>17</pointsize>
         <weight>75</weight>
         <bold>true</bold>
+        <underline>true</underline>
        </font>
       </property>
       <property name="styleSheet">

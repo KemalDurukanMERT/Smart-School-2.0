@@ -130,7 +130,7 @@ background-color: rgb(40, 41, 44);</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <pointsize>17</pointsize>
         <weight>75</weight>
         <bold>true</bold>
         <underline>true</underline>
@@ -398,7 +398,7 @@ background-color: rgb(40, 41, 44);</string>
         <x>20</x>
         <y>60</y>
         <width>1111</width>
-        <height>591</height>
+        <height>611</height>
        </rect>
       </property>
       <property name="font">
@@ -539,7 +539,7 @@ background-color: rgb(40, 41, 44);</string>
         <x>30</x>
         <y>50</y>
         <width>1091</width>
-        <height>401</height>
+        <height>621</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -551,13 +551,13 @@ background-color: rgb(40, 41, 44);</string>
        <rect>
         <x>30</x>
         <y>20</y>
-        <width>181</width>
+        <width>331</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>17</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -566,7 +566,7 @@ background-color: rgb(40, 41, 44);</string>
        <string notr="true">color: rgb(255, 191, 16);</string>
       </property>
       <property name="text">
-       <string>Attendance Records</string>
+       <string>Lesson Attendance Records</string>
       </property>
      </widget>
     </widget>
@@ -577,10 +577,10 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QTableWidget" name="meeting_table">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>100</y>
-        <width>721</width>
-        <height>521</height>
+        <x>20</x>
+        <y>50</y>
+        <width>1111</width>
+        <height>621</height>
        </rect>
       </property>
       <property name="font">
@@ -594,7 +594,7 @@ background-color: rgb(40, 41, 44);</string>
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>239</number>
+       <number>368</number>
       </attribute>
       <column>
        <property name="text">
@@ -645,15 +645,15 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QLabel" name="label_27">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>70</y>
+        <x>20</x>
+        <y>20</y>
         <width>231</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>17</pointsize>
         <weight>75</weight>
         <bold>true</bold>
         <underline>true</underline>
@@ -674,10 +674,10 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QListWidget" name="records_list_2">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>130</y>
-        <width>1071</width>
-        <height>401</height>
+        <x>30</x>
+        <y>50</y>
+        <width>1091</width>
+        <height>621</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -687,15 +687,15 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QLabel" name="label_117">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>100</y>
-        <width>241</width>
+        <x>30</x>
+        <y>20</y>
+        <width>351</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>17</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>

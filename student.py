@@ -119,6 +119,15 @@ class StudentApp(QMainWindow):
     def view_lesson_schedule(self):
         self.tabWidget.setCurrentIndex(2)  # Adjust the index according to your tab order
         self.lesson_table.setRowCount(0)  # Clear the table
+        # Set column widths
+        character_width = 12
+        self.lesson_table.setColumnWidth(0, 10 * character_width)
+        self.lesson_table.setColumnWidth(1, 50 * character_width)
+        self.lesson_table.setColumnWidth(2, 12 * character_width)
+        self.lesson_table.setColumnWidth(3, 12 * character_width)
+        self.lesson_table.setColumnWidth(4, 17 * character_width)
+       
+       
         try:
             self.lesson_table.setRowCount(0)  # Clear the table before repopulating
             query = "SELECT lesson_id, lesson_name, lesson_date, lesson_time_slot, lesson_instructor FROM lesson ORDER BY lesson_date ASC"
@@ -164,6 +173,12 @@ class StudentApp(QMainWindow):
     def view_meeting_schedule(self):
         self.tabWidget.setCurrentIndex(4)  # Adjust the index according to your tab order
         self.meeting_table.setRowCount(0)  # Clear the table
+        # Set column widths
+        character_width = 12
+        self.meeting_table.setColumnWidth(0, 67 * character_width)
+        self.meeting_table.setColumnWidth(1, 12 * character_width)
+        self.meeting_table.setColumnWidth(2, 12 * character_width)
+        
         try:
             query = "SELECT meeting_id, meeting_name, meeting_date, meeting_time_slot FROM meeting ORDER BY meeting_date ASC"
             self.cur.execute(query)
