@@ -10,7 +10,6 @@ from database import *
 from teacher import *
 from student import *
 
-
 class SchoolSystem():
     def __init__(self):
         self.database = Database()
@@ -31,7 +30,8 @@ class SchoolSystem():
         
         self.login_form = LoginApp(self.conn)
         self.student_registration = RegisterApp(self.conn)
-        self.teacher_registration = RegisterApp(self.conn)
+        self.teacher_registration = RegisterApp2(self.conn)
+        
 
         self.login_form.authentication.connect(self.login_success)
         self.login_form.student_registration.connect(self.show_reg)
@@ -39,8 +39,6 @@ class SchoolSystem():
         
         self.login_form.teacher_registration.connect(self.show_reg2)
         self.teacher_registration.login.connect(self.show_login)
-
-
         
         
         
@@ -93,9 +91,6 @@ class SchoolSystem():
         widget.show()
         
         widget.setCurrentIndex(0)
-
-
-
 
 
 if __name__ == "__main__":

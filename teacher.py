@@ -7,6 +7,21 @@ import psycopg2
 import re
 import datetime
 from message import BorderDelegate
+import sys
+import traceback
+from validator import *
+import hashlib
+
+
+def exception_hook(exctype, value, tb):
+    traceback_details = '\n'.join(traceback.format_tb(tb))
+    error_msg = f"Exception type: {exctype}\n"
+    error_msg += f"Exception value: {value}\n"
+    error_msg += f"Traceback: {traceback_details}"
+    QMessageBox.critical(None, 'Unhandled Exception', error_msg)
+    sys.exit(1)
+
+sys.excepthook = exception_hook
 
 
 class TeacherApp(QMainWindow):
@@ -46,7 +61,7 @@ class TeacherApp(QMainWindow):
         self.tabWidget.tabBar().setVisible(False)
 
     def setupMenuActions(self):
-        self.menu11_t.triggered.connect(self.showEditProfileTab)
+        self.menu11_t.triggered.connect(self.edit_profile_tab)
         self.menu21_t.triggered.connect(self.showLessonScheduleTab)
         self.menu22_t.triggered.connect(self.showLessonAttendanceTab)
         self.menu31_t.triggered.connect(self.showMeetingScheduleTab)
@@ -57,7 +72,7 @@ class TeacherApp(QMainWindow):
         self.menu71_t.triggered.connect(self.logout)
 
     def setupButtonActions(self):
-        self.b6.clicked.connect(self.updateTeacherDetails)
+        self.b6.clicked.connect(self.update_teacher_details)
         self.sendButton3_t.clicked.connect(self.send_message)
 
     def setupCalendar(self):
@@ -82,18 +97,46 @@ class TeacherApp(QMainWindow):
         except psycopg2.Error as e:
             QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
             return None
-
-    def showEditProfileTab(self):
-        self.tabWidget.setCurrentIndex(1)
-        self.tb22.setText(self.user.email)
-        self.tb23.setText(self.user.name)
-        self.tb24.setText(self.user.surname)
-        self.tb26.setText(self.user.phone)
-
+        
     def updateDateInput(self, date):
         formatted_date = date.toString("yyyy-MM-dd")
         self.date_input.setText(formatted_date)
         self.calendar.hide()
+ ###################################################################################
+    def edit_profile_tab(self):
+        self.tabWidget.setCurrentIndex(1)
+        self.load_teacher_details()
+
+    def load_teacher_details(self):
+        self.cur.execute("SELECT email, name, surname, city, phone FROM users WHERE user_id = %s", (self.user.id,))
+        user = self.cur.fetchone()
+        if user:
+            self.tb22.setText(user[0])  # email
+            self.tb23.setText(user[1])  # name
+            self.tb24.setText(user[2])  # surname
+            self.tb25.setText(user[3])  # city
+            self.tb26.setText(user[4])  # phone
+
+    def update_teacher_details(self):
+        email = self.tb22.text()
+        name = self.tb23.text()
+        surname = self.tb24.text()
+        city = self.tb25.text()
+        phone = self.tb26.text()
+        password = self.tb27.text()
+
+        if not is_valid_email(email) or not is_valid_password(password) or not is_valid_phone(phone):
+            QMessageBox.warning(self, "Update Error", "Invalid input format")
+            return
+
+        hashed_password = hashlib.sha256(password.encode()).hexdigest()
+        self.cur.execute("UPDATE users SET email = %s, name = %s, surname = %s, city = %s, phone = %s, hashed_password = %s WHERE user_id = %s",
+                         (email, name, surname, city, phone, hashed_password, self.user.id))
+        self.conn.commit()
+        QMessageBox.information(self, "Update Success", "Student details updated successfully.")
+
+
+
 ###################################################################################
     def showLessonScheduleTab(self):
         self.tabWidget.setCurrentIndex(2)
@@ -434,6 +477,8 @@ class TeacherApp(QMainWindow):
         except psycopg2.Error as e:
             self.conn.rollback()
             QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
+        except Exception as e:
+            QMessageBox.critical(self, 'Error', f'An unexpected error occurred: {e}')   
 
 
 
@@ -897,6 +942,8 @@ class TeacherApp(QMainWindow):
         except psycopg2.Error as e:
             self.conn.rollback()
             QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
+        except Exception as e:
+            QMessageBox.critical(self, 'Error', f'An unexpected error occurred: {e}')
 
     def populateMeetingFields(self, item):
         attendance_id = item.data(Qt.UserRole)  # Retrieve the attendance_id directly from the item's user data

@@ -5,11 +5,11 @@ import hashlib
 import psycopg2
 from validator import *
 
-class RegisterApp(QDialog):
+class RegisterApp2(QDialog):
     login = pyqtSignal(bool)
 
     def __init__(self, conn):
-        super(RegisterApp, self).__init__()
+        super(RegisterApp2, self).__init__()
         loadUi("teacher_registration.ui", self)
         self.b3.clicked.connect(self.register)
         self.b4.clicked.connect(self.show_login)
