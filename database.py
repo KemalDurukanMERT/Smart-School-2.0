@@ -61,7 +61,6 @@ created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 '''), 
             ('announcement', '''
   announcement_id SERIAL PRIMARY KEY,
-  title VARCHAR(50) NOT NULL,
   message TEXT NOT NULL,
   deadline TIMESTAMP NOT NULL,
   created_by INTEGER NOT NULL REFERENCES users(user_id),
@@ -72,7 +71,7 @@ created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
   content TEXT NOT NULL,
   sender_id INTEGER NOT NULL REFERENCES users(user_id),
   receiver_id INTEGER NOT NULL REFERENCES users(user_id),
-  message_read BOOLEAN NOT NULL DEFAULT false,  
+  created_by INTEGER NOT NULL REFERENCES users(user_id),
   created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 '''),
             ('todolist', '''
