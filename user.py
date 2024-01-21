@@ -1,6 +1,6 @@
 class User:
     def __init__(self, user_id, email, hashed_password, name, surname, phone, city, user_type, status, created_time):
-        self.user_id = user_id
+        self.id = user_id
         self.email = email
         self.password = hashed_password
         self.name = name
