@@ -78,7 +78,7 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -624,7 +624,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <widget class="QPushButton" name="addLessonBtn">
        <property name="geometry">
         <rect>
-         <x>800</x>
+         <x>950</x>
          <y>150</y>
          <width>151</width>
          <height>41</height>
@@ -644,7 +644,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <string notr="true">background-color: rgb(255, 191, 16);</string>
        </property>
        <property name="text">
-        <string>Add Lesson</string>
+        <string>Add/Edit Lesson</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_2">
@@ -1019,36 +1019,10 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <number>0</number>
        </property>
       </widget>
-      <widget class="QPushButton" name="editLessonBtn">
-       <property name="geometry">
-        <rect>
-         <x>960</x>
-         <y>150</y>
-         <width>141</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="toolTipDuration">
-        <number>-1</number>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 191, 16);</string>
-       </property>
-       <property name="text">
-        <string>Edit Lesson</string>
-       </property>
-      </widget>
       <widget class="QPushButton" name="resetLessonBtn">
        <property name="geometry">
         <rect>
-         <x>640</x>
+         <x>790</x>
          <y>150</y>
          <width>151</width>
          <height>41</height>

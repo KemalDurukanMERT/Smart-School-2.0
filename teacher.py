@@ -102,7 +102,7 @@ class TeacherApp(QMainWindow):
         self.lesson_name = self.findChild(QLineEdit, 'lessonName')
         self.time_slot = self.findChild(QLineEdit, 'timeSlot')
         self.add_lesson_btn = self.findChild(QPushButton, 'addLessonBtn')
-        self.edit_lesson_btn = self.findChild(QPushButton, 'editLessonBtn')
+        # self.edit_lesson_btn = self.findChild(QPushButton, 'editLessonBtn')
         self.reset_lesson_btn = self.findChild(QPushButton, 'resetLessonBtn')
         self.delete_lesson_btn = self.findChild(QPushButton, 'deleteLessonBtn')
         self.delete_all_lessons_btn = self.findChild(QPushButton, 'deleteAllLessonsBtn')
@@ -116,7 +116,7 @@ class TeacherApp(QMainWindow):
         header.setSectionResizeMode(QHeaderView.Interactive)
         
         self.add_lesson_btn.clicked.connect(self.addLesson)
-        self.edit_lesson_btn.clicked.connect(self.editLesson)
+        # self.edit_lesson_btn.clicked.connect(self.editLesson)
         self.reset_lesson_btn.clicked.connect(self.resetButton)
         self.date_input.mousePressEvent = self.showCalendar
         self.delete_lesson_btn.clicked.connect(self.deleteLesson)
@@ -177,13 +177,25 @@ class TeacherApp(QMainWindow):
             return
 
         try:
-            query = """
-            INSERT INTO lesson (lesson_name, lesson_date, lesson_time_slot, lesson_instructor, created_by)
-            VALUES (%s, %s, %s, %s, %s)
-            """
-            self.cur.execute(query, (lesson_name, date, time_slot, instructor_name, created_by))
-            self.conn.commit()
-            QMessageBox.information(self, 'Success', 'Lesson added successfully')
+            if not self.selected_lesson_index:
+                query = """
+                INSERT INTO lesson (lesson_name, lesson_date, lesson_time_slot, lesson_instructor, created_by)
+                VALUES (%s, %s, %s, %s, %s)
+                """
+                self.cur.execute(query, (lesson_name, date, time_slot, instructor_name, created_by))
+                self.conn.commit()
+                QMessageBox.information(self, 'Success', 'Lesson added successfully')
+
+            else:
+                lesson_id = self.getLessonIdFromTable(self.selected_lesson_index)
+                query = """
+                UPDATE lesson
+                SET lesson_name = %s, lesson_date = %s, lesson_time_slot = %s, lesson_instructor = %s, created_by = %s
+                WHERE lesson_id = %s
+                """
+                self.cur.execute(query, (lesson_name, date, time_slot, instructor_name, created_by, lesson_id))
+                self.conn.commit()
+                QMessageBox.information(self, 'Success', 'Lesson updated successfully')
             
 
             self.loadLessons()  # Reload the lessons to reflect changes
