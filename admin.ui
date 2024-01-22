@@ -59,7 +59,7 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>6</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -2981,15 +2981,15 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
     <property name="title">
      <string>Lessons</string>
     </property>
-    <addaction name="actionAccess_All_Functions"/>
-    <addaction name="actionLesson_Attendance"/>
+    <addaction name="menu21_t"/>
+    <addaction name="menu22_t"/>
    </widget>
    <widget class="QMenu" name="menuMeetings">
     <property name="title">
      <string>Meetings</string>
     </property>
-    <addaction name="actionMeeting_Schedule"/>
-    <addaction name="actionMeeting_Attendance"/>
+    <addaction name="menu31_t"/>
+    <addaction name="menu32_t"/>
    </widget>
    <widget class="QMenu" name="menuTo_Do_List">
     <property name="title">
@@ -3077,22 +3077,22 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
     <string>Check Reports</string>
    </property>
   </action>
-  <action name="actionAccess_All_Functions">
+  <action name="menu21_t">
    <property name="text">
     <string>Lesson Schedule</string>
    </property>
   </action>
-  <action name="actionLesson_Attendance">
+  <action name="menu22_t">
    <property name="text">
     <string>Lesson Attendance</string>
    </property>
   </action>
-  <action name="actionMeeting_Schedule">
+  <action name="menu31_t">
    <property name="text">
     <string>Meeting Schedule</string>
    </property>
   </action>
-  <action name="actionMeeting_Attendance">
+  <action name="menu32_t">
    <property name="text">
     <string>Meeting Attendance</string>
    </property>
