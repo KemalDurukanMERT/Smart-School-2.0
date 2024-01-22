@@ -9,6 +9,7 @@ from PyQt5.QtWidgets import QApplication
 from database import *
 from teacher import *
 from student import *
+from admin import *
 
 class SchoolSystem():
     def __init__(self):
@@ -17,11 +18,13 @@ class SchoolSystem():
             self.conn, self.cur = self.database.connect_db()
             self.database.check_table(self.cur)
             self.database.check_admin(self.cur)
+            self.database.add_triger(self.cur)
         else:
             self.database.create_database()
             self.conn, self.cur = self.database.connect_db()
             self.database.create_table_scratch(self.cur)
             self.database.check_admin(self.cur)
+            self.database.add_triger(self.cur)
 
 
 
@@ -61,7 +64,10 @@ class SchoolSystem():
         widget.hide()
 
         if self.user.user_type == "admin":
-            pass
+            self.admin_app = AdminApp(self.conn, self.cur, self.database, self.user)
+            self.admin_app.show()
+            self.admin_app.login.connect(self.show_login)
+            
         elif self.user.user_type == "teacher":
             print('teacher')
             self.teacher_app = TeacherApp(self.conn, self.cur, self.database, self.user)

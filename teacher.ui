@@ -78,7 +78,7 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>8</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -1943,8 +1943,8 @@ color: rgb(255, 255, 255)</string>
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="addButton">
@@ -2318,7 +2318,7 @@ color: rgb(255, 255, 255);</string>
      <attribute name="title">
       <string>Add Message</string>
      </attribute>
-     <widget class="QLineEdit" name="LineEdit_3_t">
+     <widget class="QLineEdit" name="typeMessage">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -2341,10 +2341,10 @@ color: rgb(255, 255, 255);</string>
        <string>Please Type Here</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="sendButton3_t">
+     <widget class="QPushButton" name="sendMessage">
       <property name="geometry">
        <rect>
-        <x>810</x>
+        <x>850</x>
         <y>620</y>
         <width>201</width>
         <height>51</height>
@@ -2387,7 +2387,7 @@ color: rgb(255, 255, 255);</string>
        <string>Select  Person</string>
       </property>
      </widget>
-     <widget class="QListView" name="listView_t">
+     <widget class="QListView" name="listView_chats">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -2400,7 +2400,7 @@ color: rgb(255, 255, 255);</string>
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
-     <widget class="QListView" name="list_view_3_t">
+     <widget class="QListView" name="listViewMessages">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -2472,7 +2472,7 @@ color: rgb(255, 255, 255);</string>
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Chat Box&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLabel" name="message_username">
+     <widget class="QLabel" name="username">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -2495,7 +2495,7 @@ color: rgb(255, 255, 255);</string>
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLabel" name="message_usermail">
+     <widget class="QLabel" name="usermail">
       <property name="geometry">
        <rect>
         <x>850</x>

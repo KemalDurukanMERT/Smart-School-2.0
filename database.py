@@ -19,8 +19,8 @@ email VARCHAR(255) UNIQUE NOT NULL,
 hashed_password VARCHAR(255) NOT NULL,
 name VARCHAR(50) NOT NULL,
 surname VARCHAR(50) NOT NULL,
-phone VARCHAR(50),
-city VARCHAR(50),
+phone VARCHAR(50) NOT NULL,
+city VARCHAR(50) NOT NULL,
 user_type VARCHAR(50) NOT NULL CHECK (user_type IN ('student', 'teacher', 'admin')),
 status VARCHAR(50) NOT NULL DEFAULT 'Pending',
 created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -63,6 +63,7 @@ created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
   announcement_id SERIAL PRIMARY KEY,
   message TEXT NOT NULL,
   deadline TIMESTAMP NOT NULL,
+  title VARCHAR(50) NOT NULL,
   created_by INTEGER NOT NULL REFERENCES users(user_id),
   created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 '''),
@@ -71,7 +72,7 @@ created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
   content TEXT NOT NULL,
   sender_id INTEGER NOT NULL REFERENCES users(user_id),
   receiver_id INTEGER NOT NULL REFERENCES users(user_id),
-  created_by INTEGER NOT NULL REFERENCES users(user_id),
+  message_read BOOLEAN NOT NULL DEFAULT false,
   created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 '''),
             ('todolist', '''
@@ -157,6 +158,56 @@ SELECT table_name FROM information_schema.tables WHERE table_type = 'BASE TABLE'
             cursor.execute(command)
             print(f"Table '{i[0]}' created.")
 
+    def add_triger(self, cursor):
+        action_tables = ["users", "lesson", "meeting", "todolist", "lessonattendance", "meetingattendance"]
+        self.conn.autocommit = True
+        create_function_query = """
+CREATE OR REPLACE FUNCTION update_created_time()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.created_time = NOW();
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+"""
+        check_function_query = """
+SELECT EXISTS (
+   SELECT 1
+   FROM   pg_proc
+   WHERE  proname = 'update_created_time'
+);
+"""
+
+        create_trigger_query_template = """
+CREATE TRIGGER update_created_time_trigger
+BEFORE UPDATE ON {table}
+FOR EACH ROW
+EXECUTE FUNCTION update_created_time();
+"""
+
+        check_trigger_query_template = """
+SELECT EXISTS (
+   SELECT 1
+   FROM   pg_trigger
+   WHERE  tgname = 'update_created_time_trigger'
+   AND    tgrelid = '{table}'::regclass
+);
+"""
+
+        cursor.execute(check_function_query)
+        if not cursor.fetchone()[0]:    
+            cursor.execute(create_function_query)
+
+        for table in action_tables:
+            check_trigger_query = check_trigger_query_template.format(table=table)
+            cursor.execute(check_trigger_query)
+    
+            if not cursor.fetchone()[0]:
+                create_trigger_query = create_trigger_query_template.format(table=table)
+                cursor.execute(create_trigger_query)
+
+
+
     def check_admin(self, cursor):
         self.conn.autocommit = True
         command = '''
@@ -170,10 +221,10 @@ SELECT * FROM users WHERE users.email = 'admin@admin.com'
             print('admin yok')
             command = f'''
 INSERT INTO users (
-email, hashed_password, name, surname, user_type
+email, hashed_password, name, surname, phone, city, user_type, status
 ) VALUES (
 'admin@admin.com', '{self.hash_password('Infotech1+')}',
-'Admin', 'Admin', 'admin'
+'Admin', 'Admin', '+31123456789', 'Kırşehir', 'admin', 'Active'
 );
 '''
             cursor.execute(command)

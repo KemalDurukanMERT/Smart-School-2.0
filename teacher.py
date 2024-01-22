@@ -6,11 +6,12 @@ from PyQt5.QtGui import QStandardItemModel, QStandardItem, QColor
 import psycopg2
 import re
 import datetime
-from message import BorderDelegate
+from message import *
 import sys
 import traceback
 from validator import *
 import hashlib
+from database import *
 
 
 def exception_hook(exctype, value, tb):
@@ -37,9 +38,9 @@ class TeacherApp(QMainWindow):
     def setupUi(self):
         try:
             loadUi('teacher.ui', self)
-            self.selected_lesson_index = None
-            self.selected_meeting_index = None
-            self.comboBox_instructor.currentIndexChanged.connect(self.onInstructorChanged)
+            # self.selected_lesson_index = None
+            # self.selected_meeting_index = None
+            # self.comboBox_instructor.currentIndexChanged.connect(self.onInstructorChanged)
         except Exception as e:
             self.showErrorMessage("Initialization Error", f"Error during TeacherApp initialization: {e}")
 
@@ -47,7 +48,7 @@ class TeacherApp(QMainWindow):
         self.conn = conn
         self.cur = cur
         self.database = database
-        self.populate_instructors()
+        # self.populate_instructors()
 
     def initializeUi(self):
         self.setupTabs()
@@ -73,7 +74,7 @@ class TeacherApp(QMainWindow):
 
     def setupButtonActions(self):
         self.b6.clicked.connect(self.update_teacher_details)
-        self.sendButton3_t.clicked.connect(self.send_message)
+        # self.sendButton3_t.clicked.connect(self.send_message)
 
     def setupCalendar(self):
         self.calendar = QCalendarWidget(self)
@@ -82,11 +83,11 @@ class TeacherApp(QMainWindow):
         self.calendar.hide()
         self.calendar.clicked.connect(self.updateDateInput)
 
-    def onInstructorChanged(self, index):
-        if index == 0:
-            pass  # Placeholder is selected, handle this case separately if needed
-        else:
-            selected_instructor = self.comboBox_instructor.currentText()
+    # def onInstructorChanged(self, index):
+    #     if index == 0:
+    #         pass  # Placeholder is selected, handle this case separately if needed
+    #     else:
+    #         selected_instructor = self.comboBox_instructor.currentText()
 
     def getInstructorId(self, instructor_name):
         try:
@@ -141,16 +142,19 @@ class TeacherApp(QMainWindow):
     def showLessonScheduleTab(self):
         self.tabWidget.setCurrentIndex(2)
         # Initialize UI elements for lesson schedule management
+        self.selected_lesson_index = None
         self.date_input = self.findChild(QLineEdit, 'dateInput')
         self.lesson_name = self.findChild(QLineEdit, 'lessonName')
         self.time_slot = self.findChild(QLineEdit, 'timeSlot')
         self.add_lesson_btn = self.findChild(QPushButton, 'addLessonBtn')
-        # self.edit_lesson_btn = self.findChild(QPushButton, 'editLessonBtn')
         self.reset_lesson_btn = self.findChild(QPushButton, 'resetLessonBtn')
         self.delete_lesson_btn = self.findChild(QPushButton, 'deleteLessonBtn')
         self.delete_all_lessons_btn = self.findChild(QPushButton, 'deleteAllLessonsBtn')
         self.comboBox_instructor = self.findChild(QComboBox, 'comboBox_instructor')
         self.lesson_table = self.findChild(QTableWidget, 'lessonTable')
+
+        # self.resetForm()
+
         self.populate_instructors()
 
         self.lesson_table.setColumnCount(5)
@@ -159,7 +163,6 @@ class TeacherApp(QMainWindow):
         header.setSectionResizeMode(QHeaderView.Interactive)
         
         self.add_lesson_btn.clicked.connect(self.addLesson)
-        # self.edit_lesson_btn.clicked.connect(self.editLesson)
         self.reset_lesson_btn.clicked.connect(self.resetForm)
         self.date_input.mousePressEvent = self.showCalendar
         self.delete_lesson_btn.clicked.connect(self.deleteLesson)
@@ -208,49 +211,81 @@ class TeacherApp(QMainWindow):
         date = self.date_input.text().strip()
         time_slot = self.time_slot.text().strip()
         instructor_name = self.comboBox_instructor.currentText()
-        instructor_id = self.getInstructorId(instructor_name)
+        # instructor_id = self.getInstructorId(instructor_name)
         created_by = self.user.id  # Assuming self.user.id holds the ID of the current user
 
-        if not lesson_name or not date or not time_slot or not instructor_name :
-            QMessageBox.warning(self, "Input Error", "All fields must be filled out and a valid instructor must be selected.")
-            return
-
-        if not self.isValidTimeSlot(time_slot):
-            QMessageBox.warning(self, "Input Error", "Time slot must be in the format xx:xx-xx:xx.")
-            return
-
-        try:
-            if not self.selected_lesson_index:
-                query = """
-                INSERT INTO lesson (lesson_name, lesson_date, lesson_time_slot, lesson_instructor, created_by)
-                VALUES (%s, %s, %s, %s, %s)
-                """
-                self.cur.execute(query, (lesson_name, date, time_slot, instructor_name, created_by))
-                self.conn.commit()
-                QMessageBox.information(self, 'Success', 'Lesson added successfully')
-
+        
+        if lesson_name and date and time_slot and instructor_name and instructor_name != "Select an instructor":
+            if self.isValidTimeSlot(time_slot):
+                if self.selected_lesson_index:
+                    lesson_id = self.getLessonIdFromTable(self.selected_lesson_index)
+                    query = """
+                    UPDATE lesson
+                    SET lesson_name = %s, lesson_date = %s, lesson_time_slot = %s, lesson_instructor = %s, created_by = %s
+                    WHERE lesson_id = %s
+                    """
+                    self.cur.execute(query, (lesson_name, date, time_slot, instructor_name, created_by, lesson_id))
+                    self.conn.commit()
+                    QMessageBox.information(self, 'Success', 'Lesson updated successfully')
+                    
+                else:
+                    query = """
+                    INSERT INTO lesson (lesson_name, lesson_date, lesson_time_slot, lesson_instructor, created_by)
+                    VALUES (%s, %s, %s, %s, %s)
+                    """
+                    self.cur.execute(query, (lesson_name, date, time_slot, instructor_name, created_by))
+                    self.conn.commit()
+                    QMessageBox.information(self, 'Success', 'Lesson added successfully')
+                    
+                self.resetForm()
+                self.loadLessons()
+                return
             else:
-                lesson_id = self.getLessonIdFromTable(self.selected_lesson_index)
-                query = """
-                UPDATE lesson
-                SET lesson_name = %s, lesson_date = %s, lesson_time_slot = %s, lesson_instructor = %s, created_by = %s
-                WHERE lesson_id = %s
-                """
-                self.cur.execute(query, (lesson_name, date, time_slot, instructor_name, created_by, lesson_id))
-                self.conn.commit()
-                QMessageBox.information(self, 'Success', 'Lesson updated successfully')
+                QMessageBox.warning(self, "Input Error", "Time slot must be in the format xx:xx-xx:xx.")
+                
+        else:
+            QMessageBox.warning(self, "Input Error", "All fields must be filled out and a valid instructor must be selected.")
+
+        
+        # if not lesson_name or not date or not time_slot or instructor_name is None or instructor_name == "Select an instructor" :
+        #     QMessageBox.warning(self, "Input Error", "All fields must be filled out and a valid instructor must be selected.")
             
 
-            self.loadLessons()  # Reload the lessons to reflect changes
-        except psycopg2.Error as e:
-            self.conn.rollback()
-            QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
+        # elif not self.isValidTimeSlot(time_slot):
+        #     QMessageBox.warning(self, "Input Error", "Time slot must be in the format xx:xx-xx:xx.")
+        #     return
 
-        self.resetForm()
-        self.selected_lesson_index = None  # Reset the selected index
+        # elif self.selected_lesson_index is None:
+        #     query = """
+        #     INSERT INTO lesson (lesson_name, lesson_date, lesson_time_slot, lesson_instructor, created_by)
+        #     VALUES (%s, %s, %s, %s, %s)
+        #     """
+        #     self.cur.execute(query, (lesson_name, date, time_slot, instructor_name, created_by))
+        #     self.conn.commit()
+        #     QMessageBox.information(self, 'Success', 'Lesson added successfully')
+
+        # else:
+        #     lesson_id = self.getLessonIdFromTable(self.selected_lesson_index)
+        #     query = """
+        #     UPDATE lesson
+        #     SET lesson_name = %s, lesson_date = %s, lesson_time_slot = %s, lesson_instructor = %s, created_by = %s
+        #     WHERE lesson_id = %s
+        #     """
+        #     self.cur.execute(query, (lesson_name, date, time_slot, instructor_name, created_by, lesson_id))
+        #     self.conn.commit()
+        #     QMessageBox.information(self, 'Success', 'Lesson updated successfully')
+            
+
+          # Reload the lessons to reflect changes
+        # except psycopg2.Error as e:
+        #     self.conn.rollback()
+        #     QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
+
     
     def selectLesson(self, item):
+        print(item)
         current_row = self.lesson_table.row(item)
+        print(current_row)
         if current_row >= 0:
             lesson_name_item = self.lesson_table.item(current_row, 1)  # lesson_name
             date_item = self.lesson_table.item(current_row, 2)  # lesson_date
@@ -306,6 +341,7 @@ class TeacherApp(QMainWindow):
         self.date_input.clear()
         self.time_slot.clear()
         self.comboBox_instructor.setCurrentIndex(0)
+        # self.selected_lesson_index = None
 
     def getLessonIdFromTable(self, row_index):
         lesson_id_item = self.lesson_table.item(row_index, 0)  # Assuming lesson_id is in the first column
@@ -634,7 +670,7 @@ class TeacherApp(QMainWindow):
             self.loadMeetings()
             
             self.selected_meeting_index = None  # Initialize the selected meeting index
-            self.loadMeetings()
+            # self.loadMeetings()
         except Exception as e:
             print(f"Error in showMeetingScheduleTab: {e}")
             QMessageBox.warning(self, "Error", f"An error occurred in showMeetingScheduleTab: {str(e)}")
@@ -1057,144 +1093,9 @@ class TeacherApp(QMainWindow):
         self.tabWidget.setCurrentIndex(7)
 
     def add_message_tab(self):
-        self.chattedUser = 0
         self.tabWidget.setCurrentIndex(8)
-        self.messageCombobox = self.findChild(QComboBox, 'messageCombobox')
-        self.listView_t.clicked.connect(self.read_message)
-
-        
-        self.load_chat_persons()
-        self.populateMessageCombobox()
-
-        self.messageCombobox.setCurrentIndex(0)
-        self.messageCombobox.activated.connect(lambda index: self.chatUser(self.messageCombobox.itemData(index)))
-
-    def read_message(self):
-        self.model = QStandardItemModel()
-        self.list_view_3_t.setModel(self.model)
-
-        selected_indexes = self.listView_t.selectedIndexes()
-        for index in selected_indexes:
-            item = self.model2.itemFromIndex(index)
-            item.setBackground(QColor("white"))
-    
-    def chatUser(self, user):
-        if not user:
-            user = 0
-        self.chattedUser =  user
-        self.cur.execute(f'''
-SELECT name, surname, email FROM users WHERE user_id = {user}
-''')
-       
-        data = self.cur.fetchone()
-        if data:
-            self.message_username.setText(f'{data[0]} {data[1]}')
-            self.message_usermail.setText(f'{data[2]}')
-        else:
-            self.message_username.clear()
-            self.message_usermail.clear()
-        
-        print(user)
-        self.loadMessages(user)
-        self.cur.execute(f'''UPDATE message SET message_read = true WHERE receiver_id = {self.user.id} and sender_id = {user}''')
-
-    def send_message(self):
-        message_text = self.LineEdit_3_t.text()
-
-        try:
-            self.cur.execute(f'''
-INSERT INTO message (
-content, sender_id, receiver_id
-) VALUES ('{message_text}', {self.user.id}, {self.chattedUser})
-''')
-            self.LineEdit_3_t.clear()
-            self.loadMessages(self.chattedUser)
-        except (Exception, psycopg2.DatabaseError) as error:
-            QMessageBox.warning(self, "Message Send Error", str(error))
-        
-        
-
-
-    def loadMessages(self, user):
-        if not user:
-            user = 0
-        self.cur.execute(f'''SELECT users.name, message.content, message.message_read, message.created_time, message.sender_id FROM
-message full JOIN users ON  users.user_id = message.sender_id
-WHERE sender_id = {self.user.id} and receiver_id = {user} or sender_id = {user} and receiver_id = {self.user.id}
-ORDER BY created_time ASC''')
-        
-        messages = self.cur.fetchall()
-        
-
-        self.model = QStandardItemModel()
-        self.list_view_3_t.setModel(self.model)
-        self.list_view_3_t.setItemDelegate(BorderDelegate())
-
-        if messages:
-            for name, content, message_read, created_time, sender_id in messages:
-                display_text = f'''
-    Sender: {name}
-    Content: {content}
-    Time: {created_time}
-    '''
-                item = QStandardItem(display_text)
-                if sender_id == self.user.id:
-                    item.setTextAlignment(Qt.AlignRight)
-                self.model.appendRow(item)
-        
-        # self.list_view_3_t.setModel(self.model)
-
-
-
-
-    def populateMessageCombobox(self):
-        self.messageCombobox.clear()
-        self.messageCombobox.addItem("Search User for Chat", 0)
-        self.cur.execute('''
-SELECT user_id, name, surname, email FROM users
-''')
-        users = self.cur.fetchall()
-        for user_id, name, surname, email in users:
-            display_text = f"{name} - {email}"
-            self.messageCombobox.addItem(display_text, user_id)
-
-    def load_chat_persons(self):
-        self.model2 = QStandardItemModel()
-        self.listView_t.setModel(self.model2)
-        self.cur.execute(f'''
-SELECT DISTINCT users.user_id, users.email, users.name
-FROM users
-JOIN (
-    SELECT DISTINCT sender_id AS chat_partner_id
-    FROM message
-    WHERE receiver_id = {self.user.id}
-    UNION
-    SELECT DISTINCT receiver_id AS chat_partner_id
-    FROM message
-    WHERE sender_id = {self.user.id}
-) AS chat_partners
-ON users.user_id = chat_partners.chat_partner_id; 
-''')
-        chat_persons = self.cur.fetchall()
-        for user_id, email, name in chat_persons:
-            self.cur.execute(f'''SELECT users.name, message.content, message.message_read, message.created_time, message.sender_id FROM
-message full JOIN users ON  users.user_id = message.sender_id
-WHERE sender_id = {user_id} and receiver_id = {self.user.id} and message_read = false''')
-            messages = self.cur.fetchall()
-            display_text = f"{name} - {email}"
-            item = QStandardItem(display_text)
-            if messages:
-                item.setBackground(QColor('green'))
-            item.setData(user_id, Qt.UserRole)
-            self.model2.appendRow(item)
-
-        self.listView_t.clicked.connect(self.on_list_item_clicked)
-
-    def on_list_item_clicked(self, index):
-        # Retrieve the selected user_id
-        selected_index = index.row()
-        selected_user_id = self.model2.item(selected_index).data(Qt.UserRole)
-        self.chatUser(selected_user_id)    
+        self.message_app = MessageApp(self)
+         
         
     def add_announce_tab(self):
         self.tabWidget.setCurrentIndex(6)

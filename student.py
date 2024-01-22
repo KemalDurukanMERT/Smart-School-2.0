@@ -9,6 +9,7 @@ import re
 import datetime
 import sys
 import traceback
+from message import *
 
 def exception_hook(exctype, value, tb):
     traceback_details = '\n'.join(traceback.format_tb(tb))
@@ -34,6 +35,11 @@ class StudentApp(QMainWindow):
         self.menu22_2.triggered.connect(self.view_lesson_attendance)
         self.menu31_2.triggered.connect(self.view_meeting_schedule)
         self.menu32.triggered.connect(self.view_meeting_attendance)
+        self.menu61_2.triggered.connect(self.add_message_tab)
+
+    def add_message_tab(self):
+        self.tabWidget.setCurrentIndex(8)
+        self.message_app = MessageApp(self) 
 
     def setupUi(self):
         try:
