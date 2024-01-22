@@ -17,3 +17,6 @@
 [01-21 22:34:43] [login.cc:28] GetUserRequest failed with status 16: Invalid token received 
 [01-21 22:36:03] [login.cc:28] GetUserRequest failed with status 16: Invalid token received 
 [01-22 11:03:58] [login.cc:28] GetUserRequest failed with status 16: Invalid token received 
+[01-22 11:08:00] [client.cc:20] GRPC Failed (error code INTERNAL): Trunk is not set up in this context. Cannot load config.
+[01-22 11:08:00] [submission_buffer.cc:110] diagnostics buffer 2: Submission failed: Trunk is not set up in this context. Cannot load config.
+[01-22 11:08:00] [shared_server_context.hh:121] Message processing failed: Trunk is not set up in this context. Cannot load config.

@@ -14,3 +14,29 @@
 [2024-01-22 11:07:08.343] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'assh' has no matching download for current os/cpu @ version:2.10.0
 [2024-01-22 11:07:08.347] [global] [info] [service.cc:115] Notifications config has not changed
 [2024-01-22 11:07:08.358] [global] [info] [service.cc:49] Tools config updated; updating tools
+[2024-01-22 11:07:22.851] [global] [info] [service.cc:105] CLI version change; do not run file-triggered actions
+[2024-01-22 11:07:22.854] [global] [info] [service.cc:36] CLI version change; do not update tools
+[2024-01-22 11:07:22.889] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:22.889] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:22.890] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:22.894] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:24.082] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:24.082] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:24.083] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:24.084] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:37.178] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:37.178] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:37.179] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:37.180] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:46.181] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:46.181] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:46.182] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:46.183] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:50.701] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:50.701] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:50.702] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:50.703] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:55.351] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:55.351] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:55.353] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:55.354] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
