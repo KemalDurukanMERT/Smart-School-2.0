@@ -171,3 +171,15 @@ report:
 [2024-01-22 11:08:50.721] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
 [2024-01-22 11:08:50.724] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
 [2024-01-22 11:08:56.407] [global] [info] [runner.cc:136] Executing action trunk-single-player-auto-on-upgrade.schedule.24h+5m
+[2024-01-22 11:09:54.088] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:09:54.089] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:09:54.090] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:09:54.091] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:35.969] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:35.969] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:35.971] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:35.972] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:37.447] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:37.447] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:37.448] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:37.449] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
