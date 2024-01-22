@@ -26,7 +26,7 @@ class TeacherApp(QMainWindow):
             self.selected_meeting_index = None
             self.selected_todo_index = None
             self.comboBox_instructor.currentIndexChanged.connect(self.onInstructorChanged)
-            self.comboBox_student.currentIndexChanged.connect(self.onStudentChanged)
+            self.comboBox_student.currentIndexChanged.connect(self.showStudentTodos)
         except Exception as e:
             self.showErrorMessage("Initialization Error", f"Error during TeacherApp initialization: {e}")
 
@@ -110,14 +110,17 @@ class TeacherApp(QMainWindow):
         formatted_date = date.toString("yyyy-MM-dd")
         self.deadline_input.setText(formatted_date)
         self.calendar.hide()
+    
         
     def onStudentChanged(self, index):
         if index == 0:
             pass  # Placeholder is selected, handle this case separately if needed
         else:
             selected_student = self.comboBox_student.currentText()
+            self.loadTodos()
         
     def getStudentId(self, student_name):
+        
         try:
             query = "SELECT user_id FROM users WHERE CONCAT(name, ' ', surname) = %s"
             self.cur.execute(query, (student_name,))
@@ -126,6 +129,7 @@ class TeacherApp(QMainWindow):
         except psycopg2.Error as e:
             QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
             return None
+    
 ###################################################################################
     def showLessonScheduleTab(self):
         self.tabWidget.setCurrentIndex(2)
@@ -1033,22 +1037,29 @@ class TeacherApp(QMainWindow):
         # Initialize UI elements for lesson schedule management
         self.deadline_input = self.findChild(QLineEdit, 'deadlineInput')
         self.todo_name = self.findChild(QLineEdit, 'todoName')
+        # self.task_status = self.findChild(QComboBox, 'task_status')
         self.add_todo_btn = self.findChild(QPushButton, 'addTodoBtn')
         self.delete_todo_btn = self.findChild(QPushButton, 'deleteTodoBtn')
         self.delete_all_todos_btn = self.findChild(QPushButton, 'deleteAllTodosBtn')
         self.comboBox_student = self.findChild(QComboBox, 'comboBox_student')
         self.todo_table = self.findChild(QTableWidget, 'todoTable')
 
+        
+        
+        self.recordsList.itemClicked.connect(self.selectTodo)
+        #self.task_status.addItems(['Done', 'Pending'])
+        
         self.todo_table.setColumnCount(5)
-        self.todo_table.setHorizontalHeaderLabels(["Task ID","Task", "Deadline", "Status", "Student"])
+        self.todo_table.setHorizontalHeaderLabels(["Task ID","Task", "Deadline", "Status", "Student ID"])
         header = self.todo_table.horizontalHeader()
         header.setSectionResizeMode(QHeaderView.Interactive)
         
         self.add_todo_btn.clicked.connect(self.addTodo)
-        self.deadline_input.mousePressEvent = self.showCalendarTodo
+        self.deadline_input.mousePressEvent = (self.showCalendarTodo)
         self.delete_todo_btn.clicked.connect(self.deleteTodo)
         self.delete_all_todos_btn.clicked.connect(self.deleteAllTodos)
         self.todo_table.itemClicked.connect(self.selectTodo)
+        self.allTodosBtn.clicked.connect(self.loadTodos)
 
         # Set column widths
         character_width = 12
@@ -1057,19 +1068,19 @@ class TeacherApp(QMainWindow):
         self.todo_table.setColumnWidth(2, 12 * character_width)
         self.todo_table.setColumnWidth(3, 12 * character_width)
         self.todo_table.setColumnWidth(4, 17 * character_width)
-        
+        self.todo_table.setColumnWidth(5, 17 * character_width)
         # Fetch and display lessons from the database
         self.loadTodos()
     
     def setupTodoTable(self):
-        self.todo_table.setHorizontalHeaderLabels(["Task ID", "Task", "Deadline", "Status", "Student"])
+        self.todo_table.setHorizontalHeaderLabels(["Task ID", "Task", "Deadline", "Status", "Student ID","Student"])
         header = self.todo_table.horizontalHeader()
         header.setSectionResizeMode(QHeaderView.Interactive)
-       
+    
     def loadTodos(self):
         try:
             self.todo_table.setRowCount(0)  # Clear the table before repopulating
-            query = "SELECT todo_id, task, deadline, assigned_user_id FROM todolist"
+            query = "SELECT todo_id, task, deadline, task_status, assigned_user_id FROM todolist"
             self.cur.execute(query)
             todos = self.cur.fetchall()
             for todo in todos:
@@ -1079,23 +1090,43 @@ class TeacherApp(QMainWindow):
                 self.todo_table.setItem(rowPosition, 0, QTableWidgetItem(str(todo[0])))  # Task ID
                 self.todo_table.setItem(rowPosition, 1, QTableWidgetItem(str(todo[1])))  #  Task
                 self.todo_table.setItem(rowPosition, 2, QTableWidgetItem(str(todo[2])))  # Deadline
-                #self.todo_table.setItem(rowPosition, 3, QTableWidgetItem(str(todo[3])))  # Status #TODO
-                self.todo_table.setItem(rowPosition, 4, QTableWidgetItem(str(todo[3])))  # Student
-            
+                self.todo_table.setItem(rowPosition, 3, QTableWidgetItem(str(todo[3])))  # Status #TODO
+                self.todo_table.setItem(rowPosition, 4, QTableWidgetItem(str(todo[4])))  # Student
+                
+
             # Hide the todo_id column after populating the table
             self.todo_table.setColumnHidden(0, True)  # Hides the first column (Task ID)
         except psycopg2.Error as e:
             QMessageBox.critical(self, 'Error', f'An error occurred while loading todos: {e}')
-
+        
+        self.resetFormTodo()
+        self.selected_todo_index = None
+        
     def addTodo(self):
         todo_name = self.todo_name.text().strip()
         deadline = self.deadline_input.text().strip()
-        #status = self.time_slot.text().strip() #TODO
+        #TODO
+        
+        
+        # task_status_text = self.task_status.currentText()
+        # if task_status_text.startswith('Done'):
+        #     task_status = True
+        # elif task_status_text.startswith('Pending'):
+        #     task_status = False
+        # else:
+        #     # Hata durumu veya varsayılan değer
+        #     task_status = None
+
+        # if task_status == 'Done':
+        #     task_status = self.task_status.currentText()
+        # elif task_status == 'Pending':
+        #     task_status = self.task_status.currentText()
+
         student_name = self.comboBox_student.currentText()
         student_id = self.getStudentId(student_name)
         created_by = self.user.id  # Assuming self.user.id holds the ID of the current user
 
-        if not todo_name or not deadline or student_name is None:
+        if not todo_name or not deadline or  student_name is None:
             QMessageBox.warning(self, "Input Error", "All fields must be filled out and a valid instructor must be selected.")
             return
 
@@ -1106,24 +1137,24 @@ class TeacherApp(QMainWindow):
         try:
             if self.selected_todo_index is None:  # Add new todo
                 query = """
-                INSERT INTO todolist (task, deadline,  assigned_user_id, created_by)
+                INSERT INTO todolist (task, deadline, assigned_user_id, created_by)
                 VALUES (%s, %s, %s, %s)
                 """
-                self.cur.execute(query, (todo_name, deadline,  student_name, created_by))
+                self.cur.execute(query, (todo_name, deadline,  student_id, created_by))
                 self.conn.commit()
-                QMessageBox.information(self, 'Success', 'Todo added successfully')
+                QMessageBox.information(self, 'Success', 'Task added successfully')
             else:  # Update existing lesson
                 todo_id = self.getTodoIdFromTable(self.selected_todo_index)
                 query = """
                 UPDATE todolist
-                SET task = %s, deadline = %s,  assigned_user_id = %s, created_by = %s
+                SET task = %s, deadline = %s, assigned_user_id = %s, created_by = %s
                 WHERE todo_id = %s
                 """
-                self.cur.execute(query, (todo_name, deadline,  student_name, created_by, todo_id))
+                self.cur.execute(query, (todo_name, deadline,  student_id, created_by, todo_id))
                 self.conn.commit()
-                QMessageBox.information(self, 'Success', 'Lesson updated successfully')
+                QMessageBox.information(self, 'Success', 'Task updated successfully')
 
-            self.loadTodos()  # Reload the lessons to reflect changes
+            self.loadTodos()  # Reload the tasks to reflect changes
         except psycopg2.Error as e:
             self.conn.rollback()
             QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
@@ -1132,22 +1163,78 @@ class TeacherApp(QMainWindow):
         self.selected_todo_index = None  # Reset the selected index
     
     def selectTodo(self, item):
-        current_row = self.todo_table.row(item)
-        if current_row >= 0:
-            todo_name_item = self.todo_table.item(current_row, 1)  # lesson_name
-            deadline_item = self.todo_table.item(current_row, 2)  # lesson_date
-            student_item = self.todo_table.item(current_row, 4)  # lesson_instructor
-            
-            if todo_name_item and deadline_item  and student_item:
-                self.lesson_name.setText(todo_name_item.text())
-                self.date_input.setText(deadline_item.text())
-                
-                student_index = self.comboBox_student.findText(student_item.text(), Qt.MatchFixedString)
+        current_row = item.row()
+
+        todo_name_item = self.todo_table.item(current_row, 1)  # todo_name
+        deadline_item = self.todo_table.item(current_row, 2)  # deadline
+        student_item = self.todo_table.item(current_row, 4)  # assigned_user_id
+
+        if todo_name_item and deadline_item and student_item:
+            self.todo_name.setText(todo_name_item.text())
+            self.deadline_input.setText(deadline_item.text())
+
+            assigned_user_id = int(student_item.text())
+            student_name = self.getStudentName(assigned_user_id)
+            if student_name:
+                student_index = self.comboBox_student.findText(student_name, Qt.MatchFixedString)
                 if student_index >= 0:
-                    self.comboBox_instructor.setCurrentIndex(student_index)
-                self.selected_todo_index = current_row
+                    self.comboBox_student.setCurrentIndex(student_index)
+
+            self.selected_todo_index = current_row
+        else:
+            QMessageBox.warning(self, 'Seçim Hatası', 'Görev ayrıntılarını almak başarısız oldu.')
+
+    def showStudentTodos(self):
+        selected_student_name = self.comboBox_student.currentText()
+        if selected_student_name == "Select a Student":
+            return 
+
+        student_id = self.getStudentId(selected_student_name)
+        if student_id is None:
+            QMessageBox.warning(self, 'Error', 'Selected student ID not found.')
+            return
+
+        try:
+            self.todo_table.setRowCount(0)  # Clear the table before repopulating
+            query = "SELECT todo_id, task, deadline, task_status, assigned_user_id FROM todolist WHERE assigned_user_id = %s"
+            self.cur.execute(query, (student_id,))
+            todos = self.cur.fetchall()
+            for todo in todos:
+                rowPosition = self.todo_table.rowCount()
+                self.todo_table.insertRow(rowPosition)
+                # Inserting items into the table in the correct column order
+                self.todo_table.setItem(rowPosition, 0, QTableWidgetItem(str(todo[0])))  # Task ID
+                self.todo_table.setItem(rowPosition, 1, QTableWidgetItem(str(todo[1])))  # Task
+                self.todo_table.setItem(rowPosition, 2, QTableWidgetItem(str(todo[2])))  # Deadline
+                self.todo_table.setItem(rowPosition, 3, QTableWidgetItem(str(todo[3])))  # Status
+                self.todo_table.setItem(rowPosition, 4, QTableWidgetItem(str(todo[4])))  # Id
+
+            # Hide the todo_id column after populating the table
+            self.todo_table.setColumnHidden(0, True)  # Hides the first column (Task ID)
+        except psycopg2.Error as e:
+            QMessageBox.critical(self, 'Error', f'An error occurred while loading todos: {e}')
+    
+    def getStudentName(self, assigned_user_id):
+        try:
+            query = "SELECT CONCAT(name, ' ', surname) FROM users WHERE user_id = %s"
+            self.cur.execute(query, (assigned_user_id,))
+            result = self.cur.fetchone()
+
+            if result is not None:
+                return result[0]
             else:
-                QMessageBox.warning(self, 'Selection Error', 'Failed to retrieve todo details.')
+                # Belirli bir ID'ye sahip öğrenci bulunamadı
+                return None
+        except psycopg2.Error as e:
+            QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
+            return None
+        
+
+            
+
+
+    
+
 
     def deleteTodo(self):
         selected_rows = set()
@@ -1160,7 +1247,7 @@ class TeacherApp(QMainWindow):
                     query = "DELETE FROM todolist WHERE todo_id = %s"
                     self.cur.execute(query, (todo_id,))
                     self.conn.commit()
-                    self.lesson_table.removeRow(row)
+                    self.todo_table.removeRow(row)
                 except psycopg2.Error as e:
                     self.conn.rollback()
                     QMessageBox.critical(self, 'Error', f'An error occurred while deleting the todo: {e}')
@@ -1185,15 +1272,17 @@ class TeacherApp(QMainWindow):
     def resetFormTodo(self):
         self.todo_name.clear()
         self.deadline_input.clear()
+        #self.task_status.clear()
         self.comboBox_student.setCurrentIndex(0)
-
+        #self.task_status.setCurrentIndex(0)
+    
     def getTodoIdFromTable(self, row_index):
         todo_id_item = self.todo_table.item(row_index, 0)  # Assuming lesson_id is in the first column
         return int(todo_id_item.text()) if todo_id_item else None
 
-    def isValidTimeSlot(self, time_slot):
-        pattern = re.compile(r'^\d{2}:\d{2}-\d{2}:\d{2}$')
-        return pattern.match(time_slot) is not None
+    # def isValidTimeSlot(self, time_slot):
+    #     pattern = re.compile(r'^\d{2}:\d{2}-\d{2}:\d{2}$')
+    #     return pattern.match(time_slot) is not None
 
     def showCalendarTodo(self, event):
         calendar_pos = self.deadline_input.mapToGlobal(self.deadline_input.rect().bottomLeft())
@@ -1204,12 +1293,12 @@ class TeacherApp(QMainWindow):
     def populate_students(self):
         try:
             self.comboBox_student.clear()
-            self.comboBox_student.addItem("Select an instructor")
+            self.comboBox_student.addItem("Select a Student")
             students = self.database.get_students(self.cur)
-            for name, surname in students:
+            for  name, surname in students:
                 self.comboBox_student.addItem(f"{name} {surname}")
         except Exception as e:
-            self.showErrorMessage("Database Error", f"Error populating instructors: {e}")
+            self.showErrorMessage("Database Error", f"Error populating Students: {e}")
 ###########################################################################################################
     def showErrorMessage(self, title, message):
         QMessageBox.critical(self, title, message)

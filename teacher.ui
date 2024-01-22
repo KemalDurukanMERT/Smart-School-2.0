@@ -58,8 +58,8 @@ background-color: rgb(40, 41, 44);</string>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>-10</x>
-      <y>60</y>
+      <x>0</x>
+      <y>90</y>
       <width>1131</width>
       <height>741</height>
      </rect>
@@ -520,6 +520,355 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;
       <property name="text">
        <string>Gender</string>
       </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Meeting Schedule</string>
+     </attribute>
+     <widget class="QFrame" name="meetingScheduleContainer">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>1111</width>
+        <height>681</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+        <underline>true</underline>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="meetingDateInput">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>311</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Please select a date for a meeting</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="meetingTitle">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>180</y>
+         <width>311</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Please add a meeting</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="meetingTimeSlot">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>270</y>
+         <width>311</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Please enter a time slot; hh:mm-hh:mm</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="addMeetingBtn">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>330</y>
+         <width>161</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 191, 16);</string>
+       </property>
+       <property name="text">
+        <string>Add/Edit Meeting</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>231</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 191, 16);</string>
+       </property>
+       <property name="text">
+        <string>Add/Edit a meeting</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="deleteMeetingBtn">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>620</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 191, 16);</string>
+       </property>
+       <property name="text">
+        <string>Delete Meeting</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="deleteAllMeetingsBtn">
+       <property name="geometry">
+        <rect>
+         <x>930</x>
+         <y>620</y>
+         <width>161</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 191, 16);</string>
+       </property>
+       <property name="text">
+        <string>Delete All Meetings</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="meetingTable">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>90</y>
+         <width>721</width>
+         <height>521</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>239</number>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>Meeting Title</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Meeting Date</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Meeting Time</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <underline>true</underline>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 191, 16);</string>
+       </property>
+       <property name="text">
+        <string>Meeting Date;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <underline>true</underline>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 191, 16);</string>
+       </property>
+       <property name="text">
+        <string>Meeting Title;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>240</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <underline>true</underline>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 191, 16);</string>
+       </property>
+       <property name="text">
+        <string>Meeting Time Slot;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_17">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>20</y>
+         <width>231</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 191, 16);</string>
+       </property>
+       <property name="text">
+        <string>Meeting Schedule</string>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
@@ -1314,355 +1663,6 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_4">
-     <attribute name="title">
-      <string>Meeting Schedule</string>
-     </attribute>
-     <widget class="QFrame" name="meetingScheduleContainer">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>0</y>
-        <width>1111</width>
-        <height>681</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>25</pointsize>
-        <underline>true</underline>
-        <kerning>true</kerning>
-       </font>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <widget class="QLineEdit" name="meetingDateInput">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>90</y>
-         <width>311</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-       </property>
-       <property name="placeholderText">
-        <string>Please select a date for a meeting</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="meetingTitle">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>180</y>
-         <width>311</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-       </property>
-       <property name="placeholderText">
-        <string>Please add a meeting</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="meetingTimeSlot">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>270</y>
-         <width>311</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-       </property>
-       <property name="placeholderText">
-        <string>Please enter a time slot; hh:mm-hh:mm</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="addMeetingBtn">
-       <property name="geometry">
-        <rect>
-         <x>170</x>
-         <y>330</y>
-         <width>161</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 191, 16);</string>
-       </property>
-       <property name="text">
-        <string>Add/Edit Meeting</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_4">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>231</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 191, 16);</string>
-       </property>
-       <property name="text">
-        <string>Add/Edit a meeting</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="deleteMeetingBtn">
-       <property name="geometry">
-        <rect>
-         <x>370</x>
-         <y>620</y>
-         <width>141</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 191, 16);</string>
-       </property>
-       <property name="text">
-        <string>Delete Meeting</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="deleteAllMeetingsBtn">
-       <property name="geometry">
-        <rect>
-         <x>930</x>
-         <y>620</y>
-         <width>161</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 191, 16);</string>
-       </property>
-       <property name="text">
-        <string>Delete All Meetings</string>
-       </property>
-      </widget>
-      <widget class="QTableWidget" name="meetingTable">
-       <property name="geometry">
-        <rect>
-         <x>370</x>
-         <y>90</y>
-         <width>721</width>
-         <height>521</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
-       <attribute name="horizontalHeaderDefaultSectionSize">
-        <number>239</number>
-       </attribute>
-       <column>
-        <property name="text">
-         <string>Meeting Title</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="textAlignment">
-         <set>AlignLeading|AlignVCenter</set>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Meeting Date</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="textAlignment">
-         <set>AlignLeading|AlignVCenter</set>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Meeting Time</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="textAlignment">
-         <set>AlignLeading|AlignVCenter</set>
-        </property>
-       </column>
-      </widget>
-      <widget class="QLabel" name="label_10">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>60</y>
-         <width>111</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-         <kerning>true</kerning>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 191, 16);</string>
-       </property>
-       <property name="text">
-        <string>Meeting Date;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_11">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>150</y>
-         <width>111</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-         <kerning>true</kerning>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 191, 16);</string>
-       </property>
-       <property name="text">
-        <string>Meeting Title;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_15">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>240</y>
-         <width>141</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-         <kerning>true</kerning>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 191, 16);</string>
-       </property>
-       <property name="text">
-        <string>Meeting Time Slot;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_17">
-       <property name="geometry">
-        <rect>
-         <x>370</x>
-         <y>20</y>
-         <width>231</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 191, 16);</string>
-       </property>
-       <property name="text">
-        <string>Meeting Schedule</string>
-       </property>
-      </widget>
-     </widget>
-    </widget>
     <widget class="QWidget" name="tab_7">
      <attribute name="title">
       <string>Meeting Attendance</string>
@@ -2169,7 +2169,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>640</y>
+        <y>610</y>
         <width>141</width>
         <height>41</height>
        </rect>
@@ -2195,7 +2195,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>950</x>
-        <y>640</y>
+        <y>610</y>
         <width>161</width>
         <height>41</height>
        </rect>
@@ -2221,7 +2221,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>210</y>
+        <y>190</y>
         <width>1095</width>
         <height>421</height>
        </rect>
@@ -2323,36 +2323,6 @@ color: rgb(255, 255, 255);</string>
        </property>
       </column>
      </widget>
-     <widget class="QLabel" name="label_38">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>170</y>
-        <width>231</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>17</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-        <underline>true</underline>
-       </font>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 191, 16);</string>
-      </property>
-      <property name="text">
-       <string>TODO List</string>
-      </property>
-      <property name="indent">
-       <number>0</number>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_39">
       <property name="geometry">
        <rect>
@@ -2389,7 +2359,7 @@ color: rgb(255, 255, 255);</string>
        <rect>
         <x>180</x>
         <y>60</y>
-        <width>311</width>
+        <width>241</width>
         <height>41</height>
        </rect>
       </property>
@@ -2417,9 +2387,9 @@ color: rgb(255, 255, 255);</string>
      <widget class="QLineEdit" name="deadlineInput">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>120</y>
-        <width>311</width>
+        <x>700</x>
+        <y>60</y>
+        <width>231</width>
         <height>41</height>
        </rect>
       </property>
@@ -2438,9 +2408,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>950</x>
-        <y>60</y>
+        <y>50</y>
         <width>161</width>
-        <height>121</height>
+        <height>111</height>
        </rect>
       </property>
       <property name="font">
@@ -2463,10 +2433,10 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QLabel" name="label_40">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>130</y>
+        <x>570</x>
+        <y>70</y>
         <width>111</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -2494,8 +2464,8 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QLabel" name="label_41">
       <property name="geometry">
        <rect>
-        <x>520</x>
-        <y>70</y>
+        <x>20</x>
+        <y>130</y>
         <width>121</width>
         <height>21</height>
        </rect>
@@ -2555,10 +2525,10 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QLineEdit" name="todoName">
       <property name="geometry">
        <rect>
-        <x>590</x>
-        <y>60</y>
-        <width>331</width>
-        <height>121</height>
+        <x>180</x>
+        <y>120</y>
+        <width>751</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -2580,6 +2550,32 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="placeholderText">
        <string>Please add To Do</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="allTodosBtn">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>60</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="toolTipDuration">
+       <number>-1</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 191, 16);</string>
+      </property>
+      <property name="text">
+       <string>All</string>
       </property>
      </widget>
     </widget>

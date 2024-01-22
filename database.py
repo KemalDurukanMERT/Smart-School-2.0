@@ -7,7 +7,7 @@ class Database():
         self.db_credentials = {
             'dbname': 'SmartSchool', 
             'user': 'postgres', 
-            'password': '0000', 
+            'password': '1', 
             'host': 'localhost',
             'port': '5432'
         }
@@ -82,6 +82,7 @@ created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
   assigned_user_id INTEGER NOT NULL REFERENCES users(user_id),
   created_by INTEGER NOT NULL REFERENCES users(user_id),
   created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+  student_list TEXT NOT NULL
 ''')
 
             ]
@@ -189,7 +190,7 @@ email, hashed_password, name, surname, user_type
 
 
     def get_students(self,cur):
-        cur.execute( "SELECT name, surname FROM users WHERE user_type = 'student' ")
+        cur.execute( "SELECT  name, surname FROM users WHERE user_type = 'student' ")
         students = cur.fetchall()
         return students        
 
