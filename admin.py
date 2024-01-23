@@ -1099,7 +1099,7 @@ SELECT * FROM users WHERE status = 'Pending'
         self.cityEdit = self.findChild(QLineEdit, 'tb25')
         self.phoneEdit = self.findChild(QLineEdit, 'tb26')
         self.passwordEdit = self.findChild(QLineEdit, 'tb27')
-        self.editUserTable = self.findChild(QTableWidget, 'tableWidget_2')
+        self.editUserTable = self.findChild(QTableWidget, 'users_table')
         self.saveUserDetails = self.findChild(QPushButton, 'b6')
         self.deleteUserDetails = self.findChild(QPushButton, 'b7')
 
@@ -1128,6 +1128,13 @@ SELECT * FROM users WHERE status = 'Pending'
         self.editUserTable.itemClicked.connect(self.selectEditUser)
         self.saveUserDetails.clicked.connect(self.saveDetail)
         self.deleteUserDetails.clicked.connect(self.deleteDetail)
+        
+        # Set column widths
+        character_width = 12
+        self.users_table.setColumnWidth(0, 25 * character_width)
+        self.users_table.setColumnWidth(1, 11 * character_width)
+        self.users_table.setColumnWidth(2, 11 * character_width)
+        self.users_table.setColumnWidth(3, 11 * character_width)
 
     def changeStatusCb(self):
         self.editUserStatus = self.statusCombobox.currentText()
