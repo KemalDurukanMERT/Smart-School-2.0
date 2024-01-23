@@ -42,7 +42,7 @@ background-color: rgb(40, 41, 44);</string>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>-10</x>
       <y>50</y>
       <width>1221</width>
       <height>741</height>
@@ -59,7 +59,7 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -519,8 +519,8 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>20</y>
+        <x>20</x>
+        <y>90</y>
         <width>291</width>
         <height>21</height>
        </rect>
@@ -537,30 +537,6 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
        <string>Edit or Delete User</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_12">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>90</y>
-        <width>121</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-        <underline>true</underline>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 191, 16);</string>
-      </property>
-      <property name="text">
-       <string>Select User</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_24">
@@ -616,6 +592,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label_28">
@@ -754,20 +733,6 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb21">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>70</y>
-        <width>271</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="b7">
@@ -911,7 +876,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
 font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="currentIndex">
-       <number>-1</number>
+       <number>0</number>
       </property>
       <item>
        <property name="text">
@@ -921,6 +886,11 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <item>
        <property name="text">
         <string>Pending</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Rejected</string>
        </property>
       </item>
      </widget>
@@ -979,11 +949,6 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <item>
        <property name="text">
         <string>Active</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>All</string>
        </property>
       </item>
      </widget>
@@ -2944,7 +2909,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1210</width>
-     <height>25</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="styleSheet">

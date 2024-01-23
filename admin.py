@@ -38,6 +38,17 @@ class AdminApp(QMainWindow):
         self.connectDatabase(conn, cur, database)
         self.user = user
         self.initializeUi()
+        self.pendingUsers()
+
+    def pendingUsers(self):
+        self.cur.execute('''
+SELECT * FROM users WHERE status = 'Pending'
+''')
+        users = self.cur.fetchall()
+        print(users)
+        if users:
+            self.menuTeacher.setTitle(f"Users !!({len(users)})!!")
+            self.menu12.setText(f"Users !!({len(users)})!!")
 
     def setupUi(self):
         try:
@@ -1071,7 +1082,197 @@ class AdminApp(QMainWindow):
 
 
     def showEditUserTab(self):
+        try:
+            self.saveUserDetails.clicked.disconnect()
+            self.deleteUserDetails.clicked.disconnect()
+        except:
+            pass
+
         self.tabWidget.setCurrentIndex(2)
+        # self.userCombobox = self.findChild(QComboBox, 'cb21')
+        self.statusCombobox = self.findChild(QComboBox, 'cb21_3')
+        self.typeCombobox = self.findChild(QComboBox, 'cb21_2')
+        self.tableStatusCombobox = self.findChild(QComboBox, 'cb21_6')
+        self.emailEdit = self.findChild(QLineEdit, 'tb22')
+        self.nameEdit = self.findChild(QLineEdit, 'tb23')
+        self.surnameEdit = self.findChild(QLineEdit, 'tb24')
+        self.cityEdit = self.findChild(QLineEdit, 'tb25')
+        self.phoneEdit = self.findChild(QLineEdit, 'tb26')
+        self.passwordEdit = self.findChild(QLineEdit, 'tb27')
+        self.editUserTable = self.findChild(QTableWidget, 'tableWidget_2')
+        self.saveUserDetails = self.findChild(QPushButton, 'b6')
+        self.deleteUserDetails = self.findChild(QPushButton, 'b7')
+
+        self.statusCombobox.setCurrentIndex(-1)
+        self.typeCombobox.setCurrentIndex(-1)
+        self.emailEdit.clear()
+        self.nameEdit.clear()
+        self.surnameEdit.clear()
+        self.cityEdit.clear()
+        self.phoneEdit.clear()
+        self.passwordEdit.clear()
+        self.tableStatusCombobox.currentIndexChanged.connect(self.changeTableStatus)
+        self.statusCombobox.currentIndexChanged.connect(self.changeStatusCb)
+        self.typeCombobox.currentIndexChanged.connect(self.changeTypeCb)
+
+
+
+        self.editUserTable.setColumnCount(4)
+        self.editUserTable.setHorizontalHeaderLabels(["User Email", "Name", "Surname", "Status"])
+        header = self.editUserTable.horizontalHeader()
+        header.setSectionResizeMode(QHeaderView.Interactive)
+        
+        self.tableStatus = 'Pending'
+        self.loadUserForAdmin()
+
+        self.editUserTable.itemClicked.connect(self.selectEditUser)
+        self.saveUserDetails.clicked.connect(self.saveDetail)
+        self.deleteUserDetails.clicked.connect(self.deleteDetail)
+
+    def changeStatusCb(self):
+        self.editUserStatus = self.statusCombobox.currentText()
+    def changeTypeCb(self):
+        self.editUserType = self.typeCombobox.currentText()
+
+    def saveDetail(self):
+        status = self.editUserStatus
+        type = self.editUserType
+        email = self.emailEdit.text()
+        name = self.nameEdit.text()
+        surname = self.surnameEdit.text()
+        city = self.cityEdit.text()
+        phone = self.phoneEdit.text()
+        password = self.passwordEdit.text()
+
+        if status == 'Rejected':
+            self.deleteDetail()
+        elif password:
+            if not is_valid_email(email) or not is_valid_password(password) or not is_valid_phone(phone):
+                QMessageBox.warning(self, "Update Error", "Invalid input format")
+                return
+
+            password = self.hash_password(password)
+
+            try:
+                command = f'''
+UPDATE users 
+SET status = '{status}', user_type = '{type}', name = '{name}', surname = '{surname}', city = '{city}', phone = '{phone}', hashed_password = '{password}'
+WHERE email = '{email}' 
+'''
+                cur = self.conn.cursor()
+                cur.execute(command)
+                cur.close()
+                self.conn.commit()
+                QMessageBox.information(self, "Update Successful", "Account updated successfully")
+
+                self.pendingUsers()
+                self.showEditUserTab()
+
+            except (Exception, psycopg2.DatabaseError) as error:
+                QMessageBox.warning(self, "Update Error", f"{error}")
+
+        else:
+            if not is_valid_email(email) or not is_valid_phone(phone):
+                QMessageBox.warning(self, "Update Error", "Invalid input format")
+                return
+            
+            try:
+                command = f'''
+UPDATE users 
+SET status = '{status}', user_type = '{type}', name = '{name}', surname = '{surname}', city = '{city}', phone = '{phone}'
+WHERE email = '{email}' 
+'''
+                cur = self.conn.cursor()
+                cur.execute(command)
+                cur.close()
+                self.conn.commit()
+                QMessageBox.information(self, "Update Successful", "Account updated successfully")
+
+                self.pendingUsers()
+                self.showEditUserTab()
+
+            except (Exception, psycopg2.DatabaseError) as error:
+                QMessageBox.warning(self, "Update Error", f"{error}")
+
+
+    def deleteDetail(self):
+        # status = self.editUserStatus
+        email = self.emailEdit.text()
+
+        try:
+            command = f'''
+DELETE FROM users WHERE email = '{email}'
+'''
+            cur = self.conn.cursor()
+            cur.execute(command)
+            cur.close()
+            self.conn.commit()
+            QMessageBox.information(self, "Reject/Delete Successful", "Account closed successfully")
+
+            self.pendingUsers()
+            self.showEditUserTab()
+
+        except (Exception, psycopg2.DatabaseError) as error:
+            QMessageBox.warning(self, "Reject/Delete Error", f"{error}")
+
+
+
+    def selectEditUser(self, item):
+        current_row = self.editUserTable.row(item)
+        print(current_row)
+        if current_row >= 0:
+            selectedUserEmail = self.editUserTable.item(current_row, 0)
+            # print(selectedUserEmail)
+            if selectedUserEmail:
+                print(selectedUserEmail.text())
+                self.cur.execute(f"SELECT email, status, user_type, name, surname, city, phone FROM users WHERE email = '{selectedUserEmail.text()}'")
+                user = self.cur.fetchone()
+                print(user)
+                if user:
+                        email, status, user_type, name, surname, city, phone = user
+                        self.emailEdit.setText(email)
+                        self.nameEdit.setText(name)
+                        self.surnameEdit.setText(surname)
+                        self.cityEdit.setText(city)
+                        self.phoneEdit.setText(phone)
+                        if status == "Active":
+                            self.statusCombobox.setCurrentIndex(0)
+                        elif status == "Pending":
+                            self.statusCombobox.setCurrentIndex(1)
+                        
+                        if user_type == "admin":
+                            self.typeCombobox.setCurrentIndex(0)
+                        elif user_type == "teacher":
+                            self.typeCombobox.setCurrentIndex(1)
+                        elif user_type == "student":
+                            self.typeCombobox.setCurrentIndex(2)
+            else:
+                QMessageBox.warning(self, 'Selection Error', 'Failed to retrieve user details.')
+
+
+    def changeTableStatus(self):
+        self.tableStatus = self.tableStatusCombobox.currentText()
+        self.loadUserForAdmin()
+
+    def loadUserForAdmin(self):
+        try:
+            self.editUserTable.setRowCount(0)
+            query = f"SELECT * FROM users WHERE status = '{self.tableStatus}'"
+            self.cur.execute(query)
+            users = self.cur.fetchall()
+            for user in users:
+                rowPosition = self.editUserTable.rowCount()
+                self.editUserTable.insertRow(rowPosition)
+                self.editUserTable.setItem(rowPosition, 0, QTableWidgetItem(str(user[1])))  
+                self.editUserTable.setItem(rowPosition, 1, QTableWidgetItem(str(user[3])))  
+                self.editUserTable.setItem(rowPosition, 2, QTableWidgetItem(str(user[4])))  
+                self.editUserTable.setItem(rowPosition, 3, QTableWidgetItem(str(user[8])))  
+                
+
+        except psycopg2.Error as e:
+            QMessageBox.critical(self, 'Error', f'An error occurred while loading users: {e}')
+
+
     def showAnnouncementTab(self):
         self.tabWidget.setCurrentIndex(7)
     def showTodoListTab(self):
