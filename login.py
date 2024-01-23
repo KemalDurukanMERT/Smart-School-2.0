@@ -61,3 +61,5 @@ WHERE email = %s
         
     def show_reg2(self):
         self.teacher_registration.emit(True)
+        
+    

@@ -7,7 +7,7 @@ class Database():
         self.db_credentials = {
             'dbname': 'SmartSchool', 
             'user': 'postgres', 
-            'password': '1', 
+            'password': '0000', 
             'host': 'localhost',
             'port': '5432'
         }
@@ -238,7 +238,10 @@ email, hashed_password, name, surname, phone, city, user_type, status
         teachers = cur.fetchall()
         return teachers
 
-
+    def get_students(self,cur):
+        cur.execute( "SELECT  name, surname FROM users WHERE user_type = 'student' ")
+        students = cur.fetchall()
+        return students     
 
         
 
