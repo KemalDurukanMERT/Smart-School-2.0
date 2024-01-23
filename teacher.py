@@ -73,6 +73,10 @@ class TeacherApp(QMainWindow):
         self.menu71_t.triggered.connect(self.logout)
 
     def setupButtonActions(self):
+        try:
+            self.b6.clicked.disconnect()
+        except:
+            pass
         self.b6.clicked.connect(self.update_teacher_details)
         # self.sendButton3_t.clicked.connect(self.send_message)
 
@@ -162,6 +166,10 @@ class TeacherApp(QMainWindow):
         header = self.lesson_table.horizontalHeader()
         header.setSectionResizeMode(QHeaderView.Interactive)
         
+        try:
+            self.add_lesson_btn.clicked.disconnect()
+        except:
+            pass
         self.add_lesson_btn.clicked.connect(self.addLesson)
         self.reset_lesson_btn.clicked.connect(self.resetForm)
         self.date_input.mousePressEvent = self.showCalendar
@@ -452,7 +460,7 @@ class TeacherApp(QMainWindow):
                 SELECT la.attendance_id, l.lesson_name, l.lesson_date, l.lesson_time_slot, la.status
                 FROM lessonattendance la
                 JOIN lesson l ON la.lesson_id = l.lesson_id
-                WHERE la.user_id = %s
+                WHERE la.user_id = %s ORDER BY l.lesson_date ASC
                 """
                 self.cur.execute(query, (user_id,))
                 records = self.cur.fetchall()
@@ -653,6 +661,10 @@ class TeacherApp(QMainWindow):
             self.meeting_table.setSelectionBehavior(QTableWidget.SelectRows)
             
             # Connect buttons to their respective functions
+            try:
+                self.add_meeting_btn.clicked.disconnect()
+            except:
+                pass
             self.add_meeting_btn.clicked.connect(self.addMeeting)
             self.reset_meeting_btn.clicked.connect(self.resetMeetingButton)
             self.meeting_date_input.mousePressEvent = self.showMeetingCalendar
@@ -1093,6 +1105,10 @@ class TeacherApp(QMainWindow):
         self.tabWidget.setCurrentIndex(7)
 
     def add_message_tab(self):
+        try:
+            self.sendMessage.clicked.disconnect()
+        except:
+            pass
         self.tabWidget.setCurrentIndex(8)
         self.message_app = MessageApp(self)
          
@@ -1105,6 +1121,11 @@ class TeacherApp(QMainWindow):
         self.load_announcement()
         self.date_input = self.findChild(QLineEdit, 'announcementDate')
         self.date_input.mousePressEvent = self.showCalendarAnnouncement
+        try:
+            self.addButton.clicked.disconnect()
+            self.editButton.clicked.disconnect()
+        except:
+            pass
         self.addButton.clicked.connect(self.add_announcement)
         self.editButton.clicked.connect(self.edit_announcement)
         self.deleteButton.clicked.connect(self.delete_announcement)

@@ -62,19 +62,28 @@ class AdminApp(QMainWindow):
         self.tabWidget.tabBar().setVisible(False)
 
     def setupMenuActions(self):
-        self.menu61_a.triggered.connect(self.add_message_tab)
+        self.menu11.triggered.connect(self.showAddUserTab)
+        self.menu12.triggered.connect(self.showEditUserTab)
         self.menu21_t.triggered.connect(self.showLessonScheduleTab)
         self.menu22_t.triggered.connect(self.showLessonAttendanceTab)
         self.menu31_t.triggered.connect(self.showMeetingScheduleTab)
         self.menu32_t.triggered.connect(self.showMeetingAttendanceTab)
+        self.actionAdd_Edit_Announcement.triggered.connect(self.showAnnouncementTab)
+        self.actionAdd_Edit_To_Do_List.triggered.connect(self.showTodoListTab)
+        self.menu61_a.triggered.connect(self.add_message_tab)
+        self.actionCheck_Reports.triggered.connect(self.showReportsTab)
         self.menu71.triggered.connect(self.logout)
-        
+             
 
     def setupButtonActions(self):
         pass
 
     
     def setupCalendar(self):
+        try:
+            self.calendar.clicked.disconnect()
+        except:
+            pass
         self.calendar = QCalendarWidget(self)
         self.calendar.setWindowFlags(Qt.Popup)
         self.calendar.setGridVisible(True)
@@ -101,6 +110,13 @@ class AdminApp(QMainWindow):
 # Lesson Schedule Tab   
         
     def showLessonScheduleTab(self):
+        try:
+            self.add_lesson_btn.clicked.disconnect()
+            self.reset_lesson_btn.clicked.disconnect()
+            self.delete_lesson_btn.clicked.disconnect()
+            self.delete_all_lessons_btn.clicked.disconnect()
+        except:
+            pass
         self.tabWidget.setCurrentIndex(3)
         # Initialize UI elements for lesson schedule management
         self.selected_lesson_index = None
@@ -544,6 +560,10 @@ class AdminApp(QMainWindow):
 # Meeting Schedule Tab   
     def showMeetingScheduleTab(self):
         try:
+            self.add_meeting_btn.clicked.disconnect()
+        except:
+            pass
+        try:
             self.tabWidget.setCurrentIndex(5)
             
             # Find or create UI elements for meeting schedule management
@@ -748,16 +768,16 @@ class AdminApp(QMainWindow):
         self.tabWidget.setCurrentIndex(6)
             
         # Initialize UI elements for meeting attendance management
-        self.meetingComboBox = self.findChild(QComboBox, 'meetingComboBox_2')
-        self.studentComboBox = self.findChild(QComboBox, 'studentComboBox_2')
-        self.statusComboBox = self.findChild(QComboBox, 'statusComboBox_2')
-        self.markAttendanceBtn = self.findChild(QPushButton, 'markAttendanceBtn_2')
-        self.recordsList = self.findChild(QListWidget, 'recordsList_2')
+        self.meetingComboBox = self.findChild(QComboBox, 'meetingComboBox_3')
+        self.studentComboBox = self.findChild(QComboBox, 'studentComboBox_4')
+        self.statusComboBox = self.findChild(QComboBox, 'statusComboBox_4')
+        self.markAttendanceBtn = self.findChild(QPushButton, 'markAttendanceBtn_4')
+        self.recordsList = self.findChild(QListWidget, 'recordsList_4')
             
         # Initialize delete buttons
-        self.deleteAttendanceBtn = self.findChild(QPushButton, 'deleteAttendanceBtn_2')
-        self.deleteAllAttendanceBtn = self.findChild(QPushButton, 'deleteAllAttendanceBtn_2')
-        self.deleteSelectedStudentAttendanceBtn = self.findChild(QPushButton, 'deleteSelectedStudentAttendanceBtn_2')
+        self.deleteAttendanceBtn = self.findChild(QPushButton, 'deleteAttendanceBtn_4')
+        self.deleteAllAttendanceBtn = self.findChild(QPushButton, 'deleteAllAttendanceBtn_4')
+        self.deleteSelectedStudentAttendanceBtn = self.findChild(QPushButton, 'deleteSelectedStudentAttendanceBtn_4')
         # Connect buttons to their respective methods
         self.deleteAttendanceBtn.clicked.connect(self.deleteSelectedMeetingAttendance)
         self.deleteAllAttendanceBtn.clicked.connect(self.deleteAllMeetingAttendance)
@@ -987,8 +1007,83 @@ class AdminApp(QMainWindow):
         
 ###############################################################################################################################
 ###############################################################################################################################
-  
+    def showAddUserTab(self):
+        try:
+            self.b5.clicked.disconnect()
+        except:
+            pass
+        self.b5.clicked.connect(self.registerAsAdmin)
+        self.cb21_5.currentIndexChanged.connect(self.on_status_change)
+        self.cb21_4.currentIndexChanged.connect(self.on_usertype_change)
+        self.tabWidget.setCurrentIndex(1)
+
+    def registerAsAdmin(self):
+        email = self.tb12.text()
+        name = self.tb13.text()
+        surname = self.tb14.text()
+        city = self.tb15.text()
+        phone = self.tb16.text()
+        password = self.tb17.text()
+
+        cur = self.conn.cursor()
+
+        if not is_valid_email(email) or not is_valid_password(password) or not is_valid_phone(phone):
+            QMessageBox.warning(self, "Registration Error", "Invalid input format")
+            return
+
+        password = self.hash_password(password)
+
+        try:
+            command = '''
+            INSERT INTO users (email, hashed_password, name, surname, phone, city, user_type, status, created_time)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, CURRENT_TIMESTAMP)
+            '''
+            cur.execute(command, (email, password, name, surname, phone, city, self.addUserType, self.addUserStatus))
+
+            cur.close()
+
+            self.conn.commit()
+
+            QMessageBox.information(self, "Registration Successful", "Account created successfully")
+
+            self.resetAdminRegisterForm()
+
+        except (Exception, psycopg2.DatabaseError) as error:
+            QMessageBox.warning(self, "Registration Error", f"{error}")
+
+    def resetAdminRegisterForm(self):
+        self.tb12.clear()
+        self.tb13.clear()
+        self.tb14.clear()
+        self.tb15.clear()
+        self.tb16.clear()
+        self.tb17.clear()
+        self.cb21_5.setCurrentIndex(-1)
+        self.cb21_4.setCurrentIndex(-1)
+
+    def hash_password(self, password):
+        return hashlib.sha256(password.encode()).hexdigest()
+
+    def on_status_change(self):
+        self.addUserStatus = self.cb21_5.currentText()
+    def on_usertype_change(self):
+        self.addUserType = self.cb21_4.currentText()
+
+
+    def showEditUserTab(self):
+        self.tabWidget.setCurrentIndex(2)
+    def showAnnouncementTab(self):
+        self.tabWidget.setCurrentIndex(7)
+    def showTodoListTab(self):
+        self.tabWidget.setCurrentIndex(8)
+    def showReportsTab(self):
+        self.tabWidget.setCurrentIndex(10)
+
     def add_message_tab(self):
+        try:
+            self.sendMessage.clicked.disconnect()
+        except:
+            pass
         self.tabWidget.setCurrentIndex(9)
         self.message_app = MessageApp(self)    
 

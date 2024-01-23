@@ -38,6 +38,10 @@ class StudentApp(QMainWindow):
         self.menu61_2.triggered.connect(self.add_message_tab)
 
     def add_message_tab(self):
+        try:
+            self.sendMessage.clicked.disconnect()
+        except:
+            pass
         self.tabWidget.setCurrentIndex(8)
         self.message_app = MessageApp(self) 
 
@@ -55,8 +59,11 @@ class StudentApp(QMainWindow):
         self.menu32.triggered.connect(self.view_meeting_attendance)
         self.menu71.triggered.connect(self.logout)
 
-
-
+        try:
+            self.b6.clicked.disconnect()
+        except:
+            pass
+        
         # Button actions
         self.b6.clicked.connect(self.update_student_details) 
         

@@ -234,7 +234,7 @@ email, hashed_password, name, surname, phone, city, user_type, status
         return hashlib.sha256(password.encode()).hexdigest()
     
     def get_teachers(self, cur):
-        cur.execute("SELECT name, surname FROM users WHERE user_type = 'teacher'")
+        cur.execute("SELECT name, surname FROM users WHERE user_type = 'teacher'and status = 'Active' ")
         teachers = cur.fetchall()
         return teachers
 
