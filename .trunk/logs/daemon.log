@@ -1,0 +1,265 @@
+[2024-01-22 11:07:08.324] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'yarn' has no matching download for current os/cpu @ version:1.22.19
+[2024-01-22 11:07:08.327] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'action-validator' has no matching download for current os/cpu @ version:0.5.3
+[2024-01-22 11:07:08.328] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'adr' has no matching download for current os/cpu @ version:3.0.0
+[2024-01-22 11:07:08.328] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'air' has no matching download for current os/cpu @ version:1.44.0
+[2024-01-22 11:07:08.332] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'swiftlint' has no matching download for current os/cpu @ version:0.49.1
+[2024-01-22 11:07:08.333] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'istioctl' has no matching download for current os/cpu @ version:1.14.6
+[2024-01-22 11:07:08.336] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'include-what-you-use' has no matching download for current os/cpu @ version:0.20
+[2024-01-22 11:07:08.338] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'clang-tidy' has no matching download for current os/cpu @ version:16.0.3
+[2024-01-22 11:07:08.338] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'stringslint' has no matching download for current os/cpu @ version:0.1.1
+[2024-01-22 11:07:08.340] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'swiftformat' has no matching download for current os/cpu @ version:0.50.0
+[2024-01-22 11:07:08.342] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'shellcheck' has no matching download for current os/cpu @ version:0.8.0
+[2024-01-22 11:07:08.342] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'clang-format' has no matching download for current os/cpu @ version:14.0.1
+[2024-01-22 11:07:08.342] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'amazon-ecr-credential-helper' has no matching download for current os/cpu @ version:0.7.0
+[2024-01-22 11:07:08.343] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'assh' has no matching download for current os/cpu @ version:2.10.0
+[2024-01-22 11:07:08.347] [global] [info] [service.cc:115] Notifications config has not changed
+[2024-01-22 11:07:08.358] [global] [info] [service.cc:49] Tools config updated; updating tools
+[2024-01-22 11:07:22.851] [global] [info] [service.cc:105] CLI version change; do not run file-triggered actions
+[2024-01-22 11:07:22.854] [global] [info] [service.cc:36] CLI version change; do not update tools
+[2024-01-22 11:07:22.889] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:22.889] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:22.890] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:22.894] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:24.082] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:24.082] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:24.083] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:24.084] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:37.178] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:37.178] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:37.179] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:37.180] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:46.181] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:46.181] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:46.182] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:46.183] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:50.701] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:50.701] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:50.702] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:50.703] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:55.351] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:55.351] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:55.353] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:55.354] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:59.976] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:59.976] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:59.977] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:59.978] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:00.151] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-22 11:08:00.151] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:00.151] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:00.152] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:00.153] [global] [info] [session_context.cc:138] Making commit info with id: e0b42e61f752163998badfae3eaeab0bec6eb674
+[2024-01-22 11:08:00.278] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=8 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-22 11:08:00.278] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-22 11:08:00.279] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *)
+[2024-01-22 11:08:00.279] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:00.279] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:00.280] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:00.282] [global] [info] [session_context.cc:138] Making commit info with id: e0b42e61f752163998badfae3eaeab0bec6eb674
+[2024-01-22 11:08:00.647] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *) status=OK
+[2024-01-22 11:08:00.649] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=8] RX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *)
+[2024-01-22 11:08:00.652] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=8] TX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *) status=OK
+[2024-01-22 11:08:00.653] [global] [info] [service.cc:459] [user-agent= sid=8] RX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *)
+[2024-01-22 11:08:00.665] [global] [info] [service.cc:459] [user-agent= sid=8] TX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *) status=OK
+[2024-01-22 11:08:00.666] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=8] RX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *)
+[2024-01-22 11:08:00.667] [global] [info] [sentry.cc:362] Trunk user error full stack:
+trunk_cli_version: 1.19.0
+title: Something went wrong (but it doesn't appear to be our fault)
+report:
+  - Trunk is not set up in this context. Cannot load config.
+[2024-01-22 11:08:00.667] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=8] TX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *) status=INTERNAL err='Trunk is not set up in this context. Cannot load config.'
+[2024-01-22 11:08:00.671] [global] [info] [service.cc:225] lint session ended sid=8
+[2024-01-22 11:08:00.671] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=8] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:08:00.671] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:00.672] [global] [info] [service.cc:225] lint session ended sid=3
+[2024-01-22 11:08:00.673] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=3] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:08:00.673] [global] [info] [sentry.cc:362] Trunk user error full stack:
+trunk_cli_version: 1.19.0
+title: Something went wrong (but it doesn't appear to be our fault)
+report:
+  - Trunk is not set up in this context. Cannot load config.
+[2024-01-22 11:08:00.673] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=8] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=INTERNAL err='Trunk is not set up in this context. Cannot load config.'
+[2024-01-22 11:08:00.673] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:08:00.673] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:00.674] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=3] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:08:00.674] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:08:00.713] [global] [info] [service.cc:225] lint session ended sid=4
+[2024-01-22 11:08:00.713] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=4] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:08:00.792] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:08:00.863] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:08:00.863] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:00.864] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=4] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:08:00.864] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:08:00.926] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:08:01.082] [global] [info] [grpc.cc:29] TX:virtual grpc::Status trunk::cli::actions::Service::GetNotificationsStream(grpc::ServerContext *, const proto::v1::GetNotificationsStreamRequest *, grpc::ServerWriter<proto::v1::GetNotificationsStreamResponse> *) status=OK
+[2024-01-22 11:08:04.009] [global] [info] [service.cc:225] lint session ended sid=2
+[2024-01-22 11:08:04.009] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=2] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:08:04.009] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:04.010] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=2] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:08:04.010] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:08:04.055] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:08:04.057] [global] [info] [service.cc:225] lint session ended sid=1
+[2024-01-22 11:08:04.057] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=1] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:08:04.058] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:04.058] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=1] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:08:04.058] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:08:04.087] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:08:06.097] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:06.097] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:06.098] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:06.099] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:07.440] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:07.440] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:07.441] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:07.442] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:11.066] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:11.066] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:11.069] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:11.070] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:14.322] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:14.322] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:14.323] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:14.324] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:16.317] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:16.317] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:16.318] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:16.319] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:18.420] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:18.420] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:18.421] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:18.423] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:26.589] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:26.590] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:26.591] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:26.592] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:28.419] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:28.420] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:28.420] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:28.421] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:30.614] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:30.614] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:30.615] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:30.616] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:32.318] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:32.319] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:32.320] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:32.321] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:36.850] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:36.850] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:36.851] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:36.852] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:38.633] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:38.633] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:38.634] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:38.636] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:44.793] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:44.793] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:44.795] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:44.797] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:48.829] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:48.829] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:48.831] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:48.832] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:50.718] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:50.719] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:50.721] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:50.724] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:08:56.407] [global] [info] [runner.cc:136] Executing action trunk-single-player-auto-on-upgrade.schedule.24h+5m
+[2024-01-22 11:09:54.088] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:09:54.089] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:09:54.090] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:09:54.091] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:35.969] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:35.969] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:35.971] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:35.972] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:37.447] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:37.447] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:37.448] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:37.449] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:41.200] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:41.200] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:41.201] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:41.202] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:42.251] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:42.251] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:42.252] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:42.253] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:52.312] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:52.313] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:52.314] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:52.315] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:54.292] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:54.292] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:54.293] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:54.295] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:57.125] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:57.125] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:57.127] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:10:57.128] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:08.793] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:08.793] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:08.796] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:08.798] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:10.942] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:10.942] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:10.943] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:10.944] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:16.706] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:16.707] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:16.708] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:16.709] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:18.807] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:18.808] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:18.809] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:18.810] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:22.321] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:22.321] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:22.322] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:22.324] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:24.441] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:24.441] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:24.443] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:24.444] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:25.380] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:25.380] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:25.381] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:25.381] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:30.994] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:30.994] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:30.995] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:30.996] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:32.854] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:32.854] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:32.856] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:32.857] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:35.557] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:35.557] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:35.558] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:35.560] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:37.434] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:37.434] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:37.436] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:37.438] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:39.707] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:39.708] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:39.709] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:39.711] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:53.986] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:53.986] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:53.989] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:53.991] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:56.965] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:56.966] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:56.967] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:56.968] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:58.905] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:58.905] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:58.906] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:11:58.907] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed

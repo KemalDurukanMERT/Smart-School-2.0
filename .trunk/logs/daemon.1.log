@@ -1,0 +1,691 @@
+[2024-01-21 22:25:51.565] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\login.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:51.580] [global] [info] [cache.cc:930] [on-demand] [bandit:lint:student.py:HEAD] already cached, not running linter
+[2024-01-21 22:25:51.576] [global] [info] [cache.cc:972] [on-demand] [prettier:format:.trunk\configs\.markdownlint.yaml:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.677] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\message.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:51.677] [global] [info] [cache.cc:972] [on-demand] [prettier:format:.trunk\trunk.yaml:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.677] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\student.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:51.678] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\student_registration.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:51.678] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\teacher.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:51.678] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\teacher_registration.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:51.678] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\user.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:51.678] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:student.py:upstream] not cacheable, running linter
+[2024-01-21 22:25:51.678] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:student.ui:upstream] not cacheable, running linter
+[2024-01-21 22:25:51.678] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:teacher.ui:upstream] not cacheable, running linter
+[2024-01-21 22:25:51.689] [global] [info] [cache.cc:930] [on-demand] [black:format:student.py:HEAD] already cached, not running linter
+[2024-01-21 22:25:51.700] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:.trunk\trunk.yaml:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.701] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\login.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.701] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\message.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.701] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\student.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.701] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\student_registration.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.701] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\teacher.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.701] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\teacher_registration.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.701] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\user.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.701] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:student.py:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.701] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:student.ui:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.701] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:teacher.ui:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.707] [global] [info] [cache.cc:972] [on-demand] [isort:format:student.py:HEAD] not cacheable, running linter
+[2024-01-21 22:25:51.739] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *) status=OK
+[2024-01-21 22:25:51.745] [global] [info] [service.cc:225] lint session ended sid=6
+[2024-01-21 22:25:51.745] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=6] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:25:51.747] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=6] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:25:51.747] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:25:51.969] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:25:52.113] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:25:52.192] [global] [info] [session_context.cc:138] Making commit info with id: e952ca8dc766f713f09979421a812369a4ecb754
+[2024-01-21 22:25:52.452] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=7 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:25:52.452] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:25:52.453] [global] [info] [service.cc:426] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::FormatBuffer(grpc::ServerContext *, const proto::v1::FormatBufferRequest *, proto::v1::FormatBufferResponse *)
+[2024-01-21 22:25:52.658] [global] [info] [cache.cc:930] [on-demand] [black:format:student.py:HEAD] already cached, not running linter
+[2024-01-21 22:25:52.661] [global] [info] [cache.cc:972] [on-demand] [isort:format:student.py:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.404] [global] [info] [cache.cc:972] [on-demand] [ruff:lint:student.py:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.465] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:.trunk\.gitignore:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.465] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:.trunk\configs\.isort.cfg:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:.trunk\configs\.markdownlint.yaml:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:.trunk\configs\ruff.toml:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:.trunk\trunk.yaml:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\login.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\message.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\student.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\student_registration.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\teacher.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\teacher_registration.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\user.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:student.py:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:student.ui:HEAD] not cacheable, running linter
+[2024-01-21 22:25:53.466] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:teacher.ui:HEAD] not cacheable, running linter
+[2024-01-21 22:25:54.635] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\login.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:54.635] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\message.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:54.635] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\student.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:54.635] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\student_registration.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:54.635] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\teacher.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:54.635] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\teacher_registration.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:54.635] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\user.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-21 22:25:54.635] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:student.py:upstream] not cacheable, running linter
+[2024-01-21 22:25:54.635] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:student.ui:upstream] not cacheable, running linter
+[2024-01-21 22:25:54.635] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:teacher.ui:upstream] not cacheable, running linter
+[2024-01-21 22:25:55.015] [global] [info] [cache.cc:972] [on-demand] [isort:format:student.py:HEAD] not cacheable, running linter
+[2024-01-21 22:25:55.041] [global] [info] [cache.cc:930] [on-demand] [black:format:student.py:HEAD] already cached, not running linter
+[2024-01-21 22:25:55.119] [global] [info] [cache.cc:930] [on-demand] [bandit:lint:student.py:upstream] already cached, not running linter
+[2024-01-21 22:25:55.120] [global] [info] [cache.cc:972] [on-demand] [ruff:lint:student.py:upstream] not cacheable, running linter
+[2024-01-21 22:25:56.187] [global] [info] [grpc.cc:29] TX:virtual grpc::Status trunk::cli::UpgradeService::GetAvailableUpgrades(grpc::ServerContext *, const upgrade::proto::v1::GetAvailableUpgradesRequest *, grpc::ServerWriter<upgrade::proto::v1::GetAvailableUpgradesResponse> *) status=OK
+[2024-01-21 22:25:56.362] [global] [info] [service.cc:426] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::FormatBuffer(grpc::ServerContext *, const proto::v1::FormatBufferRequest *, proto::v1::FormatBufferResponse *) status=OK
+[2024-01-21 22:25:56.363] [global] [info] [service.cc:225] lint session ended sid=7
+[2024-01-21 22:25:56.363] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=7] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:25:56.364] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=7] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:25:56.364] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:25:56.477] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:25:56.967] [global] [info] [notification_manager.cc:37] Writing to C:\Users\laptop\OneDrive\Desktop\Smart-School-2.0\.trunk\notifications\trunk-upgrade.yaml
+[2024-01-21 22:25:56.971] [global] [info] [notification_manager.cc:84] Reading from C:\Users\laptop\OneDrive\Desktop\Smart-School-2.0\.trunk\notifications\trunk-upgrade.yaml
+[2024-01-21 22:25:57.189] [global] [info] [service.cc:159] Writing notification state to file
+[2024-01-21 22:25:58.455] [global] [info] [service.cc:459] [user-agent= sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *) status=OK
+[2024-01-21 22:25:58.455] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *)
+[2024-01-21 22:25:58.456] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *) status=OK
+[2024-01-21 22:25:58.464] [global] [info] [service.cc:225] lint session ended sid=5
+[2024-01-21 22:25:58.464] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:25:58.466] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:25:58.466] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:25:58.558] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:25:59.479] [global] [info] [service.cc:285] [user-agent=lsp-proxy sid=5] TrackCheckUsageEvent upload ok: true with code: ok
+[2024-01-21 22:26:03.905] [global] [info] [cache.cc:930] [monitor] [bandit:lint:student.py:HEAD] already cached, not running linter
+[2024-01-21 22:26:03.909] [global] [info] [cache.cc:930] [monitor] [black:format:student.py:HEAD] already cached, not running linter
+[2024-01-21 22:26:35.357] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:26:35.432] [global] [info] [session_context.cc:138] Making commit info with id: e952ca8dc766f713f09979421a812369a4ecb754
+[2024-01-21 22:26:35.649] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=8 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:26:35.649] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:26:35.652] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *)
+[2024-01-21 22:26:35.738] [global] [info] [session_context.cc:138] Making commit info with id: e952ca8dc766f713f09979421a812369a4ecb754
+[2024-01-21 22:26:36.231] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *) status=OK
+[2024-01-21 22:26:36.240] [global] [info] [service.cc:225] lint session ended sid=8
+[2024-01-21 22:26:36.240] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=8] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:26:36.242] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=8] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:26:36.242] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:26:36.394] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:26:46.207] [global] [info] [service.cc:225] lint session ended sid=4
+[2024-01-21 22:26:46.207] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=4] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:26:46.208] [global] [info] [service.cc:225] lint session ended sid=3
+[2024-01-21 22:26:46.208] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=4] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:26:46.209] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:26:46.209] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=3] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:26:46.315] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:26:46.317] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=3] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:26:46.317] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:26:46.392] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:26:46.506] [global] [info] [grpc.cc:29] TX:virtual grpc::Status trunk::cli::actions::Service::GetNotificationsStream(grpc::ServerContext *, const proto::v1::GetNotificationsStreamRequest *, grpc::ServerWriter<proto::v1::GetNotificationsStreamResponse> *) status=OK
+[2024-01-21 22:26:49.696] [global] [info] [service.cc:225] lint session ended sid=2
+[2024-01-21 22:26:49.696] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=2] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:26:49.697] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=2] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:26:49.697] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:26:49.739] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:26:49.810] [global] [info] [windows_monitor_impl.cc:182] Received cancel signal for monitor
+[2024-01-21 22:26:49.810] [global] [info] [windows_monitor_impl.cc:90] Closing monitor worker
+[2024-01-21 22:26:49.810] [global] [info] [windows_monitor_impl.cc:224] Monitor shutdown complete. Closing handles
+[2024-01-21 22:26:49.810] [global] [info] [windows_monitor_impl.cc:232] Closed monitor canceller handle
+[2024-01-21 22:26:49.810] [global] [info] [windows_monitor_impl.cc:237] Closed monitor overlap handle
+[2024-01-21 22:26:49.810] [global] [info] [windows_monitor_impl.cc:242] Closed monitor workspace handle
+[2024-01-21 22:26:49.810] [global] [warning] [windows_monitor_impl.cc:226] Unable to join thread on monitor shutdown
+[2024-01-21 22:26:49.810] [global] [info] [windows_monitor_impl.cc:232] Closed monitor canceller handle
+[2024-01-21 22:26:49.810] [global] [info] [windows_monitor_impl.cc:237] Closed monitor overlap handle
+[2024-01-21 22:26:49.810] [global] [info] [windows_monitor_impl.cc:242] Closed monitor workspace handle
+[2024-01-21 22:26:49.812] [global] [info] [service.cc:159] Writing notification state to file
+[2024-01-21 22:34:41.343] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'shellcheck' has no matching download for current os/cpu @ version:0.8.0
+[2024-01-21 22:34:41.345] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'scalafmt' has no matching download for current os/cpu @ version:3.4.3
+[2024-01-21 22:34:41.347] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'action-validator' has no matching download for current os/cpu @ version:0.5.3
+[2024-01-21 22:34:41.348] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'include-what-you-use' has no matching download for current os/cpu @ version:0.20
+[2024-01-21 22:34:41.351] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'yarn' has no matching download for current os/cpu @ version:1.22.19
+[2024-01-21 22:34:41.351] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'air' has no matching download for current os/cpu @ version:1.44.0
+[2024-01-21 22:34:41.352] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'clang-tidy' has no matching download for current os/cpu @ version:16.0.3
+[2024-01-21 22:34:41.353] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'istioctl' has no matching download for current os/cpu @ version:1.14.6
+[2024-01-21 22:34:41.353] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'swiftformat' has no matching download for current os/cpu @ version:0.50.0
+[2024-01-21 22:34:41.354] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'amazon-ecr-credential-helper' has no matching download for current os/cpu @ version:0.7.0
+[2024-01-21 22:34:41.354] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'act' has no matching download for current os/cpu @ version:0.2.49
+[2024-01-21 22:34:41.356] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'assh' has no matching download for current os/cpu @ version:2.10.0
+[2024-01-21 22:34:41.358] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'stringslint' has no matching download for current os/cpu @ version:0.1.1
+[2024-01-21 22:34:41.360] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'swiftlint' has no matching download for current os/cpu @ version:0.49.1
+[2024-01-21 22:34:41.361] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'tfnotify' has no matching download for current os/cpu @ version:0.8.0
+[2024-01-21 22:34:41.362] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'adr' has no matching download for current os/cpu @ version:3.0.0
+[2024-01-21 22:34:41.363] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'tfmigrate' has no matching download for current os/cpu @ version:0.3.14
+[2024-01-21 22:34:41.364] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'direnv' has no matching download for current os/cpu @ version:2.32.3
+[2024-01-21 22:34:41.364] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'clang-format' has no matching download for current os/cpu @ version:14.0.1
+[2024-01-21 22:34:41.368] [global] [info] [run.cc:543] Ran command: 'daemon launch' LogLevel:error
+[2024-01-21 22:34:41.497] [global] [info] [runner.cc:33] Created Action Runner
+[2024-01-21 22:34:41.497] [global] [info] [runner.cc:105] Commenced Action Loop
+[2024-01-21 22:34:41.499] [global] [info] [runner.cc:136] Executing action trunk-upgrade-available.schedule.1h
+[2024-01-21 22:34:41.501] [global] [info] [runner.cc:136] Executing action trunk-cache-prune.schedule.24h
+[2024-01-21 22:34:41.502] [global] [info] [runner.cc:136] Executing action trunk-share-with-everyone.schedule.24h
+[2024-01-21 22:34:41.503] [global] [info] [server.cc:51] Starting daemon 1.19.0. LogLevel:2
+[2024-01-21 22:34:41.547] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:34:41.673] [global] [info] [session_context.cc:138] Making commit info with id: 8782a85500dc19a523b8b6562ee7787de54bb974
+[2024-01-21 22:34:41.695] [global] [info] [link.cc:98] Failed to create symlink, falling back to junctions and hard links
+[2024-01-21 22:34:41.721] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=1 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:34:41.721] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:34:41.721] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:34:41.783] [global] [info] [session_context.cc:138] Making commit info with id: 8782a85500dc19a523b8b6562ee7787de54bb974
+[2024-01-21 22:34:41.819] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=2 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:34:41.819] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:34:42.180] [global] [info] [grpc.cc:24] RX:virtual grpc::Status trunk::cli::UpgradeService::GetAvailableUpgrades(grpc::ServerContext *, const upgrade::proto::v1::GetAvailableUpgradesRequest *, grpc::ServerWriter<upgrade::proto::v1::GetAvailableUpgradesResponse> *)
+[2024-01-21 22:34:42.185] [global] [info] [cli_upgrade.cc:85] Checking for latest trunk prod version...
+[2024-01-21 22:34:42.188] [global] [info] [plugin_upgrade.cc:71] Querying latest version for plugin trunk
+[2024-01-21 22:34:42.407] [global] [info] [cli_upgrade.cc:92] Successfully fetched latest trunk 1.19.0 version: prod
+[2024-01-21 22:34:42.893] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\remark-lint\.remarkrc.yaml
+[2024-01-21 22:34:42.894] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\yamllint\.yamllint.yaml
+[2024-01-21 22:34:42.895] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\cspell\cspell.yaml
+[2024-01-21 22:34:42.896] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\flake8\.flake8
+[2024-01-21 22:34:42.898] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\remark-lint\.remarkrc.yaml
+[2024-01-21 22:34:43.380] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:34:43.451] [global] [info] [session_context.cc:138] Making commit info with id: 8782a85500dc19a523b8b6562ee7787de54bb974
+[2024-01-21 22:34:43.499] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=3 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:34:43.499] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:34:43.499] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:34:43.569] [global] [info] [session_context.cc:138] Making commit info with id: 8782a85500dc19a523b8b6562ee7787de54bb974
+[2024-01-21 22:34:43.629] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=4 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:34:43.629] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:34:43.630] [global] [info] [grpc.cc:24] RX:virtual grpc::Status trunk::cli::actions::Service::GetNotificationsStream(grpc::ServerContext *, const proto::v1::GetNotificationsStreamRequest *, grpc::ServerWriter<proto::v1::GetNotificationsStreamResponse> *)
+[2024-01-21 22:34:43.630] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:34:43.630] [global] [info] [notification_manager.cc:84] Reading from C:\Users\laptop\OneDrive\Desktop\Smart-School-2.0\.trunk\notifications\trunk-upgrade.yaml
+[2024-01-21 22:34:43.631] [global] [info] [service.cc:159] Writing notification state to file
+[2024-01-21 22:34:43.702] [global] [info] [session_context.cc:138] Making commit info with id: 8782a85500dc19a523b8b6562ee7787de54bb974
+[2024-01-21 22:34:43.769] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=5 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:34:43.769] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:34:43.770] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *)
+[2024-01-21 22:34:43.831] [global] [info] [session_context.cc:138] Making commit info with id: 8782a85500dc19a523b8b6562ee7787de54bb974
+[2024-01-21 22:34:43.985] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *) status=OK
+[2024-01-21 22:34:43.986] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *)
+[2024-01-21 22:34:43.986] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *) status=OK
+[2024-01-21 22:34:43.986] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *)
+[2024-01-21 22:34:43.987] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *) status=OK
+[2024-01-21 22:34:43.987] [global] [info] [service.cc:459] [user-agent= sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *)
+[2024-01-21 22:34:43.988] [global] [info] [service.cc:459] [user-agent= sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *) status=OK
+[2024-01-21 22:34:43.989] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *)
+[2024-01-21 22:34:43.989] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *) status=OK
+[2024-01-21 22:34:43.990] [global] [info] [service.cc:225] lint session ended sid=5
+[2024-01-21 22:34:43.990] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:34:43.992] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:34:43.992] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:34:44.067] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:34:44.428] [global] [info] [release.cc:139] Retrieved 12 linter-version pairs from ReleaseVersionService
+[2024-01-21 22:34:45.061] [global] [info] [service.cc:285] [user-agent=lsp-proxy sid=5] TrackCheckUsageEvent upload ok: true with code: ok
+[2024-01-21 22:34:49.129] [global] [info] [grpc.cc:29] TX:virtual grpc::Status trunk::cli::UpgradeService::GetAvailableUpgrades(grpc::ServerContext *, const upgrade::proto::v1::GetAvailableUpgradesRequest *, grpc::ServerWriter<upgrade::proto::v1::GetAvailableUpgradesResponse> *) status=OK
+[2024-01-21 22:34:49.747] [global] [info] [notification_manager.cc:37] Writing to C:\Users\laptop\OneDrive\Desktop\Smart-School-2.0\.trunk\notifications\trunk-upgrade.yaml
+[2024-01-21 22:34:49.752] [global] [info] [notification_manager.cc:84] Reading from C:\Users\laptop\OneDrive\Desktop\Smart-School-2.0\.trunk\notifications\trunk-upgrade.yaml
+[2024-01-21 22:34:49.767] [global] [info] [service.cc:159] Writing notification state to file
+[2024-01-21 22:35:03.356] [global] [info] [service.cc:225] lint session ended sid=3
+[2024-01-21 22:35:03.356] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=3] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:35:03.356] [global] [info] [service.cc:225] lint session ended sid=4
+[2024-01-21 22:35:03.356] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=4] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:35:03.356] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-21 22:35:03.356] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-21 22:35:03.360] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=3] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:35:03.360] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:35:03.361] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=4] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:35:03.361] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:35:03.387] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:35:03.410] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:35:03.671] [global] [info] [service.cc:105] CLI version change; do not run file-triggered actions
+[2024-01-21 22:35:03.674] [global] [info] [service.cc:36] CLI version change; do not update tools
+[2024-01-21 22:35:03.695] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-21 22:35:03.695] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-21 22:35:03.696] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-21 22:35:03.697] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-21 22:35:03.818] [global] [info] [service.cc:225] lint session ended sid=2
+[2024-01-21 22:35:03.818] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=2] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:35:03.818] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-21 22:35:03.819] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=2] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:35:03.819] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:35:03.841] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:35:03.863] [global] [info] [grpc.cc:29] TX:virtual grpc::Status trunk::cli::actions::Service::GetNotificationsStream(grpc::ServerContext *, const proto::v1::GetNotificationsStreamRequest *, grpc::ServerWriter<proto::v1::GetNotificationsStreamResponse> *) status=OK
+[2024-01-21 22:35:03.882] [global] [info] [windows_monitor_impl.cc:182] Received cancel signal for monitor
+[2024-01-21 22:35:03.883] [global] [info] [windows_monitor_impl.cc:90] Closing monitor worker
+[2024-01-21 22:35:03.883] [global] [info] [windows_monitor_impl.cc:224] Monitor shutdown complete. Closing handles
+[2024-01-21 22:35:03.883] [global] [info] [windows_monitor_impl.cc:232] Closed monitor canceller handle
+[2024-01-21 22:35:03.883] [global] [info] [windows_monitor_impl.cc:237] Closed monitor overlap handle
+[2024-01-21 22:35:03.883] [global] [info] [windows_monitor_impl.cc:242] Closed monitor workspace handle
+[2024-01-21 22:35:03.883] [global] [warning] [windows_monitor_impl.cc:226] Unable to join thread on monitor shutdown
+[2024-01-21 22:35:03.883] [global] [info] [windows_monitor_impl.cc:232] Closed monitor canceller handle
+[2024-01-21 22:35:03.883] [global] [info] [windows_monitor_impl.cc:237] Closed monitor overlap handle
+[2024-01-21 22:35:03.884] [global] [info] [windows_monitor_impl.cc:242] Closed monitor workspace handle
+[2024-01-21 22:35:03.885] [global] [info] [service.cc:159] Writing notification state to file
+[2024-01-21 22:36:01.728] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'assh' has no matching download for current os/cpu @ version:2.10.0
+[2024-01-21 22:36:01.728] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'stringslint' has no matching download for current os/cpu @ version:0.1.1
+[2024-01-21 22:36:01.731] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'swiftlint' has no matching download for current os/cpu @ version:0.49.1
+[2024-01-21 22:36:01.735] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'tfmigrate' has no matching download for current os/cpu @ version:0.3.14
+[2024-01-21 22:36:01.736] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'direnv' has no matching download for current os/cpu @ version:2.32.3
+[2024-01-21 22:36:01.738] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'tfnotify' has no matching download for current os/cpu @ version:0.8.0
+[2024-01-21 22:36:01.739] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'adr' has no matching download for current os/cpu @ version:3.0.0
+[2024-01-21 22:36:01.741] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'clang-format' has no matching download for current os/cpu @ version:14.0.1
+[2024-01-21 22:36:01.744] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'scalafmt' has no matching download for current os/cpu @ version:3.4.3
+[2024-01-21 22:36:01.746] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'shellcheck' has no matching download for current os/cpu @ version:0.8.0
+[2024-01-21 22:36:01.747] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'action-validator' has no matching download for current os/cpu @ version:0.5.3
+[2024-01-21 22:36:01.750] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'yarn' has no matching download for current os/cpu @ version:1.22.19
+[2024-01-21 22:36:01.751] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'air' has no matching download for current os/cpu @ version:1.44.0
+[2024-01-21 22:36:01.751] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'clang-tidy' has no matching download for current os/cpu @ version:16.0.3
+[2024-01-21 22:36:01.752] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'include-what-you-use' has no matching download for current os/cpu @ version:0.20
+[2024-01-21 22:36:01.753] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'amazon-ecr-credential-helper' has no matching download for current os/cpu @ version:0.7.0
+[2024-01-21 22:36:01.754] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'act' has no matching download for current os/cpu @ version:0.2.49
+[2024-01-21 22:36:01.754] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'swiftformat' has no matching download for current os/cpu @ version:0.50.0
+[2024-01-21 22:36:01.755] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'istioctl' has no matching download for current os/cpu @ version:1.14.6
+[2024-01-21 22:36:01.757] [global] [info] [run.cc:543] Ran command: 'daemon launch' LogLevel:error
+[2024-01-21 22:36:01.881] [global] [info] [runner.cc:33] Created Action Runner
+[2024-01-21 22:36:01.882] [global] [info] [runner.cc:105] Commenced Action Loop
+[2024-01-21 22:36:01.885] [global] [info] [runner.cc:136] Executing action trunk-upgrade-available.schedule.1h
+[2024-01-21 22:36:01.886] [global] [info] [runner.cc:136] Executing action trunk-cache-prune.schedule.24h
+[2024-01-21 22:36:01.887] [global] [info] [runner.cc:136] Executing action trunk-share-with-everyone.schedule.24h
+[2024-01-21 22:36:01.889] [global] [info] [server.cc:51] Starting daemon 1.19.0. LogLevel:2
+[2024-01-21 22:36:01.931] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:36:02.021] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-21 22:36:02.052] [global] [info] [link.cc:98] Failed to create symlink, falling back to junctions and hard links
+[2024-01-21 22:36:02.078] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=1 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:36:02.078] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:36:02.079] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:36:02.143] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-21 22:36:02.188] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=2 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:36:02.188] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:36:02.798] [global] [info] [grpc.cc:24] RX:virtual grpc::Status trunk::cli::UpgradeService::GetAvailableUpgrades(grpc::ServerContext *, const upgrade::proto::v1::GetAvailableUpgradesRequest *, grpc::ServerWriter<upgrade::proto::v1::GetAvailableUpgradesResponse> *)
+[2024-01-21 22:36:02.828] [global] [info] [cli_upgrade.cc:85] Checking for latest trunk prod version...
+[2024-01-21 22:36:02.829] [global] [info] [plugin_upgrade.cc:71] Querying latest version for plugin trunk
+[2024-01-21 22:36:03.079] [global] [info] [cli_upgrade.cc:92] Successfully fetched latest trunk 1.19.0 version: prod
+[2024-01-21 22:36:03.718] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\cspell\cspell.yaml
+[2024-01-21 22:36:03.719] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\flake8\.flake8
+[2024-01-21 22:36:03.719] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\yamllint\.yamllint.yaml
+[2024-01-21 22:36:03.721] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\remark-lint\.remarkrc.yaml
+[2024-01-21 22:36:03.726] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\remark-lint\.remarkrc.yaml
+[2024-01-21 22:36:03.763] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:36:03.840] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-21 22:36:03.894] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=3 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:36:03.894] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:36:03.894] [global] [info] [grpc.cc:24] RX:virtual grpc::Status trunk::cli::actions::Service::GetNotificationsStream(grpc::ServerContext *, const proto::v1::GetNotificationsStreamRequest *, grpc::ServerWriter<proto::v1::GetNotificationsStreamResponse> *)
+[2024-01-21 22:36:03.895] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:36:03.895] [global] [info] [notification_manager.cc:84] Reading from C:\Users\laptop\OneDrive\Desktop\Smart-School-2.0\.trunk\notifications\trunk-upgrade.yaml
+[2024-01-21 22:36:03.896] [global] [info] [service.cc:159] Writing notification state to file
+[2024-01-21 22:36:03.965] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-21 22:36:04.033] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=4 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:36:04.033] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:36:04.034] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:36:04.113] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-21 22:36:04.194] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=5 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:36:04.194] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:36:04.194] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *)
+[2024-01-21 22:36:04.264] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-21 22:36:04.425] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *) status=OK
+[2024-01-21 22:36:04.425] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *)
+[2024-01-21 22:36:04.425] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *) status=OK
+[2024-01-21 22:36:04.426] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *)
+[2024-01-21 22:36:04.426] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *) status=OK
+[2024-01-21 22:36:04.427] [global] [info] [service.cc:459] [user-agent= sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *)
+[2024-01-21 22:36:04.428] [global] [info] [service.cc:459] [user-agent= sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *) status=OK
+[2024-01-21 22:36:04.429] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *)
+[2024-01-21 22:36:04.429] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *) status=OK
+[2024-01-21 22:36:04.430] [global] [info] [service.cc:225] lint session ended sid=5
+[2024-01-21 22:36:04.430] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:36:04.432] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:36:04.432] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:36:04.502] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:36:04.801] [global] [info] [release.cc:139] Retrieved 12 linter-version pairs from ReleaseVersionService
+[2024-01-21 22:36:05.499] [global] [info] [service.cc:285] [user-agent=lsp-proxy sid=5] TrackCheckUsageEvent upload ok: true with code: ok
+[2024-01-21 22:36:08.976] [global] [info] [grpc.cc:29] TX:virtual grpc::Status trunk::cli::UpgradeService::GetAvailableUpgrades(grpc::ServerContext *, const upgrade::proto::v1::GetAvailableUpgradesRequest *, grpc::ServerWriter<upgrade::proto::v1::GetAvailableUpgradesResponse> *) status=OK
+[2024-01-21 22:36:09.565] [global] [info] [notification_manager.cc:37] Writing to C:\Users\laptop\OneDrive\Desktop\Smart-School-2.0\.trunk\notifications\trunk-upgrade.yaml
+[2024-01-21 22:36:09.569] [global] [info] [notification_manager.cc:84] Reading from C:\Users\laptop\OneDrive\Desktop\Smart-School-2.0\.trunk\notifications\trunk-upgrade.yaml
+[2024-01-21 22:36:09.581] [global] [info] [service.cc:159] Writing notification state to file
+[2024-01-21 22:36:33.356] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:36:33.457] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-21 22:36:33.637] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=6 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:36:33.637] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:36:33.638] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *)
+[2024-01-21 22:36:33.704] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-21 22:36:33.874] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *) status=OK
+[2024-01-21 22:36:33.875] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=6] RX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *)
+[2024-01-21 22:36:33.877] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=6] TX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *) status=OK
+[2024-01-21 22:36:33.878] [global] [info] [service.cc:459] [user-agent= sid=6] RX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *)
+[2024-01-21 22:36:33.902] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:main.py:HEAD] not cacheable, running linter
+[2024-01-21 22:36:33.902] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:main.py:upstream] not cacheable, running linter
+[2024-01-21 22:36:33.913] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:main.py:HEAD] not cacheable, running linter
+[2024-01-21 22:36:33.916] [global] [error] [tool.cc:105] Error encountered while renaming tool shim C:\Users\laptop\AppData\Local\trunk\repos\f94fcaa141fad2a49de56a0b84367e68\tools\bandit-nsVoR to C:\Users\laptop\AppData\Local\trunk\repos\f94fcaa141fad2a49de56a0b84367e68\tools\bandit.bat: Permission denied
+[2024-01-21 22:36:33.955] [global] [info] [cache.cc:930] [on-demand] [bandit:lint:main.py:HEAD] already cached, not running linter
+[2024-01-21 22:36:33.967] [global] [info] [cache.cc:930] [on-demand] [black:format:main.py:HEAD] already cached, not running linter
+[2024-01-21 22:36:33.974] [global] [info] [cache.cc:972] [on-demand] [isort:format:main.py:HEAD] not cacheable, running linter
+[2024-01-21 22:36:34.664] [global] [info] [cache.cc:972] [on-demand] [ruff:lint:main.py:HEAD] not cacheable, running linter
+[2024-01-21 22:36:34.670] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:main.py:upstream] not cacheable, running linter
+[2024-01-21 22:36:35.298] [global] [info] [cache.cc:930] [on-demand] [bandit:lint:main.py:upstream] already cached, not running linter
+[2024-01-21 22:36:35.301] [global] [info] [cache.cc:972] [on-demand] [ruff:lint:main.py:upstream] not cacheable, running linter
+[2024-01-21 22:36:36.427] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-21 22:36:36.501] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-21 22:36:36.638] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=7 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-21 22:36:36.638] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-21 22:36:36.639] [global] [info] [service.cc:426] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::FormatBuffer(grpc::ServerContext *, const proto::v1::FormatBufferRequest *, proto::v1::FormatBufferResponse *)
+[2024-01-21 22:36:36.938] [global] [info] [service.cc:459] [user-agent= sid=6] TX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *) status=OK
+[2024-01-21 22:36:37.063] [global] [info] [cache.cc:930] [on-demand] [black:format:main.py:HEAD] already cached, not running linter
+[2024-01-21 22:36:37.067] [global] [info] [cache.cc:972] [on-demand] [isort:format:main.py:HEAD] not cacheable, running linter
+[2024-01-21 22:36:38.961] [global] [info] [cache.cc:972] [on-demand] [isort:format:main.py:HEAD] not cacheable, running linter
+[2024-01-21 22:36:38.966] [global] [info] [cache.cc:930] [on-demand] [black:format:main.py:HEAD] already cached, not running linter
+[2024-01-21 22:36:39.923] [global] [info] [service.cc:426] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::FormatBuffer(grpc::ServerContext *, const proto::v1::FormatBufferRequest *, proto::v1::FormatBufferResponse *) status=OK
+[2024-01-21 22:36:39.923] [global] [info] [service.cc:225] lint session ended sid=7
+[2024-01-21 22:36:39.924] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=7] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:36:39.925] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=7] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:36:39.925] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:36:39.989] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:36:40.083] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=6] RX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *)
+[2024-01-21 22:36:40.084] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=6] TX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *) status=OK
+[2024-01-21 22:36:40.088] [global] [info] [service.cc:225] lint session ended sid=6
+[2024-01-21 22:36:40.088] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=6] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:36:40.090] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=6] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:36:40.090] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:36:40.151] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:36:40.288] [global] [info] [service.cc:285] [user-agent=lsp-proxy sid=6] TrackCheckUsageEvent upload ok: true with code: ok
+[2024-01-21 22:38:47.325] [global] [info] [service.cc:225] lint session ended sid=4
+[2024-01-21 22:38:47.325] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=4] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:38:47.325] [global] [info] [service.cc:225] lint session ended sid=3
+[2024-01-21 22:38:47.326] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=3] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:38:47.327] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=4] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:38:47.327] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:38:47.328] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=3] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:38:47.328] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:38:47.385] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:38:47.427] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:38:47.948] [global] [info] [grpc.cc:29] TX:virtual grpc::Status trunk::cli::actions::Service::GetNotificationsStream(grpc::ServerContext *, const proto::v1::GetNotificationsStreamRequest *, grpc::ServerWriter<proto::v1::GetNotificationsStreamResponse> *) status=OK
+[2024-01-21 22:38:49.113] [global] [info] [service.cc:225] lint session ended sid=2
+[2024-01-21 22:38:49.113] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=2] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:38:49.114] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=2] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:38:49.115] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-21 22:38:49.143] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-21 22:38:49.165] [global] [info] [windows_monitor_impl.cc:182] Received cancel signal for monitor
+[2024-01-21 22:38:49.165] [global] [info] [windows_monitor_impl.cc:90] Closing monitor worker
+[2024-01-21 22:38:49.165] [global] [info] [windows_monitor_impl.cc:224] Monitor shutdown complete. Closing handles
+[2024-01-21 22:38:49.165] [global] [info] [windows_monitor_impl.cc:232] Closed monitor canceller handle
+[2024-01-21 22:38:49.165] [global] [info] [windows_monitor_impl.cc:237] Closed monitor overlap handle
+[2024-01-21 22:38:49.165] [global] [info] [windows_monitor_impl.cc:242] Closed monitor workspace handle
+[2024-01-21 22:38:49.166] [global] [warning] [windows_monitor_impl.cc:226] Unable to join thread on monitor shutdown
+[2024-01-21 22:38:49.166] [global] [info] [windows_monitor_impl.cc:232] Closed monitor canceller handle
+[2024-01-21 22:38:49.166] [global] [info] [windows_monitor_impl.cc:237] Closed monitor overlap handle
+[2024-01-21 22:38:49.166] [global] [info] [windows_monitor_impl.cc:242] Closed monitor workspace handle
+[2024-01-21 22:38:49.167] [global] [info] [service.cc:159] Writing notification state to file
+[2024-01-22 11:03:56.201] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'adr' has no matching download for current os/cpu @ version:3.0.0
+[2024-01-22 11:03:56.202] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'air' has no matching download for current os/cpu @ version:1.44.0
+[2024-01-22 11:03:56.204] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'yarn' has no matching download for current os/cpu @ version:1.22.19
+[2024-01-22 11:03:56.205] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'act' has no matching download for current os/cpu @ version:0.2.49
+[2024-01-22 11:03:56.206] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'action-validator' has no matching download for current os/cpu @ version:0.5.3
+[2024-01-22 11:03:56.209] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'tfmigrate' has no matching download for current os/cpu @ version:0.3.14
+[2024-01-22 11:03:56.210] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'scalafmt' has no matching download for current os/cpu @ version:3.4.3
+[2024-01-22 11:03:56.211] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'direnv' has no matching download for current os/cpu @ version:2.32.3
+[2024-01-22 11:03:56.211] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'tfnotify' has no matching download for current os/cpu @ version:0.8.0
+[2024-01-22 11:03:56.213] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'assh' has no matching download for current os/cpu @ version:2.10.0
+[2024-01-22 11:03:56.215] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'swiftformat' has no matching download for current os/cpu @ version:0.50.0
+[2024-01-22 11:03:56.216] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'shellcheck' has no matching download for current os/cpu @ version:0.8.0
+[2024-01-22 11:03:56.217] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'clang-format' has no matching download for current os/cpu @ version:14.0.1
+[2024-01-22 11:03:56.217] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'amazon-ecr-credential-helper' has no matching download for current os/cpu @ version:0.7.0
+[2024-01-22 11:03:56.218] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'include-what-you-use' has no matching download for current os/cpu @ version:0.20
+[2024-01-22 11:03:56.219] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'clang-tidy' has no matching download for current os/cpu @ version:16.0.3
+[2024-01-22 11:03:56.219] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'stringslint' has no matching download for current os/cpu @ version:0.1.1
+[2024-01-22 11:03:56.220] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'swiftlint' has no matching download for current os/cpu @ version:0.49.1
+[2024-01-22 11:03:56.223] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'istioctl' has no matching download for current os/cpu @ version:1.14.6
+[2024-01-22 11:03:56.225] [global] [info] [run.cc:543] Ran command: 'daemon launch' LogLevel:error
+[2024-01-22 11:03:56.398] [global] [info] [runner.cc:33] Created Action Runner
+[2024-01-22 11:03:56.398] [global] [info] [runner.cc:105] Commenced Action Loop
+[2024-01-22 11:03:56.400] [global] [info] [runner.cc:136] Executing action trunk-upgrade-available.schedule.1h
+[2024-01-22 11:03:56.401] [global] [info] [runner.cc:136] Executing action trunk-cache-prune.schedule.24h
+[2024-01-22 11:03:56.402] [global] [info] [runner.cc:136] Executing action trunk-share-with-everyone.schedule.24h
+[2024-01-22 11:03:56.415] [global] [info] [server.cc:51] Starting daemon 1.19.0. LogLevel:2
+[2024-01-22 11:03:56.447] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-22 11:03:56.615] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-22 11:03:56.682] [global] [info] [link.cc:98] Failed to create symlink, falling back to junctions and hard links
+[2024-01-22 11:03:56.804] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=1 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-22 11:03:56.804] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-22 11:03:56.805] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-22 11:03:56.860] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-22 11:03:56.943] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=2 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-22 11:03:56.943] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-22 11:03:57.104] [global] [info] [grpc.cc:24] RX:virtual grpc::Status trunk::cli::UpgradeService::GetAvailableUpgrades(grpc::ServerContext *, const upgrade::proto::v1::GetAvailableUpgradesRequest *, grpc::ServerWriter<upgrade::proto::v1::GetAvailableUpgradesResponse> *)
+[2024-01-22 11:03:57.143] [global] [info] [cli_upgrade.cc:85] Checking for latest trunk prod version...
+[2024-01-22 11:03:57.144] [global] [info] [plugin_upgrade.cc:71] Querying latest version for plugin trunk
+[2024-01-22 11:03:57.341] [global] [info] [cli_upgrade.cc:92] Successfully fetched latest trunk 1.19.0 version: prod
+[2024-01-22 11:03:57.756] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\remark-lint\.remarkrc.yaml
+[2024-01-22 11:03:57.757] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\remark-lint\.remarkrc.yaml
+[2024-01-22 11:03:57.757] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\flake8\.flake8
+[2024-01-22 11:03:57.757] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\yamllint\.yamllint.yaml
+[2024-01-22 11:03:57.758] [global] [info] [linter.cc:1650] Found config in plugin repo at C:\Users\laptop\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.2-4ebadccd80b22638\linters\cspell\cspell.yaml
+[2024-01-22 11:03:58.414] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-22 11:03:58.471] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-22 11:03:58.556] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=3 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-22 11:03:58.556] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-22 11:03:58.557] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-22 11:03:58.602] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-22 11:03:58.700] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=4 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-22 11:03:58.700] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-22 11:03:58.701] [global] [info] [grpc.cc:24] RX:virtual grpc::Status trunk::cli::actions::Service::GetNotificationsStream(grpc::ServerContext *, const proto::v1::GetNotificationsStreamRequest *, grpc::ServerWriter<proto::v1::GetNotificationsStreamResponse> *)
+[2024-01-22 11:03:58.701] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-22 11:03:58.702] [global] [info] [notification_manager.cc:84] Reading from C:\Users\laptop\OneDrive\Desktop\Smart-School-2.0\.trunk\notifications\trunk-upgrade.yaml
+[2024-01-22 11:03:58.713] [global] [info] [service.cc:159] Writing notification state to file
+[2024-01-22 11:03:58.749] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-22 11:03:58.787] [global] [info] [release.cc:139] Retrieved 12 linter-version pairs from ReleaseVersionService
+[2024-01-22 11:03:58.853] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=5 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-22 11:03:58.853] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-22 11:03:58.854] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *)
+[2024-01-22 11:03:58.906] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-22 11:03:59.179] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *) status=OK
+[2024-01-22 11:03:59.180] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *)
+[2024-01-22 11:03:59.181] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *) status=OK
+[2024-01-22 11:03:59.208] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *)
+[2024-01-22 11:03:59.238] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *) status=OK
+[2024-01-22 11:03:59.239] [global] [info] [service.cc:459] [user-agent= sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *)
+[2024-01-22 11:03:59.270] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\database.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-22 11:03:59.270] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\login.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-22 11:03:59.270] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\student.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-22 11:03:59.270] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\teacher.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-22 11:03:59.271] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\teacher_registration.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-22 11:03:59.271] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\validator.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-22 11:03:59.271] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\database.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-22 11:03:59.271] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\login.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-22 11:03:59.271] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\student.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-22 11:03:59.271] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\teacher.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-22 11:03:59.271] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\teacher_registration.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-22 11:03:59.271] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:__pycache__\validator.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-22 11:03:59.276] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\database.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-22 11:03:59.276] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\login.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-22 11:03:59.276] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\student.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-22 11:03:59.276] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\teacher.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-22 11:03:59.276] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\teacher_registration.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-22 11:03:59.276] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\validator.cpython-310.pyc:HEAD] not cacheable, running linter
+[2024-01-22 11:03:59.279] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\database.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-22 11:03:59.279] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\login.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-22 11:03:59.279] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\student.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-22 11:03:59.279] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\teacher.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-22 11:03:59.279] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\teacher_registration.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-22 11:03:59.279] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:__pycache__\validator.cpython-310.pyc:upstream] not cacheable, running linter
+[2024-01-22 11:03:59.449] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-22 11:03:59.527] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-22 11:03:59.688] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=6 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-22 11:03:59.689] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-22 11:03:59.691] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *)
+[2024-01-22 11:03:59.762] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-22 11:04:00.487] [global] [info] [service.cc:391] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::GetChangedFiles(grpc::ServerContext *, const proto::v1::GetChangedFilesRequest *, proto::v1::GetChangedFilesResponse *) status=OK
+[2024-01-22 11:04:00.489] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=6] RX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *)
+[2024-01-22 11:04:00.491] [global] [info] [service.cc:361] [user-agent=lsp-proxy sid=6] TX:virtual grpc::Status trunk::cli::lint::Service::Queue(grpc::ServerContext *, const proto::v1::QueueRequest *, proto::v1::QueueResponse *) status=OK
+[2024-01-22 11:04:00.492] [global] [info] [service.cc:304] [user-agent= sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::CancelFiles(grpc::ServerContext *, const proto::v1::CancelFilesRequest *, proto::v1::CancelFilesResponse *)
+[2024-01-22 11:04:00.501] [global] [info] [service.cc:304] [user-agent= sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::CancelFiles(grpc::ServerContext *, const proto::v1::CancelFilesRequest *, proto::v1::CancelFilesResponse *) status=OK
+[2024-01-22 11:04:00.511] [global] [info] [service.cc:459] [user-agent= sid=6] RX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *)
+[2024-01-22 11:04:00.525] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:main.py:HEAD] not cacheable, running linter
+[2024-01-22 11:04:00.642] [global] [info] [cache.cc:972] [on-demand] [git-diff-check:lint:main.py:upstream] not cacheable, running linter
+[2024-01-22 11:04:00.741] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:main.py:HEAD] not cacheable, running linter
+[2024-01-22 11:04:00.794] [global] [info] [cache.cc:972] [on-demand] [trufflehog:lint:main.py:upstream] not cacheable, running linter
+[2024-01-22 11:04:03.276] [global] [info] [cache.cc:972] [on-demand] [isort:format:main.py:HEAD] not cacheable, running linter
+[2024-01-22 11:04:03.276] [global] [info] [cache.cc:930] [on-demand] [bandit:lint:main.py:HEAD] already cached, not running linter
+[2024-01-22 11:04:03.281] [global] [info] [cache.cc:972] [on-demand] [ruff:lint:main.py:HEAD] not cacheable, running linter
+[2024-01-22 11:04:03.292] [global] [info] [cache.cc:930] [on-demand] [bandit:lint:main.py:upstream] already cached, not running linter
+[2024-01-22 11:04:03.292] [global] [info] [cache.cc:930] [on-demand] [black:format:main.py:HEAD] already cached, not running linter
+[2024-01-22 11:04:03.293] [global] [info] [cache.cc:972] [on-demand] [ruff:lint:main.py:upstream] not cacheable, running linter
+[2024-01-22 11:04:03.491] [global] [info] [service.cc:459] [user-agent= sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *) status=OK
+[2024-01-22 11:04:03.506] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *)
+[2024-01-22 11:04:03.507] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *) status=OK
+[2024-01-22 11:04:03.513] [global] [info] [service.cc:225] lint session ended sid=5
+[2024-01-22 11:04:03.513] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=5] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:04:03.515] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=5] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:04:03.515] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:04:03.684] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:04:04.759] [global] [info] [service.cc:285] [user-agent=lsp-proxy sid=5] TrackCheckUsageEvent upload ok: true with code: ok
+[2024-01-22 11:04:04.925] [global] [info] [service.cc:459] [user-agent= sid=6] TX:virtual grpc::Status trunk::cli::lint::Service::Lint(grpc::ServerContext *, const proto::v1::LintRequest *, grpc::ServerWriter<proto::v1::LintResponse> *) status=OK
+[2024-01-22 11:04:04.926] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=6] RX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *)
+[2024-01-22 11:04:04.927] [global] [info] [service.cc:518] [user-agent=lsp-proxy sid=6] TX:virtual grpc::Status trunk::cli::lint::Service::GetLandingState(grpc::ServerContext *, const proto::v1::GetLandingStateRequest *, proto::v1::GetLandingStateResponse *) status=OK
+[2024-01-22 11:04:04.931] [global] [info] [service.cc:225] lint session ended sid=6
+[2024-01-22 11:04:04.931] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=6] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:04:04.933] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=6] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:04:04.933] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:04:05.030] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:04:05.132] [global] [info] [service.cc:285] [user-agent=lsp-proxy sid=6] TrackCheckUsageEvent upload ok: true with code: ok
+[2024-01-22 11:04:05.208] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *)
+[2024-01-22 11:04:05.269] [global] [info] [session_context.cc:138] Making commit info with id: bbe9e4ea63c88c33ec8d0a0167fc2932503ccf7d
+[2024-01-22 11:04:05.382] [global] [info] [service.cc:214] [user-agent=lsp-proxy sid=n/a] lint session created sid=7 with the following options:
+cache_enabled: true
+num_jobs: 4
+session_type: SESSION_TYPE_LSP
+client_id: "lsp-proxy"
+scope: SESSION_SCOPE_ALL
+
+[2024-01-22 11:04:05.382] [global] [info] [service.cc:146] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::Start(grpc::ServerContext *, const proto::v1::StartRequest *, proto::v1::StartResponse *) status=OK
+[2024-01-22 11:04:05.383] [global] [info] [service.cc:426] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::FormatBuffer(grpc::ServerContext *, const proto::v1::FormatBufferRequest *, proto::v1::FormatBufferResponse *)
+[2024-01-22 11:04:05.508] [global] [info] [cache.cc:972] [on-demand] [isort:format:main.py:HEAD] not cacheable, running linter
+[2024-01-22 11:04:05.519] [global] [info] [cache.cc:930] [on-demand] [black:format:main.py:HEAD] already cached, not running linter
+[2024-01-22 11:04:06.096] [global] [info] [cache.cc:972] [on-demand] [isort:format:main.py:HEAD] not cacheable, running linter
+[2024-01-22 11:04:06.115] [global] [info] [cache.cc:930] [on-demand] [black:format:main.py:HEAD] already cached, not running linter
+[2024-01-22 11:04:06.719] [global] [info] [service.cc:426] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::FormatBuffer(grpc::ServerContext *, const proto::v1::FormatBufferRequest *, proto::v1::FormatBufferResponse *) status=OK
+[2024-01-22 11:04:06.719] [global] [info] [service.cc:225] lint session ended sid=7
+[2024-01-22 11:04:06.719] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=7] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:04:06.720] [global] [info] [service.cc:227] [user-agent=lsp-proxy sid=7] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:04:06.720] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] RX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *)
+[2024-01-22 11:04:06.804] [global] [info] [service.cc:294] [user-agent=lsp-proxy sid=n/a] TX:virtual grpc::Status trunk::cli::lint::Service::End(grpc::ServerContext *, const proto::v1::EndRequest *, proto::v1::EndResponse *) status=OK
+[2024-01-22 11:04:15.016] [global] [info] [grpc.cc:29] TX:virtual grpc::Status trunk::cli::UpgradeService::GetAvailableUpgrades(grpc::ServerContext *, const upgrade::proto::v1::GetAvailableUpgradesRequest *, grpc::ServerWriter<upgrade::proto::v1::GetAvailableUpgradesResponse> *) status=OK
+[2024-01-22 11:04:15.936] [global] [info] [notification_manager.cc:37] Writing to C:\Users\laptop\OneDrive\Desktop\Smart-School-2.0\.trunk\notifications\trunk-upgrade.yaml
+[2024-01-22 11:04:15.942] [global] [info] [notification_manager.cc:84] Reading from C:\Users\laptop\OneDrive\Desktop\Smart-School-2.0\.trunk\notifications\trunk-upgrade.yaml
+[2024-01-22 11:04:15.955] [global] [info] [service.cc:159] Writing notification state to file
+[2024-01-22 11:07:01.690] [global] [info] [service.cc:105] CLI version change; do not run file-triggered actions
+[2024-01-22 11:07:01.692] [global] [info] [service.cc:36] CLI version change; do not update tools
+[2024-01-22 11:07:01.756] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:01.756] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:01.757] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:01.759] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:05.566] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:05.567] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:05.570] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:05.572] [global] [info] [app_context.cc:392] TryGetTrunkConfigPb failed
+[2024-01-22 11:07:08.316] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'scalafmt' has no matching download for current os/cpu @ version:3.4.3
+[2024-01-22 11:07:08.317] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'direnv' has no matching download for current os/cpu @ version:2.32.3
+[2024-01-22 11:07:08.320] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'tfnotify' has no matching download for current os/cpu @ version:0.8.0
+[2024-01-22 11:07:08.323] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'tfmigrate' has no matching download for current os/cpu @ version:0.3.14
+[2024-01-22 11:07:08.324] [global] [info] [download_tool.hh:32] Failed to create download for tool  with error 'act' has no matching download for current os/cpu @ version:0.2.49

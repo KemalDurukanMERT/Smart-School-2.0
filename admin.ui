@@ -59,7 +59,11 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
+<<<<<<< HEAD
      <number>8</number>
+=======
+     <number>0</number>
+>>>>>>> 64e1b80feeb63eaa540eb1ab56b7e4351e9d6fa0
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -2462,6 +2466,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <attribute name="title">
       <string>To Do List</string>
      </attribute>
+<<<<<<< HEAD
      <widget class="QLabel" name="label_42">
       <property name="geometry">
        <rect>
@@ -2873,6 +2878,8 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
       </column>
      </widget>
+=======
+>>>>>>> 64e1b80feeb63eaa540eb1ab56b7e4351e9d6fa0
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -3355,7 +3362,11 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1210</width>
+<<<<<<< HEAD
      <height>31</height>
+=======
+     <height>25</height>
+>>>>>>> 64e1b80feeb63eaa540eb1ab56b7e4351e9d6fa0
     </rect>
    </property>
    <property name="styleSheet">
