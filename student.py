@@ -36,7 +36,8 @@ class StudentApp(QMainWindow):
         self.menu31_2.triggered.connect(self.view_meeting_schedule)
         self.menu32.triggered.connect(self.view_meeting_attendance)
         self.menu61_2.triggered.connect(self.add_message_tab)
-
+        self.menu51_s.triggered.connect(self.view_todolist)
+        self.announcements_s.triggered.connect(self.view_announcement)
     def add_message_tab(self):
         self.tabWidget.setCurrentIndex(8)
         self.message_app = MessageApp(self) 
@@ -53,8 +54,10 @@ class StudentApp(QMainWindow):
         self.menu22_2.triggered.connect(self.view_lesson_attendance)
         self.menu31_2.triggered.connect(self.view_meeting_schedule)
         self.menu32.triggered.connect(self.view_meeting_attendance)
+        self.menu61_2.triggered.connect(self.add_message_tab)
         self.menu71.triggered.connect(self.logout)
-
+        self.menu51_s.triggered.connect(self.view_todolist)
+        self.announcements_s.triggered.connect(self.view_announcement)
 
 
         # Button actions
@@ -69,12 +72,14 @@ class StudentApp(QMainWindow):
         self.view_lesson_attendance()
         self.view_meeting_schedule()
         self.view_meeting_attendance()
-        
-        
+        self.view_todolist()
+        self.view_announcement()
         
         
         self.tabWidget.setCurrentIndex(0)
         self.tabWidget.tabBar().setVisible(False)
+        
+        self.record_table_s.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
     def logout(self):
         self.close()
@@ -176,6 +181,8 @@ class StudentApp(QMainWindow):
         except psycopg2.Error as e:
             QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
 
+    
+    
     def view_meeting_schedule(self):
         self.tabWidget.setCurrentIndex(4)  # Adjust the index according to your tab order
         self.meeting_table.setRowCount(0)  # Clear the table
@@ -221,3 +228,90 @@ class StudentApp(QMainWindow):
                 self.records_list_2.addItem(listItem)
         except psycopg2.Error as e:
             QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
+
+    def view_announcement(self):
+        self.tabWidget.setCurrentIndex(6)  # Tabloya göre dizini ayarla
+        self.record_table_s.setRowCount(0)  # Tabloyu temizle
+        # Kolon genişliklerini ayarla
+        character_width = 12
+        self.record_table_s.setColumnWidth(0, 67 * character_width)
+        self.record_table_s.setColumnWidth(1, 12 * character_width)
+        self.record_table_s.setColumnWidth(2, 12 * character_width)
+
+        try:
+            query = """
+            SELECT announcement_id, message, deadline, title, created_by
+            FROM announcement
+            ORDER BY deadline ASC
+            """
+            self.cur.execute(query)
+            records = self.cur.fetchall()
+
+            # Tabloya verileri ekleyin
+            for row, (announcement_id, announcement, deadline, title, created_by) in enumerate(records):
+                try:
+                    deadline_str = deadline.strftime("%Y-%m-%d") if isinstance(deadline, datetime.date) else str(deadline)
+                except AttributeError:
+                    # Tarih yoksa ya da hatalı biçimdeyse, hata mesajı verebilir veya farklı bir değer atayabilirsiniz.
+                    deadline_str = "Invalid Date"
+
+                self.record_table_s.insertRow(row)
+                self.record_table_s.setItem(row, 0, QTableWidgetItem(title))
+                self.record_table_s.setItem(row, 1, QTableWidgetItem(announcement))
+                self.record_table_s.setItem(row, 2, QTableWidgetItem(deadline_str))
+
+        except psycopg2.Error as e:
+            QMessageBox.critical(self, 'Hata', f'Bir hata oluştu: {e}')
+
+
+
+    def view_todolist(self):
+        self.tabWidget.setCurrentIndex(7)
+        self.todoTable_s.setRowCount(0)
+        character_width = 12
+
+        user_id = self.user.id
+        
+        # Set column widths
+        self.todoTable_s.setColumnWidth(0, 10 * character_width)
+        self.todoTable_s.setColumnWidth(1, 50 * character_width)
+        self.todoTable_s.setColumnWidth(2, 12 * character_width)
+        self.todoTable_s.setColumnWidth(3, 12 * character_width)
+        self.todoTable_s.setColumnWidth(4, 17 * character_width)
+
+        try:
+            self.todoTable_s.setRowCount(0)
+            query = "SELECT todo_id, task, deadline, task_status, assigned_user_id FROM todolist WHERE assigned_user_id = %s ORDER BY deadline ASC"
+            self.cur.execute(query, (user_id,))
+            tasks = self.cur.fetchall()
+            for task in tasks:
+                rowPosition = self.todoTable_s.rowCount()
+                self.todoTable_s.insertRow(rowPosition)
+                
+                # Inserting items into the table in the correct column order
+                self.todoTable_s.setItem(rowPosition, 0, QTableWidgetItem(str(task[0])))  # Task ID
+                self.todoTable_s.setItem(rowPosition, 1, QTableWidgetItem(str(task[1])))  # Task
+                self.todoTable_s.setItem(rowPosition, 2, QTableWidgetItem(str(task[2])))  # Deadline
+                self.todoTable_s.setItem(rowPosition, 4, QTableWidgetItem(str(task[4])))  # Assaigned Id
+                
+                # Adding a checkbox to the third column (index 3)
+                checkbox = QCheckBox()
+                checkbox.setChecked(bool(task[3]))
+                checkbox.stateChanged.connect(lambda state, row=rowPosition, task_id=task[0]: self.updateTaskStatus(row, task_id, state))
+                self.todoTable_s.setCellWidget(rowPosition, 3, checkbox)
+                
+                # Hide the todo_id column after populating the table
+                self.todoTable_s.setColumnHidden(0, True)  # Hides the first column (Todo ID)
+
+        except psycopg2.Error as e:
+            QMessageBox.critical(self, 'Error', f'An error occurred while loading lessons: {e}')
+
+    def updateTaskStatus(self, row, task_id, state):
+        try:
+            new_status = bool(state)
+            query = "UPDATE todolist SET task_status = %s WHERE todo_id = %s"
+            self.cur.execute(query, (new_status, task_id))
+            self.conn.commit()
+        except psycopg2.Error as e:
+            self.conn.rollback()
+            QMessageBox.critical(self, 'Error', f'An error occurred while updating task status: {e}')

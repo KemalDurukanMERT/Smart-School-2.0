@@ -1,0 +1,20 @@
+trunk_cli_version: 1.19.0
+title: Check [[on-demand] [isort:format:main.py:HEAD]]
+report:
+  - linter:
+      command: |
+        'C:\Users\laptop\AppData\Local\trunk\tools\isort\5.13.2-7def74b7c92d83d2d8fdff8ddb752c87/Scripts\isort.exe' -q --overwrite-in-place main.py
+      stdin_path: (none)
+      run_from: C:\Users\laptop\AppData\Local\Temp\trunk\xhhrblj\
+      timeout: 10m
+      rerun: (cd C:\Users\laptop\AppData\Local\Temp\trunk\xhhrblj\; env -i HOME= 'SYSTEMROOT=C:\WINDOWS' PYTHONUTF8=1 'VIRTUAL_ENV=C:\Users\laptop\AppData\Local\trunk\tools\isort\5.13.2-7def74b7c92d83d2d8fdff8ddb752c87' 'PATH=C:\Users\laptop\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\laptop\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\laptop\AppData\Local\trunk\tools\isort\5.13.2-7def74b7c92d83d2d8fdff8ddb752c87/bin;C:\Users\laptop\AppData\Local\trunk\tools\isort\5.13.2-7def74b7c92d83d2d8fdff8ddb752c87/Scripts;C:\Users\laptop\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070/bin;C:\Users\laptop\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070;C:\Users\laptop\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\laptop\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin' 'C:\Users\laptop\AppData\Local\trunk\tools\isort\5.13.2-7def74b7c92d83d2d8fdff8ddb752c87/Scripts\isort.exe' -q --overwrite-in-place main.py)
+      affects_cache:
+        []
+      direct_configs:
+        - .isort.cfg
+      exit_status: exited
+      exit_code: 0
+      stdout: (none)
+      stderr: (none)
+    parser: |
+      (none)

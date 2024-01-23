@@ -1,0 +1,20 @@
+trunk_cli_version: 1.19.0
+title: Check [[on-demand] [black:format:student.py:HEAD]]
+report:
+  - linter:
+      command: |
+        'C:\Users\laptop\AppData\Local\trunk\tools\black\23.12.1-b110d5db43a6dc1812c59c9549d25d5f/Scripts\black.exe' -q student.py
+      stdin_path: (none)
+      run_from: C:\Users\laptop\AppData\Local\Temp\trunk\v4aivqv\
+      timeout: 10m
+      rerun: (cd C:\Users\laptop\AppData\Local\Temp\trunk\v4aivqv\; env -i PYTHONUTF8=1 'VIRTUAL_ENV=C:\Users\laptop\AppData\Local\trunk\tools\black\23.12.1-b110d5db43a6dc1812c59c9549d25d5f' HOME= 'SYSTEMROOT=C:\WINDOWS' 'PATH=C:\Users\laptop\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\laptop\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\laptop\AppData\Local\trunk\tools\black\23.12.1-b110d5db43a6dc1812c59c9549d25d5f/bin;C:\Users\laptop\AppData\Local\trunk\tools\black\23.12.1-b110d5db43a6dc1812c59c9549d25d5f/Scripts;C:\Users\laptop\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070/bin;C:\Users\laptop\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070;C:\Users\laptop\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\laptop\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin' 'C:\Users\laptop\AppData\Local\trunk\tools\black\23.12.1-b110d5db43a6dc1812c59c9549d25d5f/Scripts\black.exe' -q student.py)
+      affects_cache:
+        []
+      direct_configs:
+        []
+      exit_status: exited
+      exit_code: 0
+      stdout: (none)
+      stderr: (none)
+    parser: |
+      (none)

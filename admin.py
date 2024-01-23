@@ -60,6 +60,7 @@ class AdminApp(QMainWindow):
         self.menu61_a.triggered.connect(self.add_message_tab)
         self.menu71.triggered.connect(self.logout)
         self.actionAdd_Edit_To_Do_List.triggered.connect(self.showTodoListTab)
+        self.actionAdd_Edit_Announcement.triggered.connect(self.add_announce_tab)
         pass
 
     def setupButtonActions(self):
@@ -347,7 +348,7 @@ class AdminApp(QMainWindow):
         except Exception as e:
             self.showErrorMessage("Database Error", f"Error populating Students: {e}")
     def add_message_tab(self):
-        self.tabWidget.setCurrentIndex(3)
+        self.tabWidget.setCurrentIndex(9)
         self.message_app = MessageApp(self)
 
 
@@ -373,3 +374,171 @@ class AdminApp(QMainWindow):
     
     def show_login(self):
         self.login.emit(True)
+        
+#################################################################################
+
+
+    def add_announce_tab(self):
+        self.tabWidget.setCurrentIndex(7)
+        self.edittedAnnouncement = None
+        self.populateAnnouncementCombobox()
+        self.announcementCombobox_a = self.findChild(QComboBox, 'announcementCombobox_a')
+        self.load_announcement()
+        self.date_input = self.findChild(QLineEdit, 'announcementDate_a')
+        self.date_input.mousePressEvent = self.showCalendarAnnouncement
+        self.addButton_a.clicked.connect(self.add_announcement)
+        self.editButton_a.clicked.connect(self.edit_announcement)
+        self.deleteButton_a.clicked.connect(self.delete_announcement)
+
+        self.announcementCombobox_a.setCurrentIndex(0)
+        self.announcementCombobox_a.activated.connect(lambda index: self.selectAnnouncement(self.announcementCombobox_a.itemData(index)))
+
+
+    def showCalendarAnnouncement(self, event):
+        calendar_pos = self.date_input.mapToGlobal(self.date_input.rect().bottomLeft())
+        self.calendar.move(calendar_pos)
+        self.calendar.show()
+
+    def load_announcement(self):
+        self.model = QStandardItemModel()
+        self.announcementListView_a.setModel(self.model)
+
+        self.cur.execute('''
+SELECT message, deadline, created_by, title, users.email 
+FROM announcement JOIN users ON created_by = users.user_id
+''')
+        announcements = self.cur.fetchall()
+        for message, deadline, created_by, title, author in announcements:
+            display_text = f'''
+Author: {author}
+Title: {title}
+Message: {message}
+'''
+            item = QStandardItem(display_text)
+            self.model.appendRow(item)
+
+    def selectAnnouncement(self, id):
+        if not id:
+            id = 0
+        self.edittedAnnouncement = id
+        text = self.announcementCombobox_a.currentText()
+        if text != 'Select Announcement for Edit':
+            self.announcementTitle_a.setText(text)
+        
+
+        self.cur.execute(f'''
+SELECT message, deadline FROM announcement
+WHERE announcement_id = {id} 
+''')
+        self.textEdit_a.clear()
+        data = self.cur.fetchone()
+        if data:
+            context = data[0]
+            self.textEdit_a.append(context)
+            self.date_input.setText(str(data[1]))
+
+
+    def add_announcement(self):
+        text = self.textEdit_a.toPlainText()
+        title = self.announcementTitle_a.text()
+        date = self.date_input.text().strip()
+
+        try:
+
+            self.cur.execute(f'''
+    INSERT INTO announcement (
+    message, deadline, created_by, title
+    ) VALUES (
+    '{text}', '{date}', {self.user.id}, '{title}'
+    );''')
+            QMessageBox.warning(self, 'Success', 'Announcement Added Successfully')
+            self.load_announcement()
+            self.populateAnnouncementCombobox()
+            self.textEdit_a.clear()
+            self.announcementTitle_a.clear()
+        except psycopg2.Error as e:
+            QMessageBox.critical(self, 'Insert Error', f'Error: {e}')
+
+    def edit_announcement(self):
+        text = self.textEdit_a.toPlainText()
+        title = self.announcementTitle_a.text()
+        date = self.date_input.text().strip()
+
+        if self.edittedAnnouncement:
+            if self.edittedAnnouncement != 0:
+                print(self.edittedAnnouncement)
+                try:
+                    self.cur.execute(f'''
+            UPDATE announcement 
+            SET message = '{text}', deadline = '{date}', title = '{title}'
+            WHERE announcement_id = {self.edittedAnnouncement};''')
+                    QMessageBox.warning(self, 'Success', 'Announcement Updated Successfully')
+                    self.load_announcement()
+                    self.populateAnnouncementCombobox()
+                    self.textEdit_a.clear()
+                    self.announcementTitle.clear()
+                except psycopg2.Error as e:
+                    QMessageBox.critical(self, 'Edit Error', f'Error: {e}')
+
+    def delete_announcement(self):
+        if self.edittedAnnouncement and self.edittedAnnouncement != 0:
+            reply = QMessageBox.question(self, 'Confirm Delete', 'Are you sure you want to delete announcement?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+            if reply == QMessageBox.Yes:
+                try:
+                    self.cur.execute(f'''
+DELETE FROM announcement WHERE announcement_id = {self.edittedAnnouncement}            
+''')
+                    QMessageBox.warning(self, 'Success', 'Announcement Deleted Successfully')
+                    self.load_announcement()
+                    self.populateAnnouncementCombobox()
+                    self.textEdit_a.clear()
+                    self.announcementTitle_a.clear()
+                except psycopg2.Error as e:
+                    QMessageBox.critical(self, 'Edit Error', f'Error: {e}')
+        else:
+            QMessageBox.warning(self, 'Error', 'There is no selected announcement')
+
+
+
+
+        
+        
+
+    def populateAnnouncementCombobox(self):
+        self.announcementCombobox_a.clear()
+        self.announcementCombobox_a.addItem('Select Announcement for Edit', 0)
+#         
+        self.cur.execute('''
+SELECT title, announcement_id FROM announcement
+''')
+        announcement_titles = self.cur.fetchall()
+        for title, announcement_id in announcement_titles:
+            text = f'''{title}'''
+            self.announcementCombobox_a.addItem(text, announcement_id)
+
+    def logout(self):
+        self.close()
+        self.show_login()
+    
+    def show_login(self):
+        self.login.emit(True)
+
+    def updateTeacherDetails(self):
+        self.user.name = self.tb23.text()
+        self.user.surname = self.tb24.text()
+        self.user.phone = self.tb26.text()
+
+        command = '''
+UPDATE users
+SET name = %s, surname = %s, phone = %s
+WHERE users.email = %s;
+'''
+
+        try:
+            cur = self.conn.cursor()
+            cur.execute(command, (self.user.name, self.user.surname, self.user.phone, self.user.email))
+            cur.close()
+            self.conn.commit()
+            QMessageBox.information(self, "Update Information", "User updated successfully")
+        except (Exception, psycopg2.DatabaseError) as error:
+            QMessageBox.warning(self, "Update Error", str(error))   
