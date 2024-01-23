@@ -1,14 +1,14 @@
-Smart School 2.0
+# Smart School 2.0
 
 
-Overview
+## Overview
 
 This project focuses on developing a Python application integrating GUI elements and PostgreSQL database, supported by comprehensive UML and ERD diagrams.
 Aimed at enhancing educational experiences, it is an excellent opportunity to demonstrate technical proficiency, problem-solving skills, and effective teamwork.
 
 
 
-Features
+## Features
 
 •	Object-Oriented Programming (OOP) approach
 
@@ -20,7 +20,7 @@ Features
 
 
 
-Aim and Objectives
+## Aim and Objectives
 
 The project aims to:
 
@@ -37,26 +37,26 @@ The project aims to:
 The project encompasses the following three primary user types:
 
 
-Admin
+### Admin
 
 After logging into the application, the admin is recognized and directed to the Admin Panel. Here, the admin can create teacher accounts and make modifications to these accounts.
 When the admin login, admin will reach the admin page. Admin should be able to run all the functions. Admin should approve/reject new accounts requested by the teacher.
 
 
-Teacher
+### Teacher
 
 Users who logged in as teachers can access the teacher interface and perform functionalities as indicated in the diagram. When the teachers login, they will reach the Teacher Page.
 Every teacher has a profile page that contains their own information. Teachers can create, edit and view the annual course schedule.
 
 
-Student
+### Student
 
 Students can log in or create a new account. These users can modify their own personal to-do lists. Additionally, they can access to information created by their teachers.
 When the students login, they will reach the Student Page. They can edit their own informations. Students can view the annual course schedule (except for the teacher of those lessons).
 
 
 
-Tools and Technologies
+## Tools and Technologies
 
 •	Python
 
@@ -68,7 +68,7 @@ Tools and Technologies
 
 
 
-Project Management
+## Project Management
 
 •	Agile methodologies and regular team meetings for progress tracking
 
@@ -76,7 +76,7 @@ Project Management
 
 
 
-Requirements
+## Requirements
 
 •	Knowledge of Python programming
 
@@ -88,7 +88,7 @@ Requirements
 
 
 
-Diagrams:
+## Diagrams:
 
 Class Diagram 
 
