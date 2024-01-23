@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1283</width>
-    <height>801</height>
+    <width>1143</width>
+    <height>809</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -45,7 +45,7 @@ background-color: rgb(40, 41, 44);</string>
       <x>0</x>
       <y>50</y>
       <width>1161</width>
-      <height>711</height>
+      <height>721</height>
      </rect>
     </property>
     <property name="font">
@@ -124,8 +124,8 @@ background-color: rgb(40, 41, 44);</string>
        <rect>
         <x>20</x>
         <y>30</y>
-        <width>181</width>
-        <height>21</height>
+        <width>201</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -502,9 +502,9 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>30</y>
+        <y>20</y>
         <width>231</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -550,9 +550,9 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>20</y>
+        <y>10</y>
         <width>331</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -560,6 +560,7 @@ background-color: rgb(40, 41, 44);</string>
         <pointsize>17</pointsize>
         <weight>75</weight>
         <bold>true</bold>
+        <underline>true</underline>
        </font>
       </property>
       <property name="styleSheet">
@@ -646,9 +647,9 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>20</y>
+        <y>10</y>
         <width>231</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -688,9 +689,9 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>20</y>
+        <y>10</y>
         <width>351</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -698,6 +699,7 @@ background-color: rgb(40, 41, 44);</string>
         <pointsize>17</pointsize>
         <weight>75</weight>
         <bold>true</bold>
+        <underline>true</underline>
        </font>
       </property>
       <property name="styleSheet">
@@ -810,7 +812,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>860</x>
-        <y>600</y>
+        <y>620</y>
         <width>201</width>
         <height>51</height>
        </rect>
@@ -833,7 +835,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>130</y>
+        <y>120</y>
         <width>511</width>
         <height>371</height>
        </rect>
@@ -846,7 +848,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>510</y>
+        <y>540</y>
         <width>511</width>
         <height>71</height>
        </rect>
@@ -869,14 +871,14 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>50</y>
+        <y>30</y>
         <width>281</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -892,9 +894,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>200</y>
+        <y>170</y>
         <width>401</width>
-        <height>381</height>
+        <height>441</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -905,7 +907,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>90</y>
+        <y>70</y>
         <width>401</width>
         <height>41</height>
        </rect>
@@ -918,14 +920,14 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>160</y>
+        <y>140</y>
         <width>281</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -941,7 +943,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>40</y>
+        <y>30</y>
         <width>501</width>
         <height>31</height>
        </rect>
@@ -964,7 +966,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>90</y>
+        <y>80</y>
         <width>281</width>
         <height>21</height>
        </rect>
@@ -987,7 +989,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>850</x>
-        <y>90</y>
+        <y>80</y>
         <width>201</width>
         <height>21</height>
        </rect>
@@ -1009,6 +1011,29 @@ p, li { white-space: pre-wrap; }
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
+     <widget class="QLabel" name="label_149">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>500</y>
+        <width>501</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 191, 16);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Send a message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -1018,8 +1043,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1283</width>
-     <height>30</height>
+     <width>1143</width>
+     <height>25</height>
     </rect>
    </property>
    <property name="styleSheet">
