@@ -280,8 +280,8 @@ class StudentApp(QMainWindow):
         # Kolon genişliklerini ayarla
         character_width = 12
         self.title_table.setColumnWidth(0, 12 * character_width)
-        self.title_table.setColumnWidth(1, 60 * character_width)
-        self.title_table.setColumnWidth(2, 13 * character_width)
+        self.title_table.setColumnWidth(1, 64 * character_width)
+        self.title_table.setColumnWidth(2, 15 * character_width)
 
         try:
             query = """
@@ -328,7 +328,7 @@ class StudentApp(QMainWindow):
         # Set column widths
         self.todoTable_s.setColumnWidth(0, 10 * character_width)
         self.todoTable_s.setColumnWidth(1, 44 * character_width)
-        self.todoTable_s.setColumnWidth(2, 12 * character_width)
+        self.todoTable_s.setColumnWidth(2, 14 * character_width)
         self.todoTable_s.setColumnWidth(3, 12 * character_width)
         self.todoTable_s.setColumnWidth(4, 17 * character_width)
         self.todoTable_s.setColumnWidth(5, 17 * character_width)
