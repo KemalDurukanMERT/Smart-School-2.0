@@ -7,7 +7,7 @@ class Database():
         self.db_credentials = {
             'dbname': 'SmartSchool', 
             'user': 'postgres', 
-            'password': '1', 
+            'password': '0000', 
             'host': 'localhost',
             'port': '5432'
         }
