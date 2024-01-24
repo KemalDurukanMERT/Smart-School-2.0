@@ -2232,11 +2232,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <rect>
         <x>50</x>
         <y>210</y>
-<<<<<<< HEAD
         <width>1051</width>
-=======
-        <width>1031</width>
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
         <height>401</height>
        </rect>
       </property>

@@ -735,7 +735,6 @@ background-color: rgb(40, 41, 44);</string>
        <string>Announcements</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QWidget" name="verticalLayoutWidget">
       <property name="geometry">
        <rect>
@@ -777,22 +776,12 @@ background-color: rgb(40, 41, 44);</string>
         <y>80</y>
         <width>721</width>
         <height>41</height>
-=======
-     <widget class="QListWidget" name="records_list_s">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>130</y>
-        <width>1121</width>
-        <height>451</height>
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QTableWidget" name="title_table">
       <property name="geometry">
        <rect>
@@ -805,69 +794,17 @@ background-color: rgb(40, 41, 44);</string>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
-=======
-     <widget class="QTableWidget" name="record_table_s">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>130</y>
-        <width>1121</width>
-        <height>451</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="mouseTracking">
-       <bool>false</bool>
-      </property>
-      <property name="tabletTracking">
-       <bool>false</bool>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="autoFillBackground">
-       <bool>false</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="sortingEnabled">
-       <bool>false</bool>
-      </property>
-      <attribute name="horizontalHeaderCascadingSectionResizes">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>218</number>
-      </attribute>
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
       <column>
        <property name="text">
         <string>Title</string>
        </property>
        <property name="font">
         <font>
-<<<<<<< HEAD
          <pointsize>13</pointsize>
-=======
-         <pointsize>12</pointsize>
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
          <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
-<<<<<<< HEAD
-=======
-       <property name="textAlignment">
-        <set>AlignCenter</set>
-       </property>
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
       </column>
       <column>
        <property name="text">
@@ -880,12 +817,6 @@ background-color: rgb(40, 41, 44);</string>
          <bold>true</bold>
         </font>
        </property>
-<<<<<<< HEAD
-=======
-       <property name="textAlignment">
-        <set>AlignCenter</set>
-       </property>
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
       </column>
       <column>
        <property name="text">
@@ -898,12 +829,6 @@ background-color: rgb(40, 41, 44);</string>
          <bold>true</bold>
         </font>
        </property>
-<<<<<<< HEAD
-=======
-       <property name="textAlignment">
-        <set>AlignCenter</set>
-       </property>
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
       </column>
      </widget>
     </widget>
@@ -976,7 +901,6 @@ background-color: rgb(40, 41, 44);</string>
       </attribute>
       <column>
        <property name="text">
-<<<<<<< HEAD
         <string>Status</string>
        </property>
        <property name="font">
@@ -988,9 +912,6 @@ background-color: rgb(40, 41, 44);</string>
        </property>
        <property name="textAlignment">
         <set>AlignLeading|AlignVCenter</set>
-=======
-        <string>Task ID</string>
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
        </property>
       </column>
       <column>
@@ -1025,21 +946,7 @@ background-color: rgb(40, 41, 44);</string>
       </column>
       <column>
        <property name="text">
-<<<<<<< HEAD
         <string>Task Id</string>
-=======
-        <string>Status</string>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="textAlignment">
-        <set>AlignLeading|AlignVCenter</set>
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
        </property>
       </column>
       <column>
@@ -1057,7 +964,6 @@ background-color: rgb(40, 41, 44);</string>
         <set>AlignLeading|AlignVCenter</set>
        </property>
       </column>
-<<<<<<< HEAD
       <column>
        <property name="text">
         <string>Created By Id</string>
@@ -1075,8 +981,6 @@ background-color: rgb(40, 41, 44);</string>
         </font>
        </property>
       </column>
-=======
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
      </widget>
     </widget>
     <widget class="QWidget" name="tab_8">

@@ -34,8 +34,7 @@ class TeacherApp(QMainWindow):
         self.connectDatabase(conn, cur, database)
         self.user = user
         self.initializeUi()
-    def __str__(self):
-        return self.user
+    
         
     def setupUi(self):
         try:

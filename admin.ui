@@ -59,11 +59,7 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
-<<<<<<< HEAD
      <number>8</number>
-=======
-     <number>7</number>
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">

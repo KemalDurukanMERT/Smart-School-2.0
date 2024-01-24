@@ -76,24 +76,16 @@ class StudentApp(QMainWindow):
         self.view_todolist()
         self.view_announcement()
         
-<<<<<<< HEAD
         
        
-=======
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
         
         self.tabWidget.setCurrentIndex(0)
         self.tabWidget.tabBar().setVisible(False)
         
-<<<<<<< HEAD
         
         
         
         
-=======
-        self.record_table_s.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
     def logout(self):
         self.close()
         self.show_login()
@@ -136,7 +128,7 @@ class StudentApp(QMainWindow):
 
         hashed_password = hashlib.sha256(password.encode()).hexdigest()
         self.cur.execute("UPDATE users SET email = %s, name = %s, surname = %s, city = %s, phone = %s, hashed_password = %s WHERE user_id = %s",
-                         (email, name, surname, city, phone, hashed_password, self.user.id))
+                        (email, name, surname, city, phone, hashed_password, self.user.id))
         self.conn.commit()
         QMessageBox.information(self, "Update Success", "Student details updated successfully.")
 
@@ -150,8 +142,8 @@ class StudentApp(QMainWindow):
         self.lesson_table.setColumnWidth(2, 12 * character_width)
         self.lesson_table.setColumnWidth(3, 12 * character_width)
         self.lesson_table.setColumnWidth(4, 17 * character_width)
-       
-       
+
+
         try:
             self.lesson_table.setRowCount(0)  # Clear the table before repopulating
             query = "SELECT lesson_id, lesson_name, lesson_date, lesson_time_slot, lesson_instructor FROM lesson ORDER BY lesson_date ASC"
@@ -242,7 +234,6 @@ class StudentApp(QMainWindow):
         except psycopg2.Error as e:
             QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
 
-<<<<<<< HEAD
     # def view_announcement(self):
     #     self.tabWidget.setCurrentIndex(6)  # Tabloya göre dizini ayarla
     #     self.record_table_s.setRowCount(0)  # Tabloyu temizle
@@ -288,16 +279,6 @@ class StudentApp(QMainWindow):
         self.title_table.setColumnWidth(0, 12 * character_width)
         self.title_table.setColumnWidth(1, 60 * character_width)
         self.title_table.setColumnWidth(2, 13 * character_width)
-=======
-    def view_announcement(self):
-        self.tabWidget.setCurrentIndex(6)  # Tabloya göre dizini ayarla
-        self.record_table_s.setRowCount(0)  # Tabloyu temizle
-        # Kolon genişliklerini ayarla
-        character_width = 12
-        self.record_table_s.setColumnWidth(0, 67 * character_width)
-        self.record_table_s.setColumnWidth(1, 12 * character_width)
-        self.record_table_s.setColumnWidth(2, 12 * character_width)
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
 
         try:
             query = """
@@ -316,7 +297,6 @@ class StudentApp(QMainWindow):
                     # Tarih yoksa ya da hatalı biçimdeyse, hata mesajı verebilir veya farklı bir değer atayabilirsiniz.
                     deadline_str = "Invalid Date"
 
-<<<<<<< HEAD
                 self.title_table.insertRow(row)
                 self.title_table.setItem(row, 0, QTableWidgetItem(title))
                 item_announcement = QTableWidgetItem(announcement)
@@ -324,26 +304,17 @@ class StudentApp(QMainWindow):
                 self.title_table.setItem(row, 1, QTableWidgetItem(announcement))
                 self.title_table.setItem(row, 2, QTableWidgetItem(deadline_str))
                 
-=======
-                self.record_table_s.insertRow(row)
-                self.record_table_s.setItem(row, 0, QTableWidgetItem(title))
-                self.record_table_s.setItem(row, 1, QTableWidgetItem(announcement))
-                self.record_table_s.setItem(row, 2, QTableWidgetItem(deadline_str))
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
 
         except psycopg2.Error as e:
             QMessageBox.critical(self, 'Hata', f'Bir hata oluştu: {e}')
 
 
 
-<<<<<<< HEAD
 
 
 
 
     
-=======
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
     def view_todolist(self):
         self.tabWidget.setCurrentIndex(7)
         self.todoTable_s.setRowCount(0)
@@ -353,7 +324,6 @@ class StudentApp(QMainWindow):
         
         # Set column widths
         self.todoTable_s.setColumnWidth(0, 10 * character_width)
-<<<<<<< HEAD
         self.todoTable_s.setColumnWidth(1, 44 * character_width)
         self.todoTable_s.setColumnWidth(2, 12 * character_width)
         self.todoTable_s.setColumnWidth(3, 12 * character_width)
@@ -362,16 +332,6 @@ class StudentApp(QMainWindow):
         try:
             self.todoTable_s.setRowCount(0)
             query = "SELECT todo_id, task, deadline, task_status, assigned_user_id, created_by FROM todolist WHERE assigned_user_id = %s ORDER BY deadline ASC"
-=======
-        self.todoTable_s.setColumnWidth(1, 50 * character_width)
-        self.todoTable_s.setColumnWidth(2, 12 * character_width)
-        self.todoTable_s.setColumnWidth(3, 12 * character_width)
-        self.todoTable_s.setColumnWidth(4, 17 * character_width)
-
-        try:
-            self.todoTable_s.setRowCount(0)
-            query = "SELECT todo_id, task, deadline, task_status, assigned_user_id FROM todolist WHERE assigned_user_id = %s ORDER BY deadline ASC"
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
             self.cur.execute(query, (user_id,))
             tasks = self.cur.fetchall()
             for task in tasks:
@@ -379,7 +339,6 @@ class StudentApp(QMainWindow):
                 self.todoTable_s.insertRow(rowPosition)
                 
                 # Inserting items into the table in the correct column order
-<<<<<<< HEAD
                 self.todoTable_s.setItem(rowPosition, 3, QTableWidgetItem(str(task[0]))) 
                 self.todoTable_s.setItem(rowPosition, 1, QTableWidgetItem(str(task[1])))  
                 self.todoTable_s.setItem(rowPosition, 2, QTableWidgetItem(str(task[2])))  
@@ -392,18 +351,11 @@ class StudentApp(QMainWindow):
                 else:
                     self.todoTable_s.setItem(rowPosition, 6, QTableWidgetItem("Unknown"))
                 
-=======
-                self.todoTable_s.setItem(rowPosition, 0, QTableWidgetItem(str(task[0])))  # Task ID
-                self.todoTable_s.setItem(rowPosition, 1, QTableWidgetItem(str(task[1])))  # Task
-                self.todoTable_s.setItem(rowPosition, 2, QTableWidgetItem(str(task[2])))  # Deadline
-                self.todoTable_s.setItem(rowPosition, 4, QTableWidgetItem(str(task[4])))  # Assaigned Id
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
                 
                 # Adding a checkbox to the third column (index 3)
                 checkbox = QCheckBox()
                 checkbox.setChecked(bool(task[3]))
                 checkbox.stateChanged.connect(lambda state, row=rowPosition, task_id=task[0]: self.updateTaskStatus(row, task_id, state))
-<<<<<<< HEAD
                 self.todoTable_s.setCellWidget(rowPosition, 0, checkbox)
                 
                 # Hide the todo_id column after populating the table
@@ -426,15 +378,6 @@ class StudentApp(QMainWindow):
         except psycopg2.Error as e:
             QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
             return None
-=======
-                self.todoTable_s.setCellWidget(rowPosition, 3, checkbox)
-                
-                # Hide the todo_id column after populating the table
-                self.todoTable_s.setColumnHidden(0, True)  # Hides the first column (Todo ID)
-
-        except psycopg2.Error as e:
-            QMessageBox.critical(self, 'Error', f'An error occurred while loading lessons: {e}')
->>>>>>> 85497b27cb39d5df6c2459599b85efd396aad389
 
     def updateTaskStatus(self, row, task_id, state):
         try:
