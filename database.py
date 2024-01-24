@@ -62,7 +62,7 @@ created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
             ('announcement', '''
   announcement_id SERIAL PRIMARY KEY,
   message TEXT NOT NULL,
-  deadline TIMESTAMP NOT NULL,
+  deadline DATE NOT NULL,
   title VARCHAR(50) NOT NULL,
   created_by INTEGER NOT NULL REFERENCES users(user_id),
   created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -78,7 +78,7 @@ created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
             ('todolist', '''
   todo_id SERIAL PRIMARY KEY,
   task TEXT NOT NULL,
-  deadline TIMESTAMP NOT NULL,
+  deadline DATE NOT NULL,
   task_status BOOLEAN NOT NULL DEFAULT false,
   assigned_user_id INTEGER NOT NULL REFERENCES users(user_id),
   created_by INTEGER NOT NULL REFERENCES users(user_id),
@@ -237,6 +237,13 @@ email, hashed_password, name, surname, phone, city, user_type, status
         cur.execute("SELECT name, surname FROM users WHERE user_type = 'teacher'and status = 'Active' ")
         teachers = cur.fetchall()
         return teachers
+    
+    def get_students(self,cur):
+        cur.execute( "SELECT  name, surname FROM users WHERE user_type = 'student' ")
+        students = cur.fetchall()
+        return students
+    
+
 
 
 
