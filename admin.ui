@@ -59,7 +59,7 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>10</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -3599,6 +3599,41 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
+      <item>
+       <property name="text">
+        <string>User Actions</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lesson Actions</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lesson Attendance Actions</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Meeting Actions</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Meeting Attendance Actions</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Announcement Actions</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ToDo Actions</string>
+       </property>
+      </item>
      </widget>
      <widget class="QPushButton" name="b6_2">
       <property name="geometry">
@@ -3652,7 +3687,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <x>20</x>
         <y>160</y>
         <width>1171</width>
-        <height>531</height>
+        <height>501</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -3661,31 +3696,6 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <attribute name="horizontalHeaderDefaultSectionSize">
        <number>236</number>
       </attribute>
-      <column>
-       <property name="text">
-        <string>User</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Action</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Details</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Process Date</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Deadline</string>
-       </property>
-      </column>
      </widget>
      <widget class="QComboBox" name="comboBox_2">
       <property name="geometry">
@@ -3699,6 +3709,11 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
+      <item>
+       <property name="text">
+        <string>All Users</string>
+       </property>
+      </item>
      </widget>
      <widget class="QLabel" name="label_62">
       <property name="geometry">

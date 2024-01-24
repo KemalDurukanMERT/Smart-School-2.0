@@ -1,5 +1,5 @@
 from PyQt5.uic import loadUi
-from PyQt5.QtWidgets import QMainWindow, QListWidgetItem, QComboBox, QListWidget, QHeaderView, QMessageBox, QWidget, QCalendarWidget, QLineEdit, QPushButton, QTableWidget, QTableWidgetItem
+from PyQt5.QtWidgets import QMainWindow, QListWidgetItem, QComboBox, QDateEdit, QListWidget, QHeaderView, QMessageBox, QWidget, QCalendarWidget, QLineEdit, QPushButton, QTableWidget, QTableWidgetItem
 from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5 import QtGui
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QColor
@@ -12,6 +12,7 @@ import traceback
 from validator import *
 import hashlib
 from database import *
+import os
 
 ###############################################################################################################################
 
@@ -49,6 +50,9 @@ SELECT * FROM users WHERE status = 'Pending'
         if users:
             self.menuTeacher.setTitle(f"Users !!({len(users)})!!")
             self.menu12.setText(f"Users !!({len(users)})!!")
+        else:
+            self.menuTeacher.setTitle(f"Users")
+            self.menu12.setText(f"Users")
 
     def setupUi(self):
         try:
@@ -1382,6 +1386,7 @@ SELECT * FROM users WHERE status = 'Pending'
 
 
     def showEditUserTab(self):
+        self.pendingUsers()
         try:
             self.saveUserDetails.clicked.disconnect()
             self.deleteUserDetails.clicked.disconnect()
@@ -1405,6 +1410,7 @@ SELECT * FROM users WHERE status = 'Pending'
 
         self.statusCombobox.setCurrentIndex(-1)
         self.typeCombobox.setCurrentIndex(-1)
+        self.tableStatusCombobox.setCurrentIndex(0)
         self.emailEdit.clear()
         self.nameEdit.clear()
         self.surnameEdit.clear()
@@ -1453,6 +1459,7 @@ SELECT * FROM users WHERE status = 'Pending'
 
         if status == 'Rejected':
             self.deleteDetail()
+            self.pendingUsers()
         elif password:
             if not is_valid_email(email) or not is_valid_password(password) or not is_valid_phone(phone):
                 QMessageBox.warning(self, "Update Error", "Invalid input format")
@@ -1472,7 +1479,7 @@ WHERE email = '{email}'
                 self.conn.commit()
                 QMessageBox.information(self, "Update Successful", "Account updated successfully")
 
-                self.pendingUsers()
+                
                 self.showEditUserTab()
 
             except (Exception, psycopg2.DatabaseError) as error:
@@ -1580,12 +1587,205 @@ DELETE FROM users WHERE email = '{email}'
             QMessageBox.critical(self, 'Error', f'An error occurred while loading users: {e}')
 
 
-    # def showAnnouncementTab(self):
-    #     self.tabWidget.setCurrentIndex(7)
-    # def showTodoListTab(self):
-    #     self.tabWidget.setCurrentIndex(8)
+    def showAnnouncementTab(self):
+        self.tabWidget.setCurrentIndex(7)
+    def showTodoListTab(self):
+        self.tabWidget.setCurrentIndex(8)
     def showReportsTab(self):
         self.tabWidget.setCurrentIndex(10)
+        self.fromDateEdit = self.findChild(QDateEdit, "dateEdit")
+        self.toDateEdit = self.findChild(QDateEdit, "dateEdit_2")
+        self.fromDateEdit.setDate(datetime.date.today())
+        self.toDateEdit.setDate(datetime.date.today())
+        self.reportType = self.findChild(QComboBox, "comboBox")
+        self.reportType.setCurrentIndex(0)
+        self.selectedReportType = self.reportType.currentText()
+        self.userFilter = self.findChild(QComboBox, "comboBox_2")
+        self.userFilter.setCurrentIndex(0)
+        self.selectedUserFilter = self.userFilter.currentText()
+        self.reportTable = self.findChild(QTableWidget, 'tableWidget')
+        self.generateReport = self.findChild(QPushButton, 'b6_2')
+        self.exportReport = self.findChild(QPushButton, 'b6_3')
+
+        self.reportType.currentIndexChanged.connect(self.reportTypeChange)
+        self.userFilter.currentIndexChanged.connect(self.userFilterChange)
+        self.userFilter.activated.connect(lambda index: self.userFilterChange(self.userFilter.itemData(index)))
+        self.generateReport.clicked.connect(self.generateReportTable)
+
+        self.populate_report_users()
+        self.generateReportTable()
+
+    def reportTypeChange(self):
+        self.selectedReportType = self.reportType.currentText()
+
+    def userFilterChange(self, user):
+        if user:
+            self.selectedUserFilter = user
+        else: 
+            self.selectedUserFilter = "All Users"
+
+    def dateCommander(self, start_date, end_date, table=""):
+        if table:
+            if start_date == end_date:
+                dateCommand = f"WHERE {table}.created_time >= '{start_date}' AND {table}.created_time < '{end_date}'::timestamp + INTERVAL '1 day'"
+            elif start_date > end_date:
+                # QMessageBox.information("Error", "Start date should be earlier than End date!")
+                dateCommand = ""
+            else:
+                dateCommand = f''' WHERE {table}.created_time >= '{start_date}' AND {table}.created_time <= '{end_date}' '''
+
+        else:
+            if start_date == end_date:
+                dateCommand = f"WHERE created_time >= '{start_date}' AND created_time < '{end_date}'::timestamp + INTERVAL '1 day'"
+            elif start_date > end_date:
+                # QMessageBox.information("Error", "Start date should be earlier than End date!")
+                dateCommand = ''
+            else:
+                dateCommand = f''' WHERE created_time >= '{start_date}' AND created_time <= '{end_date}' '''
+            
+
+        return dateCommand
+
+
+    def generateReportTable(self):
+        start_date = self.fromDateEdit.date().toString("yyyy-MM-dd")
+        end_date = self.toDateEdit.date().toString("yyyy-MM-dd")
+
+
+
+        if start_date > end_date:
+            print("hata")
+            # QMessageBox.information("Error", "Start date should be earlier than End date!")
+            return
+
+        if self.selectedUserFilter == "All Users":
+            userFilterCommand = f""
+        else:
+            userFilterCommand = f''' AND users.email = '{self.selectedUserFilter}' '''
+
+        if start_date == end_date:
+            dateCommand = f"WHERE created_time >= '{start_date}' AND created_time < '{end_date}'::timestamp + INTERVAL '1 day'"
+        elif start_date > end_date:
+            # QMessageBox.information("Error", "Start date should be earlier than End date!")
+            dateCommand = ""
+        else:
+            dateCommand = f''' WHERE created_time >= '{start_date}' AND created_time <= '{end_date}' '''
+
+
+        if self.selectedReportType == 'User Actions':
+            command = f'''SELECT name, surname, phone, city, email, created_time FROM users {self.dateCommander(start_date, end_date)} {userFilterCommand} ORDER BY created_time ASC'''
+            column_names = ["name", "surname", "phone", "city", "email", "created_time"] 
+        elif self.selectedReportType == 'Lesson Actions':
+            command = f'''
+SELECT lesson_name, lesson_date, lesson_time_slot, lesson_instructor, users.email  FROM lesson
+inner join users
+on lesson.created_by = users.user_id
+{self.dateCommander(start_date, end_date, 'lesson')} 
+ORDER BY lesson.created_time ASC''' 
+            column_names = ["lesson_name", "lesson_date", "Time", "Instructor", "created_by"]
+
+            pass
+        elif self.selectedReportType == 'Lesson Attendance Actions':
+            
+            command = f'''
+SELECT u.email AS user_email, l.lesson_name, la.status, ua.email AS created_by_email
+FROM lessonattendance la
+JOIN users ua ON la.created_by = ua.user_id
+JOIN users u ON la.user_id = u.user_id
+JOIN lesson l ON la.lesson_id = l.lesson_id
+{self.dateCommander(start_date, end_date, "la")}
+{userFilterCommand}
+ORDER BY la.created_time ASC''' 
+            column_names = ["Student", "Lesson", "Status", "created_by"]
+            pass
+        elif self.selectedReportType == 'Meeting Actions':
+            command = f'''
+SELECT meeting_name, meeting_date, meeting_time_slot, users.email  FROM meeting
+inner join users
+on meeting.created_by = users.user_id
+{self.dateCommander(start_date, end_date, 'meeting')}
+{userFilterCommand} 
+ORDER BY meeting.created_time ASC''' 
+            
+            column_names = ["Meeting Name", "Date", "Time", "created_by"]
+            pass
+        elif self.selectedReportType == 'Meeting Attendance Actions':
+            command = f'''
+SELECT m.meeting_name, u.email AS user_email, ma.status, ua.email AS created_by_email 
+FROM meetingattendance ma
+JOIN users ua ON ma.created_by = ua.user_id
+JOIN users u ON ma.user_id = u.user_id
+JOIN meeting m ON ma.meeting_id = m.meeting_id
+{self.dateCommander(start_date, end_date, "ma")}
+{userFilterCommand}
+ORDER BY ma.created_time ASC'''
+            column_names = [ "Meeting", "Student", "Status", "created_by"] 
+            pass
+        elif self.selectedReportType == 'Announcement Actions':
+            command = f'''SELECT title, message, deadline, users.email FROM announcement 
+JOIN users ON announcement.created_by = users.user_id
+{self.dateCommander(start_date, end_date, "announcement")}
+{userFilterCommand} 
+ORDER BY announcement.created_time ASC''' 
+            column_names = ["Title", "Message", "Deadline", "created_by"]
+            pass
+        elif self.selectedReportType == 'ToDo Actions':
+            command = f'''
+SELECT todolist.task, todolist.task_status, todolist.deadline,  ua.email as assigned, u.email as creater FROM todolist
+inner join users ua ON todolist.assigned_user_id = ua.user_id
+join users u on todolist.created_by = u.user_id
+{self.dateCommander(start_date, end_date, 'todolist')} 
+{userFilterCommand} 
+ORDER BY todolist.created_time ASC;''' 
+            pass
+            
+            column_names = ["Task", "Task Status", "Deadline", "User", "created_by"]
+
+        try:
+            # print(command)
+            self.cur.execute(command)
+            self.showReport(column_names, self.cur.fetchall())
+        except (Exception, psycopg2.DatabaseError) as error:
+            QMessageBox.warning(self, "Report Error", str(error))
+
+    def populate_report_users(self):
+        self.cur.execute('''
+SELECT user_id, name, surname, email FROM users WHERE status = 'Active'
+''')
+        users = self.cur.fetchall()
+        for user_id, name, surname, email in users:
+            display_text = f"{name} - {email}"
+            self.userFilter.addItem(display_text, email)
+
+    def showReport(self, column_names, data):
+        num_columns = len(column_names)
+        num_rows = len(data)
+
+        # Set column count and headers
+        self.reportTable.setColumnCount(num_columns)
+        self.reportTable.setHorizontalHeaderLabels(column_names)
+        header = self.reportTable.horizontalHeader()
+        header.setSectionResizeMode(QHeaderView.Interactive)
+
+        # Set column widths
+        character_width = 30
+        for i in range(num_columns):
+            self.reportTable.setColumnWidth(i, len(column_names[i]) * character_width)
+
+        # Populate the table with data
+        self.reportTable.setRowCount(num_rows)
+        for i in range(num_rows):
+            for j in range(num_columns):
+                item = QTableWidgetItem(str(data[i][j]))
+                self.reportTable.setItem(i, j, item)
+        
+        
+
+    
+
+
+
+
 
     def add_message_tab(self):
         try:
