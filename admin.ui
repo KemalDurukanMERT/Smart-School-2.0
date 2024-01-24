@@ -25,7 +25,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>17</pointsize>
+      <pointsize>25</pointsize>
       <weight>75</weight>
       <bold>true</bold>
       <strikeout>false</strikeout>
@@ -59,7 +59,7 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -92,10 +92,10 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QLabel" name="label_13">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>70</y>
-        <width>851</width>
-        <height>61</height>
+        <x>260</x>
+        <y>90</y>
+        <width>671</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -519,9 +519,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>291</width>
+        <x>20</x>
+        <y>70</y>
+        <width>191</width>
         <height>21</height>
        </rect>
       </property>
@@ -537,30 +537,6 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
        <string>Edit or Delete User</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_12">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>90</y>
-        <width>121</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-        <underline>true</underline>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 191, 16);</string>
-      </property>
-      <property name="text">
-       <string>Select User</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_24">
@@ -616,6 +592,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label_28">
@@ -754,20 +733,6 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb21">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>70</y>
-        <width>271</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="b7">
@@ -911,7 +876,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
 font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="currentIndex">
-       <number>-1</number>
+       <number>0</number>
       </property>
       <item>
        <property name="text">
@@ -921,6 +886,11 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <item>
        <property name="text">
         <string>Pending</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Rejected</string>
        </property>
       </item>
      </widget>
@@ -945,31 +915,104 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <string>Status</string>
       </property>
      </widget>
-     <widget class="QTableWidget" name="tableWidget_2">
+     <widget class="QTableWidget" name="users_table">
       <property name="geometry">
        <rect>
         <x>480</x>
-        <y>70</y>
+        <y>130</y>
         <width>711</width>
-        <height>451</height>
+        <height>491</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>175</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>User Email</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignVCenter</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignVCenter</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Surname</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignVCenter</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Status</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignVCenter</set>
+       </property>
+      </column>
      </widget>
      <widget class="QComboBox" name="cb21_6">
       <property name="geometry">
        <rect>
-        <x>700</x>
-        <y>20</y>
-        <width>271</width>
+        <x>480</x>
+        <y>80</y>
+        <width>151</width>
         <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);
 font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
       </property>
       <item>
        <property name="text">
@@ -981,24 +1024,19 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <string>Active</string>
        </property>
       </item>
-      <item>
-       <property name="text">
-        <string>All</string>
-       </property>
-      </item>
      </widget>
      <widget class="QLabel" name="label_63">
       <property name="geometry">
        <rect>
-        <x>590</x>
-        <y>30</y>
-        <width>101</width>
+        <x>480</x>
+        <y>50</y>
+        <width>121</width>
         <height>20</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>11</pointsize>
+        <pointsize>14</pointsize>
         <weight>75</weight>
         <bold>true</bold>
         <underline>true</underline>
@@ -3200,7 +3238,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>850</x>
-        <y>600</y>
+        <y>630</y>
         <width>201</width>
         <height>51</height>
        </rect>
@@ -3223,9 +3261,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>200</y>
+        <y>180</y>
         <width>401</width>
-        <height>381</height>
+        <height>431</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -3236,7 +3274,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>510</y>
+        <y>540</y>
         <width>501</width>
         <height>71</height>
        </rect>
@@ -3259,14 +3297,14 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>50</y>
+        <y>20</y>
         <width>281</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -3282,7 +3320,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>90</y>
+        <y>60</y>
         <width>401</width>
         <height>41</height>
        </rect>
@@ -3295,14 +3333,14 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>160</y>
+        <y>140</y>
         <width>281</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -3318,7 +3356,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>40</y>
+        <y>20</y>
         <width>461</width>
         <height>31</height>
        </rect>
@@ -3341,7 +3379,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>90</y>
+        <y>70</y>
         <width>281</width>
         <height>21</height>
        </rect>
@@ -3364,7 +3402,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>840</x>
-        <y>90</y>
+        <y>70</y>
         <width>201</width>
         <height>21</height>
        </rect>
@@ -3390,13 +3428,36 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>130</y>
+        <y>110</y>
         <width>501</width>
         <height>361</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_149">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>500</y>
+        <width>501</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 191, 16);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Send a message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>
@@ -3710,15 +3771,15 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
     <property name="title">
      <string>Lessons</string>
     </property>
-    <addaction name="actionAccess_All_Functions"/>
-    <addaction name="actionLesson_Attendance"/>
+    <addaction name="menu21_t"/>
+    <addaction name="menu22_t"/>
    </widget>
    <widget class="QMenu" name="menuMeetings">
     <property name="title">
      <string>Meetings</string>
     </property>
-    <addaction name="actionMeeting_Schedule"/>
-    <addaction name="actionMeeting_Attendance"/>
+    <addaction name="menu31_t"/>
+    <addaction name="menu32_t"/>
    </widget>
    <widget class="QMenu" name="menuTo_Do_List">
     <property name="title">
@@ -3806,22 +3867,22 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
     <string>Check Reports</string>
    </property>
   </action>
-  <action name="actionAccess_All_Functions">
+  <action name="menu21_t">
    <property name="text">
     <string>Lesson Schedule</string>
    </property>
   </action>
-  <action name="actionLesson_Attendance">
+  <action name="menu22_t">
    <property name="text">
     <string>Lesson Attendance</string>
    </property>
   </action>
-  <action name="actionMeeting_Schedule">
+  <action name="menu31_t">
    <property name="text">
     <string>Meeting Schedule</string>
    </property>
   </action>
-  <action name="actionMeeting_Attendance">
+  <action name="menu32_t">
    <property name="text">
     <string>Meeting Attendance</string>
    </property>

@@ -61,6 +61,11 @@ class StudentApp(QMainWindow):
         self.announcements_s.triggered.connect(self.view_announcement)
 
 
+        try:
+            self.b6.clicked.disconnect()
+        except:
+            pass
+        
         # Button actions
         self.b6.clicked.connect(self.update_student_details) 
         
@@ -128,7 +133,7 @@ class StudentApp(QMainWindow):
 
         hashed_password = hashlib.sha256(password.encode()).hexdigest()
         self.cur.execute("UPDATE users SET email = %s, name = %s, surname = %s, city = %s, phone = %s, hashed_password = %s WHERE user_id = %s",
-                        (email, name, surname, city, phone, hashed_password, self.user.id))
+                         (email, name, surname, city, phone, hashed_password, self.user.id))
         self.conn.commit()
         QMessageBox.information(self, "Update Success", "Student details updated successfully.")
 
@@ -142,8 +147,8 @@ class StudentApp(QMainWindow):
         self.lesson_table.setColumnWidth(2, 12 * character_width)
         self.lesson_table.setColumnWidth(3, 12 * character_width)
         self.lesson_table.setColumnWidth(4, 17 * character_width)
-
-
+       
+       
         try:
             self.lesson_table.setRowCount(0)  # Clear the table before repopulating
             query = "SELECT lesson_id, lesson_name, lesson_date, lesson_time_slot, lesson_instructor FROM lesson ORDER BY lesson_date ASC"
@@ -186,8 +191,6 @@ class StudentApp(QMainWindow):
         except psycopg2.Error as e:
             QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
 
-    
-    
     def view_meeting_schedule(self):
         self.tabWidget.setCurrentIndex(4)  # Adjust the index according to your tab order
         self.meeting_table.setRowCount(0)  # Clear the table

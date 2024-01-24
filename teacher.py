@@ -1,8 +1,8 @@
 from PyQt5.uic import loadUi
-from PyQt5.QtWidgets import QMainWindow, QListWidgetItem,QLabel, QComboBox, QListWidget, QHeaderView, QMessageBox, QWidget, QCalendarWidget, QLineEdit, QPushButton, QTableWidget, QTableWidgetItem
-from PyQt5.QtCore import Qt, pyqtSignal, QDate,  QTimer, QDateTime
+from PyQt5.QtWidgets import QMainWindow, QListWidgetItem, QLabel, QComboBox, QListWidget, QHeaderView, QMessageBox, QWidget, QCalendarWidget, QLineEdit, QPushButton, QTableWidget, QTableWidgetItem
+from PyQt5.QtCore import Qt, pyqtSignal,   QTimer, QDateTime
 from PyQt5 import QtGui
-from PyQt5.QtGui import QStandardItemModel, QStandardItem, QColor, QFont
+from PyQt5.QtGui import QStandardItemModel, QStandardItem, QColor, QFont 
 import psycopg2
 import re
 import datetime
@@ -34,15 +34,14 @@ class TeacherApp(QMainWindow):
         self.connectDatabase(conn, cur, database)
         self.user = user
         self.initializeUi()
-    
-        
+
     def setupUi(self):
         try:
             loadUi('teacher.ui', self)
             # self.selected_lesson_index = None
             # self.selected_meeting_index = None
             # self.comboBox_instructor.currentIndexChanged.connect(self.onInstructorChanged)
-            self.comboBox_student.currentIndexChanged.connect(self.showStudentTodos)        
+            self.comboBox_student.currentIndexChanged.connect(self.showStudentTodos)
         except Exception as e:
             self.showErrorMessage("Initialization Error", f"Error during TeacherApp initialization: {e}")
 
@@ -62,9 +61,8 @@ class TeacherApp(QMainWindow):
         self.setupDeadlineCalendar()
         self.show_logged_in_user()
         self.initializeClock()
-        self.selected_todo_index = None 
-    
-        
+        self.selected_todo_index = None
+
     def show_logged_in_user(self):
         
         self.logged_in_user_label = QLabel(str(self.user), self)
@@ -94,7 +92,6 @@ class TeacherApp(QMainWindow):
         date_time = QDateTime.currentDateTime().toString('dd.MM.yyyy HH:mm:ss')
         self.date_time_label.setText(f'{date_time}')
 
-        
     def setupTabs(self):
         self.tabWidget.setCurrentIndex(0)
         self.tabWidget.tabBar().setVisible(False)
@@ -109,8 +106,13 @@ class TeacherApp(QMainWindow):
         self.menu51_t.triggered.connect(self.add_message_tab)
         self.announcementMenu.triggered.connect(self.add_announce_tab)
         self.menu71_t.triggered.connect(self.logout)
-        
+
+
     def setupButtonActions(self):
+        try:
+            self.b6.clicked.disconnect()
+        except:
+            pass
         self.b6.clicked.connect(self.update_teacher_details)
         # self.sendButton3_t.clicked.connect(self.send_message)
 
@@ -120,6 +122,7 @@ class TeacherApp(QMainWindow):
         self.calendar.setGridVisible(True)
         self.calendar.hide()
         self.calendar.clicked.connect(self.updateDateInput)
+
     def setupDeadlineCalendar(self):
         self.calendartodo = QCalendarWidget(self)
         self.calendartodo.setWindowFlags(Qt.Popup)
@@ -148,13 +151,12 @@ class TeacherApp(QMainWindow):
         formatted_date = date.toString("yyyy-MM-dd")
         self.date_input.setText(formatted_date)
         self.calendar.hide()
-        
+
     def updateDeadlineInput(self, date):
         formatted_date = date.toString("yyyy-MM-dd")
         self.deadline_input.setText(formatted_date)
         self.calendar.hide()
-    
-        
+
     def onStudentChanged(self, index):
         if index == 0:
             pass  # Placeholder is selected, handle this case separately if needed
@@ -176,7 +178,7 @@ class TeacherApp(QMainWindow):
     
         
         
-###################################################################################
+ ###################################################################################
     def edit_profile_tab(self):
         self.tabWidget.setCurrentIndex(1)
         self.load_teacher_details()
@@ -235,6 +237,10 @@ class TeacherApp(QMainWindow):
         header = self.lesson_table.horizontalHeader()
         header.setSectionResizeMode(QHeaderView.Interactive)
         
+        try:
+            self.add_lesson_btn.clicked.disconnect()
+        except:
+            pass
         self.add_lesson_btn.clicked.connect(self.addLesson)
         self.reset_lesson_btn.clicked.connect(self.resetForm)
         self.date_input.mousePressEvent = self.showCalendar
@@ -288,7 +294,7 @@ class TeacherApp(QMainWindow):
         created_by = self.user.id  # Assuming self.user.id holds the ID of the current user
 
         
-        if lesson_name and date and time_slot and instructor_name and (instructor_name != "Select an instructor"):
+        if lesson_name and date and time_slot and instructor_name and instructor_name != "Select an instructor":
             if self.isValidTimeSlot(time_slot):
                 if self.selected_lesson_index:
                     lesson_id = self.getLessonIdFromTable(self.selected_lesson_index)
@@ -525,7 +531,7 @@ class TeacherApp(QMainWindow):
                 SELECT la.attendance_id, l.lesson_name, l.lesson_date, l.lesson_time_slot, la.status
                 FROM lessonattendance la
                 JOIN lesson l ON la.lesson_id = l.lesson_id
-                WHERE la.user_id = %s
+                WHERE la.user_id = %s ORDER BY l.lesson_date ASC
                 """
                 self.cur.execute(query, (user_id,))
                 records = self.cur.fetchall()
@@ -726,6 +732,10 @@ class TeacherApp(QMainWindow):
             self.meeting_table.setSelectionBehavior(QTableWidget.SelectRows)
             
             # Connect buttons to their respective functions
+            try:
+                self.add_meeting_btn.clicked.disconnect()
+            except:
+                pass
             self.add_meeting_btn.clicked.connect(self.addMeeting)
             self.reset_meeting_btn.clicked.connect(self.resetMeetingButton)
             self.meeting_date_input.mousePressEvent = self.showMeetingCalendar
@@ -811,7 +821,9 @@ class TeacherApp(QMainWindow):
         time = self.meeting_time_slot.text().strip()
         created_by = self.user.id
 
-        
+        if not title or not date or not time:
+            QMessageBox.warning(self, "Input Error", "All fields must be filled out.")
+            return
 
         if not self.isValidTimeSlot(time):
             QMessageBox.warning(self, "Input Error", "Time slot must be in the format xx:xx-xx:xx.")
@@ -832,11 +844,7 @@ class TeacherApp(QMainWindow):
         except Exception as e:
             self.conn.rollback()
             QMessageBox.critical(self, "Error", f"An error occurred: {str(e)}")
-        
-        if not title or not date or not time:
-            QMessageBox.warning(self, "Input Error", "All fields must be filled out.")
-            return
-        
+            
         self.meeting_title.clear()
         self.meeting_date_input.clear()
         self.meeting_time_slot.clear()
@@ -859,7 +867,6 @@ class TeacherApp(QMainWindow):
                     query = "DELETE FROM meeting WHERE meeting_id = %s"
                     self.cur.execute(query, (meeting_id,))
                     self.conn.commit()
-                    self.selected_meeting_index = None
                 except Exception as e:
                     self.conn.rollback()
                     QMessageBox.warning(self, "Error", f"An error occurred: {str(e)}")
@@ -1461,6 +1468,10 @@ class TeacherApp(QMainWindow):
             self.showErrorMessage("Database Error", f"Error populating Students: {e}")
 
     def add_message_tab(self):
+        try:
+            self.sendMessage.clicked.disconnect()
+        except:
+            pass
         self.tabWidget.setCurrentIndex(8)
         self.message_app = MessageApp(self)
          
@@ -1473,6 +1484,11 @@ class TeacherApp(QMainWindow):
         self.load_announcement()
         self.date_input = self.findChild(QLineEdit, 'announcementDate')
         self.date_input.mousePressEvent = self.showCalendarAnnouncement
+        try:
+            self.addButton.clicked.disconnect()
+            self.editButton.clicked.disconnect()
+        except:
+            pass
         self.addButton.clicked.connect(self.add_announcement)
         self.editButton.clicked.connect(self.edit_announcement)
         self.deleteButton.clicked.connect(self.delete_announcement)

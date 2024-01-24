@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1154</width>
-    <height>801</height>
+    <width>1143</width>
+    <height>809</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -45,7 +45,7 @@ background-color: rgb(40, 41, 44);</string>
       <x>0</x>
       <y>50</y>
       <width>1161</width>
-      <height>711</height>
+      <height>721</height>
      </rect>
     </property>
     <property name="font">
@@ -59,7 +59,7 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>8</number>
     </property>
     <widget class="QWidget" name="tab_1">
      <attribute name="title">
@@ -124,8 +124,8 @@ background-color: rgb(40, 41, 44);</string>
        <rect>
         <x>20</x>
         <y>30</y>
-        <width>181</width>
-        <height>21</height>
+        <width>201</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -502,9 +502,9 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>30</y>
+        <y>20</y>
         <width>231</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -550,9 +550,9 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>20</y>
+        <y>10</y>
         <width>331</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -560,6 +560,7 @@ background-color: rgb(40, 41, 44);</string>
         <pointsize>17</pointsize>
         <weight>75</weight>
         <bold>true</bold>
+        <underline>true</underline>
        </font>
       </property>
       <property name="styleSheet">
@@ -646,9 +647,9 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>20</y>
+        <y>10</y>
         <width>231</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -688,9 +689,9 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>20</y>
+        <y>10</y>
         <width>351</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -698,6 +699,7 @@ background-color: rgb(40, 41, 44);</string>
         <pointsize>17</pointsize>
         <weight>75</weight>
         <bold>true</bold>
+        <underline>true</underline>
        </font>
       </property>
       <property name="styleSheet">
@@ -712,18 +714,43 @@ background-color: rgb(40, 41, 44);</string>
      <attribute name="title">
       <string>view_announcement</string>
      </attribute>
-     <widget class="QLabel" name="label_122">
+     <widget class="QTextBrowser" name="textBrowser">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>20</y>
-        <width>301</width>
-        <height>41</height>
+        <x>60</x>
+        <y>140</y>
+        <width>1031</width>
+        <height>411</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>19</pointsize>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_122">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>70</y>
+        <width>201</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -836,11 +863,24 @@ background-color: rgb(40, 41, 44);</string>
      <attribute name="title">
       <string>view_todolist</string>
      </attribute>
+     <widget class="QListView" name="list_view">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>190</y>
+        <width>691</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
      <widget class="QLabel" name="label_108">
       <property name="geometry">
        <rect>
         <x>510</x>
-        <y>80</y>
+        <y>130</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -991,7 +1031,7 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>860</x>
-        <y>600</y>
+        <y>620</y>
         <width>201</width>
         <height>51</height>
        </rect>
@@ -1014,7 +1054,7 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>130</y>
+        <y>120</y>
         <width>511</width>
         <height>371</height>
        </rect>
@@ -1027,7 +1067,7 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>510</y>
+        <y>540</y>
         <width>511</width>
         <height>71</height>
        </rect>
@@ -1050,14 +1090,14 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>50</y>
+        <y>30</y>
         <width>281</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -1073,9 +1113,9 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>200</y>
+        <y>170</y>
         <width>401</width>
-        <height>381</height>
+        <height>441</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1086,7 +1126,7 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>90</y>
+        <y>70</y>
         <width>401</width>
         <height>41</height>
        </rect>
@@ -1099,14 +1139,14 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>160</y>
+        <y>140</y>
         <width>281</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -1122,7 +1162,7 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>40</y>
+        <y>30</y>
         <width>501</width>
         <height>31</height>
        </rect>
@@ -1145,7 +1185,7 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>90</y>
+        <y>80</y>
         <width>281</width>
         <height>21</height>
        </rect>
@@ -1168,7 +1208,7 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>850</x>
-        <y>90</y>
+        <y>80</y>
         <width>201</width>
         <height>21</height>
        </rect>
@@ -1190,6 +1230,29 @@ background-color: rgb(40, 41, 44);</string>
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
+     <widget class="QLabel" name="label_149">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>500</y>
+        <width>501</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 191, 16);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Send a message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -1199,8 +1262,8 @@ background-color: rgb(40, 41, 44);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1154</width>
-     <height>30</height>
+     <width>1143</width>
+     <height>25</height>
     </rect>
    </property>
    <property name="styleSheet">

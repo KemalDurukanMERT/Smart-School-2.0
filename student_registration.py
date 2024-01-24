@@ -11,6 +11,10 @@ class RegisterApp(QDialog):
     def __init__(self, conn):
         super(RegisterApp, self).__init__()
         loadUi("student_registration.ui", self)
+        try:
+            self.b3.clicked.disconnect()
+        except:
+            pass
         self.b3.clicked.connect(self.register)
         self.b4.clicked.connect(self.show_login)
         self.conn = conn

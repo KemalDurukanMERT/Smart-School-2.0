@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1116</width>
-    <height>862</height>
+    <width>1118</width>
+    <height>872</height>
    </rect>
   </property>
   <property name="font">
@@ -35,7 +35,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>17</pointsize>
+      <pointsize>25</pointsize>
       <weight>75</weight>
       <bold>true</bold>
       <strikeout>false</strikeout>
@@ -78,7 +78,7 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>7</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -2035,8 +2035,8 @@ color: rgb(255, 255, 255);</string>
        <rect>
         <x>20</x>
         <y>20</y>
-        <width>501</width>
-        <height>51</height>
+        <width>441</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="font">
@@ -2059,8 +2059,8 @@ fontSize: 20px</string>
        <rect>
         <x>610</x>
         <y>160</y>
-        <width>231</width>
-        <height>31</height>
+        <width>171</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="font">
@@ -2184,8 +2184,8 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <rect>
         <x>610</x>
         <y>20</y>
-        <width>481</width>
-        <height>41</height>
+        <width>401</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="font">
@@ -2438,14 +2438,12 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <bold>true</bold>
        </font>
       </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 191, 16);</string>
+       <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>Delete All Tasks</string>
+       <string>Delete</string>
       </property>
      </widget>
      <widget class="QPushButton" name="resAllTodoFields">
@@ -2653,7 +2651,7 @@ background-color: rgb(255, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>520</y>
+        <y>560</y>
         <width>501</width>
         <height>71</height>
        </rect>
@@ -2676,7 +2674,7 @@ background-color: rgb(255, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>850</x>
-        <y>620</y>
+        <y>640</y>
         <width>201</width>
         <height>51</height>
        </rect>
@@ -2699,14 +2697,14 @@ background-color: rgb(255, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>50</y>
+        <y>40</y>
         <width>281</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -2722,9 +2720,9 @@ background-color: rgb(255, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>210</y>
+        <y>180</y>
         <width>401</width>
-        <height>381</height>
+        <height>451</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2735,7 +2733,7 @@ background-color: rgb(255, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>150</y>
+        <y>120</y>
         <width>501</width>
         <height>361</height>
        </rect>
@@ -2748,7 +2746,7 @@ background-color: rgb(255, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>100</y>
+        <y>70</y>
         <width>401</width>
         <height>41</height>
        </rect>
@@ -2761,14 +2759,14 @@ background-color: rgb(255, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>170</y>
+        <y>150</y>
         <width>281</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -2784,8 +2782,8 @@ background-color: rgb(255, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>50</y>
-        <width>461</width>
+        <y>30</y>
+        <width>501</width>
         <height>31</height>
        </rect>
       </property>
@@ -2807,7 +2805,7 @@ background-color: rgb(255, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>100</y>
+        <y>80</y>
         <width>281</width>
         <height>21</height>
        </rect>
@@ -2830,7 +2828,7 @@ background-color: rgb(255, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>850</x>
-        <y>100</y>
+        <y>80</y>
         <width>201</width>
         <height>21</height>
        </rect>
@@ -2852,6 +2850,29 @@ background-color: rgb(255, 0, 0);</string>
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
+     <widget class="QLabel" name="label_149">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>520</y>
+        <width>501</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 191, 16);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Send a message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -2861,7 +2882,7 @@ background-color: rgb(255, 0, 0);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1116</width>
+     <width>1118</width>
      <height>50</height>
     </rect>
    </property>

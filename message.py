@@ -9,6 +9,10 @@ import psycopg2
 
 class MessageApp():
     def __init__(self, data):
+        try:
+            self.sendMessage.clicked.disconnect()
+        except:
+            pass
         self.self = data
         self.chattedUser = 0
         self.user = self.self.user
@@ -111,7 +115,7 @@ ORDER BY created_time ASC''')
         self.messageCombobox.clear()
         self.messageCombobox.addItem("Search User for Chat", 0)
         self.cur.execute('''
-SELECT user_id, name, surname, email FROM users
+SELECT user_id, name, surname, email FROM users WHERE status = 'Active'
 ''')
         users = self.cur.fetchall()
         for user_id, name, surname, email in users:
@@ -152,10 +156,10 @@ WHERE sender_id = {user_id} and receiver_id = {self.user.id} and message_read = 
 
     def on_list_item_clicked(self, index):
         selected_index = index.row()
-
-        selected_user_id = self.model2.item(selected_index).data(Qt.UserRole)
-        self.chatUser(selected_user_id)
-        self.read_message()
+        if self.model2.item(selected_index):
+            selected_user_id = self.model2.item(selected_index).data(Qt.UserRole)
+            self.chatUser(selected_user_id)
+            self.read_message()
 
 
 class BorderDelegate(QStyledItemDelegate):
