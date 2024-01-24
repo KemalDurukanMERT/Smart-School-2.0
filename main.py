@@ -1,13 +1,15 @@
 import sys
 import re
 from login import *
-from register import *
+from student_registration import *
+from teacher_registration import *
 import psycopg2
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication 
 from database import *
 from teacher import *
-
+from student import *
+from admin import *
 
 class SchoolSystem():
     def __init__(self):
@@ -16,11 +18,13 @@ class SchoolSystem():
             self.conn, self.cur = self.database.connect_db()
             self.database.check_table(self.cur)
             self.database.check_admin(self.cur)
+            self.database.add_triger(self.cur)
         else:
             self.database.create_database()
             self.conn, self.cur = self.database.connect_db()
             self.database.create_table_scratch(self.cur)
             self.database.check_admin(self.cur)
+            self.database.add_triger(self.cur)
 
 
 
@@ -28,18 +32,28 @@ class SchoolSystem():
         
         
         self.login_form = LoginApp(self.conn)
-        self.register_form = RegisterApp(self.conn)
+        self.student_registration = RegisterApp(self.conn)
+        self.teacher_registration = RegisterApp2(self.conn)
+        
 
         self.login_form.authentication.connect(self.login_success)
-        self.login_form.register.connect(self.show_reg)
-        self.register_form.login.connect(self.show_login)
+        self.login_form.student_registration.connect(self.show_reg)
+        self.student_registration.login.connect(self.show_login)
+        
+        self.login_form.teacher_registration.connect(self.show_reg2)
+        self.teacher_registration.login.connect(self.show_login)
+        
+        
         
 
         widget.addWidget(self.login_form)
-        widget.addWidget(self.register_form)
+        widget.addWidget(self.student_registration)
+        widget.addWidget(self.teacher_registration)
+
         widget.show()
         widget.setFixedWidth(400)
         widget.setFixedHeight(650)
+        sys.exit(app.exec_())
 
     def login_success(self, user):
         self.user = user
@@ -50,7 +64,10 @@ class SchoolSystem():
         widget.hide()
 
         if self.user.user_type == "admin":
-            pass
+            self.admin_app = AdminApp(self.conn, self.cur, self.database, self.user)
+            self.admin_app.show()
+            self.admin_app.login.connect(self.show_login)
+            
         elif self.user.user_type == "teacher":
             print('teacher')
             self.teacher_app = TeacherApp(self.conn, self.cur, self.database, self.user)
@@ -58,13 +75,22 @@ class SchoolSystem():
             self.teacher_app.login.connect(self.show_login)
 
         elif self.user.user_type == "student":
-            pass
+            print('student')
+            self.student_app = StudentApp(self.conn, self.cur, self.database, self.user)
+            self.student_app.show()
+            self.student_app.login.connect(self.show_login)
+        
 
 
     def show_reg(self):
         global widget
         widget.setCurrentIndex(1)
-
+        
+    def show_reg2(self):
+        global widget
+        widget.setCurrentIndex(2)
+        
+        
     def show_login(self):
         global widget
         self.login_form.tb1.clear()
@@ -74,16 +100,14 @@ class SchoolSystem():
         widget.setCurrentIndex(0)
 
 
-
-
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     widget = QtWidgets.QStackedWidget()
     system = SchoolSystem()
     widget.setFixedWidth(400)
     widget.setFixedHeight(650)
-    sys.exit(app.exec_())
+    
+
 
 
 
