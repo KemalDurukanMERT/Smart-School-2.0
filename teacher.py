@@ -38,9 +38,10 @@ class TeacherApp(QMainWindow):
         self.initializeUi()
 
     def setupUi(self):
-        loc=os.getcwd()
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        ui_path = os.path.join(script_dir, 'teacher.ui')
         try:
-            loadUi(f"{loc}\\teacher.ui", self)
+            loadUi(ui_path, self)
             # self.selected_lesson_index = None
             # self.selected_meeting_index = None
             # self.comboBox_instructor.currentIndexChanged.connect(self.onInstructorChanged)
@@ -777,7 +778,7 @@ class TeacherApp(QMainWindow):
     def loadMeetings(self):
         self.meeting_table.clearContents()
         self.meeting_table.setRowCount(0)
-        query = "SELECT meeting_id, meeting_name, meeting_date, meeting_time_slot FROM meeting WHERE teacher_id = %s ORDER BY meeting_date ASC"
+        query = "SELECT meeting_id, meeting_name, meeting_date, meeting_time_slot FROM meeting ORDER BY meeting_date ASC"
         self.cur.execute(query, (self.user.id,))
         meetings = self.cur.fetchall()
         for meeting_id, meeting_name, meeting_date, meeting_time_slot in meetings:
@@ -1454,6 +1455,7 @@ FROM announcement JOIN users ON created_by = users.user_id
 Author: {author}
 Title: {title}
 Message: {message}
+Deadline: {deadline}
 '''
             item = QStandardItem(display_text)
             self.model.appendRow(item)
