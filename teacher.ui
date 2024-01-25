@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1118</width>
+    <width>1115</width>
     <height>872</height>
    </rect>
   </property>
@@ -78,7 +78,7 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
-     <number>7</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -1904,8 +1904,8 @@ color: rgb(255, 255, 255)</string>
      <widget class="QLineEdit" name="announcementTitle">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>140</y>
+        <x>20</x>
+        <y>240</y>
         <width>321</width>
         <height>51</height>
        </rect>
@@ -1927,8 +1927,8 @@ color: rgb(255, 255, 255)</string>
      <widget class="QTextEdit" name="textEdit">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>220</y>
+        <x>20</x>
+        <y>350</y>
         <width>321</width>
         <height>271</height>
        </rect>
@@ -1943,15 +1943,15 @@ color: rgb(255, 255, 255)</string>
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="addButton">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>510</y>
+        <x>20</x>
+        <y>630</y>
         <width>91</width>
         <height>51</height>
        </rect>
@@ -1973,8 +1973,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="editButton">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>510</y>
+        <x>130</x>
+        <y>630</y>
         <width>101</width>
         <height>51</height>
        </rect>
@@ -1996,8 +1996,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="deleteButton">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>510</y>
+        <x>250</x>
+        <y>630</y>
         <width>91</width>
         <height>51</height>
        </rect>
@@ -2020,8 +2020,8 @@ color: rgb(255, 255, 255);</string>
      <widget class="QComboBox" name="announcementCombobox">
       <property name="geometry">
        <rect>
-        <x>610</x>
-        <y>60</y>
+        <x>420</x>
+        <y>130</y>
         <width>471</width>
         <height>51</height>
        </rect>
@@ -2035,8 +2035,8 @@ color: rgb(255, 255, 255);</string>
        <rect>
         <x>20</x>
         <y>20</y>
-        <width>441</width>
-        <height>21</height>
+        <width>311</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -2044,6 +2044,7 @@ color: rgb(255, 255, 255);</string>
         <pointsize>18</pointsize>
         <weight>75</weight>
         <bold>true</bold>
+        <underline>true</underline>
        </font>
       </property>
       <property name="styleSheet">
@@ -2051,14 +2052,14 @@ color: rgb(255, 255, 255);</string>
 fontSize: 20px</string>
       </property>
       <property name="text">
-       <string>Add/Edit  Announcement Details</string>
+       <string>Add/Edit  Announcement</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_65">
       <property name="geometry">
        <rect>
-        <x>610</x>
-        <y>160</y>
+        <x>420</x>
+        <y>200</y>
         <width>171</width>
         <height>21</height>
        </rect>
@@ -2080,10 +2081,10 @@ fontSize: 20px</string>
      <widget class="QListView" name="announcementListView">
       <property name="geometry">
        <rect>
-        <x>610</x>
-        <y>200</y>
-        <width>471</width>
-        <height>421</height>
+        <x>420</x>
+        <y>230</y>
+        <width>681</width>
+        <height>391</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2093,10 +2094,10 @@ fontSize: 20px</string>
      <widget class="QLineEdit" name="announcementDate">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>80</y>
+        <x>20</x>
+        <y>130</y>
         <width>321</width>
-        <height>41</height>
+        <height>51</height>
        </rect>
       </property>
       <property name="toolTipDuration">
@@ -2114,9 +2115,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>80</y>
+        <y>100</y>
         <width>151</width>
-        <height>31</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="font">
@@ -2137,9 +2138,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>150</y>
-        <width>151</width>
-        <height>31</height>
+        <y>210</y>
+        <width>201</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="font">
@@ -2153,16 +2154,16 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <string notr="true">color: rgb(255, 191, 16);</string>
       </property>
       <property name="text">
-       <string>Header</string>
+       <string>Announcement Title</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_68">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>220</y>
+        <y>320</y>
         <width>151</width>
-        <height>41</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="font">
@@ -2182,15 +2183,15 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QLabel" name="label_69">
       <property name="geometry">
        <rect>
-        <x>610</x>
-        <y>20</y>
+        <x>420</x>
+        <y>100</y>
         <width>401</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>18</pointsize>
+        <pointsize>14</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -2199,7 +2200,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <string notr="true">color: rgb(255, 191, 16);</string>
       </property>
       <property name="text">
-       <string>Select Announcement for Edit</string>
+       <string>Select announcement to edit</string>
       </property>
      </widget>
     </widget>
@@ -2210,7 +2211,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QPushButton" name="deleteTodoBtn">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>20</x>
         <y>610</y>
         <width>141</width>
         <height>41</height>
@@ -2266,9 +2267,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QLabel" name="label_43">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>50</x>
         <y>150</y>
-        <width>101</width>
+        <width>81</width>
         <height>21</height>
        </rect>
       </property>
@@ -2296,7 +2297,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QPushButton" name="deleteAllTodosBtn">
       <property name="geometry">
        <rect>
-        <x>910</x>
+        <x>940</x>
         <y>610</y>
         <width>161</width>
         <height>41</height>
@@ -2322,7 +2323,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QPushButton" name="allTodosBtn">
       <property name="geometry">
        <rect>
-        <x>370</x>
+        <x>380</x>
         <y>70</y>
         <width>111</width>
         <height>41</height>
@@ -2348,7 +2349,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QLineEdit" name="deadlineInput">
       <property name="geometry">
        <rect>
-        <x>490</x>
+        <x>500</x>
         <y>70</y>
         <width>411</width>
         <height>41</height>
@@ -2368,10 +2369,10 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QLabel" name="label_42">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>20</y>
-        <width>211</width>
-        <height>21</height>
+        <x>10</x>
+        <y>10</y>
+        <width>161</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -2398,10 +2399,10 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QPushButton" name="addTodoBtn">
       <property name="geometry">
        <rect>
-        <x>910</x>
-        <y>120</y>
+        <x>940</x>
+        <y>140</y>
         <width>161</width>
-        <height>61</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -2424,9 +2425,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QLabel" name="label_44">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>100</x>
         <y>80</y>
-        <width>71</width>
+        <width>31</width>
         <height>21</height>
        </rect>
       </property>
@@ -2445,7 +2446,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <string notr="true">color: rgb(255, 191, 16);</string>
       </property>
       <property name="text">
-       <string>To :</string>
+       <string>To</string>
       </property>
       <property name="indent">
        <number>0</number>
@@ -2456,7 +2457,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <rect>
         <x>140</x>
         <y>140</y>
-        <width>761</width>
+        <width>771</width>
         <height>41</height>
        </rect>
       </property>
@@ -2487,7 +2488,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QPushButton" name="resAllTodoFields">
       <property name="geometry">
        <rect>
-        <x>910</x>
+        <x>940</x>
         <y>70</y>
         <width>161</width>
         <height>41</height>
@@ -2515,9 +2516,9 @@ background-color: rgb(255, 0, 0);</string>
      <widget class="QTableWidget" name="todoTable">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>20</x>
         <y>200</y>
-        <width>1031</width>
+        <width>1081</width>
         <height>401</height>
        </rect>
       </property>
@@ -2643,9 +2644,9 @@ background-color: rgb(255, 0, 0);</string>
      <widget class="QLineEdit" name="typeMessage">
       <property name="geometry">
        <rect>
-        <x>550</x>
+        <x>530</x>
         <y>560</y>
-        <width>501</width>
+        <width>561</width>
         <height>71</height>
        </rect>
       </property>
@@ -2666,7 +2667,7 @@ background-color: rgb(255, 0, 0);</string>
      <widget class="QPushButton" name="sendMessage">
       <property name="geometry">
        <rect>
-        <x>850</x>
+        <x>890</x>
         <y>640</y>
         <width>201</width>
         <height>51</height>
@@ -2689,7 +2690,7 @@ background-color: rgb(255, 0, 0);</string>
      <widget class="QLabel" name="label_105">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>30</x>
         <y>40</y>
         <width>281</width>
         <height>21</height>
@@ -2712,7 +2713,7 @@ background-color: rgb(255, 0, 0);</string>
      <widget class="QListView" name="listView_chats">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>30</x>
         <y>180</y>
         <width>401</width>
         <height>451</height>
@@ -2725,9 +2726,9 @@ background-color: rgb(255, 0, 0);</string>
      <widget class="QListView" name="listViewMessages">
       <property name="geometry">
        <rect>
-        <x>550</x>
+        <x>530</x>
         <y>120</y>
-        <width>501</width>
+        <width>561</width>
         <height>361</height>
        </rect>
       </property>
@@ -2738,7 +2739,7 @@ background-color: rgb(255, 0, 0);</string>
      <widget class="QComboBox" name="messageCombobox">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>30</x>
         <y>70</y>
         <width>401</width>
         <height>41</height>
@@ -2751,7 +2752,7 @@ background-color: rgb(255, 0, 0);</string>
      <widget class="QLabel" name="label_107">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>30</x>
         <y>150</y>
         <width>281</width>
         <height>21</height>
@@ -2774,7 +2775,7 @@ background-color: rgb(255, 0, 0);</string>
      <widget class="QLabel" name="label_115">
       <property name="geometry">
        <rect>
-        <x>550</x>
+        <x>530</x>
         <y>30</y>
         <width>501</width>
         <height>31</height>
@@ -2797,7 +2798,7 @@ background-color: rgb(255, 0, 0);</string>
      <widget class="QLabel" name="username">
       <property name="geometry">
        <rect>
-        <x>550</x>
+        <x>530</x>
         <y>80</y>
         <width>281</width>
         <height>21</height>
@@ -2820,9 +2821,9 @@ background-color: rgb(255, 0, 0);</string>
      <widget class="QLabel" name="usermail">
       <property name="geometry">
        <rect>
-        <x>850</x>
+        <x>880</x>
         <y>80</y>
-        <width>201</width>
+        <width>211</width>
         <height>21</height>
        </rect>
       </property>
@@ -2875,7 +2876,7 @@ background-color: rgb(255, 0, 0);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1118</width>
+     <width>1115</width>
      <height>50</height>
     </rect>
    </property>

@@ -717,9 +717,9 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QLabel" name="label_122">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>40</y>
-        <width>271</width>
+        <x>10</x>
+        <y>0</y>
+        <width>171</width>
         <height>51</height>
        </rect>
       </property>
@@ -728,6 +728,7 @@ background-color: rgb(40, 41, 44);</string>
         <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
+        <underline>true</underline>
        </font>
       </property>
       <property name="styleSheet">
@@ -741,14 +742,17 @@ background-color: rgb(40, 41, 44);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>140</y>
+        <y>80</y>
         <width>1101</width>
-        <height>461</height>
+        <height>561</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>364</number>
+      </attribute>
       <column>
        <property name="text">
         <string>Title</string>
@@ -807,10 +811,10 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QLabel" name="label_108">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>40</y>
-        <width>241</width>
-        <height>61</height>
+        <x>20</x>
+        <y>10</y>
+        <width>131</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -818,6 +822,7 @@ background-color: rgb(40, 41, 44);</string>
         <pointsize>19</pointsize>
         <weight>75</weight>
         <bold>true</bold>
+        <underline>true</underline>
        </font>
       </property>
       <property name="styleSheet">
@@ -958,7 +963,7 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QPushButton" name="sendMessage">
       <property name="geometry">
        <rect>
-        <x>860</x>
+        <x>920</x>
         <y>620</y>
         <width>201</width>
         <height>51</height>
@@ -983,7 +988,7 @@ background-color: rgb(40, 41, 44);</string>
        <rect>
         <x>550</x>
         <y>120</y>
-        <width>511</width>
+        <width>571</width>
         <height>371</height>
        </rect>
       </property>
@@ -996,7 +1001,7 @@ background-color: rgb(40, 41, 44);</string>
        <rect>
         <x>550</x>
         <y>540</y>
-        <width>511</width>
+        <width>571</width>
         <height>71</height>
        </rect>
       </property>
@@ -1017,7 +1022,7 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QLabel" name="label_105">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>30</x>
         <y>30</y>
         <width>281</width>
         <height>21</height>
@@ -1040,9 +1045,9 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QListView" name="listView_chats">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>30</x>
         <y>170</y>
-        <width>401</width>
+        <width>441</width>
         <height>441</height>
        </rect>
       </property>
@@ -1053,9 +1058,9 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QComboBox" name="messageCombobox">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>30</x>
         <y>70</y>
-        <width>401</width>
+        <width>441</width>
         <height>41</height>
        </rect>
       </property>
@@ -1066,7 +1071,7 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QLabel" name="label_147">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>30</x>
         <y>140</y>
         <width>281</width>
         <height>21</height>
@@ -1135,7 +1140,7 @@ background-color: rgb(40, 41, 44);</string>
      <widget class="QLabel" name="usermail">
       <property name="geometry">
        <rect>
-        <x>850</x>
+        <x>920</x>
         <y>80</y>
         <width>201</width>
         <height>21</height>
@@ -1191,7 +1196,7 @@ background-color: rgb(40, 41, 44);</string>
      <x>0</x>
      <y>0</y>
      <width>1143</width>
-     <height>30</height>
+     <height>25</height>
     </rect>
    </property>
    <property name="styleSheet">
