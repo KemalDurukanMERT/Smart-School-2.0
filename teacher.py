@@ -12,6 +12,8 @@ import traceback
 from validator import *
 import hashlib
 from database import *
+import os
+
 
 
 def exception_hook(exctype, value, tb):
@@ -36,8 +38,9 @@ class TeacherApp(QMainWindow):
         self.initializeUi()
 
     def setupUi(self):
+        loc=os.getcwd()
         try:
-            loadUi('teacher.ui', self)
+            loadUi(f"{loc}\\teacher.ui", self)
             # self.selected_lesson_index = None
             # self.selected_meeting_index = None
             # self.comboBox_instructor.currentIndexChanged.connect(self.onInstructorChanged)
@@ -684,6 +687,12 @@ class TeacherApp(QMainWindow):
   # Meeting Schedule Tab
     def showMeetingScheduleTab(self):
         try:
+            self.add_meeting_btn.clicked.disconnect()
+        except:
+            pass
+        
+        
+        try:
             self.tabWidget.setCurrentIndex(4)
             
             # Find or create UI elements for meeting schedule management
@@ -704,10 +713,6 @@ class TeacherApp(QMainWindow):
             self.meeting_table.setSelectionBehavior(QTableWidget.SelectRows)
             
             # Connect buttons to their respective functions
-            try:
-                self.add_meeting_btn.clicked.disconnect()
-            except:
-                pass
             self.add_meeting_btn.clicked.connect(self.addMeeting)
             self.reset_meeting_btn.clicked.connect(self.resetMeetingButton)
             self.meeting_date_input.mousePressEvent = self.showMeetingCalendar

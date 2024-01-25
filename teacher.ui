@@ -78,7 +78,7 @@ background-color: rgb(40, 41, 44);</string>
      <string notr="true">background-color: rgb(40, 41, 44);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>8</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -2613,6 +2613,9 @@ background-color: rgb(255, 0, 0);</string>
          <weight>75</weight>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignVCenter</set>
        </property>
       </column>
       <column>

@@ -55,8 +55,9 @@ SELECT * FROM users WHERE status = 'Pending'
             self.menu12.setText(f"Users")
 
     def setupUi(self):
+        loc=os.getcwd()
         try:
-            loadUi("admin.ui", self)
+            loadUi(f"{loc}\\admin.ui", self)
             
         except Exception as e:
             self.showErrorMessage("Initialization Error", f"Error during TeacherApp initialization: {e}")
