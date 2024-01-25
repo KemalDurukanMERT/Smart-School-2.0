@@ -4,13 +4,15 @@ from PyQt5.QtCore import pyqtSignal
 import hashlib
 import psycopg2
 from validator import *
+import os
 
 class RegisterApp2(QDialog):
     login = pyqtSignal(bool)
 
     def __init__(self, conn):
+        loc=os.getcwd()
         super(RegisterApp2, self).__init__()
-        loadUi("teacher_registration.ui", self)
+        loadUi(f"{loc}\\teacher_registration.ui", self)
         try:
             self.b3.clicked.disconnect()
         except:
