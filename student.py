@@ -42,13 +42,18 @@ class StudentApp(QMainWindow):
         self.menu51_s.triggered.connect(self.view_todolist)
         self.announcements_s.triggered.connect(self.view_announcement)
     def add_message_tab(self):
+        try:
+            self.sendMessage.clicked.disconnect()
+        except:
+            pass
         self.tabWidget.setCurrentIndex(8)
         self.message_app = MessageApp(self) 
 
     def setupUi(self):
-        loc=os.getcwd()
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        ui_path = os.path.join(script_dir, 'student.ui')
         try:
-            loadUi(f"{loc}\\student.ui", self)
+            loadUi(ui_path, self)
         except Exception as e:
             self.showErrorMessage("Initialization Error", f"Error during StudentApp initialization: {e}")
         

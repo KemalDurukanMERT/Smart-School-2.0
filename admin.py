@@ -55,9 +55,10 @@ SELECT * FROM users WHERE status = 'Pending'
             self.menu12.setText(f"Users")
 
     def setupUi(self):
-        loc=os.getcwd()
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        ui_path = os.path.join(script_dir, 'admin.ui')
         try:
-            loadUi(f"{loc}\\admin.ui", self)
+            loadUi(ui_path, self)
             
         except Exception as e:
             self.showErrorMessage("Initialization Error", f"Error during TeacherApp initialization: {e}")
@@ -1848,6 +1849,7 @@ FROM announcement JOIN users ON created_by = users.user_id
 Author: {author}
 Title: {title}
 Message: {message}
+Deadline: {deadline}
 '''
             item = QStandardItem(display_text)
             self.model.appendRow(item)

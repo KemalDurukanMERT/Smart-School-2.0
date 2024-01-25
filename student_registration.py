@@ -12,8 +12,9 @@ class RegisterApp(QDialog):
 
     def __init__(self, conn):
         super(RegisterApp, self).__init__()
-        loc=os.getcwd()
-        loadUi(f"{loc}\\student_registration.ui", self)
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        ui_path = os.path.join(script_dir, 'student_registration.ui')
+        loadUi(ui_path, self)
         try:
             self.b3.clicked.disconnect()
         except:

@@ -97,9 +97,8 @@ ORDER BY created_time ASC''')
         if messages:
             for name, content, message_read, created_time, sender_id in messages:
                 display_text = f'''
-    Sender: {name}
-    Content: {content}
-    Time: {created_time}
+    {content}
+            {created_time.strftime('%H:%M')}
     '''
                 item = QStandardItem(display_text)
                 if sender_id == self.user.id:

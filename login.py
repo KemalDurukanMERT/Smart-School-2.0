@@ -12,9 +12,11 @@ class LoginApp(QDialog):
     teacher_registration = pyqtSignal(bool)
 
     def __init__(self, conn):
-        loc=os.getcwd()
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        ui_path = os.path.join(script_dir, 'login_form.ui')
+        print(ui_path)
         super(LoginApp, self).__init__()
-        loadUi(f"{loc}\\login_form.ui", self)
+        loadUi(ui_path, self)
         self.b1.clicked.connect(self.login)
         self.b2.clicked.connect(self.show_reg)
         self.b2_2.clicked.connect(self.show_reg2)
