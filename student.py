@@ -11,6 +11,8 @@ import datetime
 import sys
 import traceback
 from message import *
+import os
+
 
 def exception_hook(exctype, value, tb):
     traceback_details = '\n'.join(traceback.format_tb(tb))
@@ -44,8 +46,9 @@ class StudentApp(QMainWindow):
         self.message_app = MessageApp(self) 
 
     def setupUi(self):
+        loc=os.getcwd()
         try:
-            loadUi('student.ui', self)
+            loadUi(f"{loc}\\student.ui", self)
         except Exception as e:
             self.showErrorMessage("Initialization Error", f"Error during StudentApp initialization: {e}")
         

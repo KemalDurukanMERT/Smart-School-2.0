@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import QDialog, QMessageBox
 from PyQt5.QtCore import pyqtSignal
 from user import *
 import hashlib
+import os
+
 
 class LoginApp(QDialog):
     authentication = pyqtSignal(object)
@@ -10,8 +12,9 @@ class LoginApp(QDialog):
     teacher_registration = pyqtSignal(bool)
 
     def __init__(self, conn):
+        loc=os.getcwd()
         super(LoginApp, self).__init__()
-        loadUi("login_form.ui", self)
+        loadUi(f"{loc}\\login_form.ui", self)
         self.b1.clicked.connect(self.login)
         self.b2.clicked.connect(self.show_reg)
         self.b2_2.clicked.connect(self.show_reg2)
