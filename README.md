@@ -92,7 +92,7 @@ When the students login, they will reach the Student Page. They can edit their o
 
 Class Diagram 
 
-![](image1.png)
+![](Class_diagram.png)
 
 
 Use Case Diagram 
