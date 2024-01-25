@@ -772,7 +772,7 @@ class TeacherApp(QMainWindow):
     def loadMeetings(self):
         self.meeting_table.clearContents()
         self.meeting_table.setRowCount(0)
-        query = "SELECT meeting_id, meeting_name, meeting_date, meeting_time_slot FROM meeting WHERE teacher_id = %s ORDER BY meeting_date ASC"
+        query = "SELECT meeting_id, meeting_name, meeting_date, meeting_time_slot FROM meeting ORDER BY meeting_date ASC"
         self.cur.execute(query, (self.user.id,))
         meetings = self.cur.fetchall()
         for meeting_id, meeting_name, meeting_date, meeting_time_slot in meetings:

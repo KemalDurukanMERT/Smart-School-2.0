@@ -962,7 +962,7 @@ SELECT * FROM users WHERE status = 'Pending'
     def loadMeetings(self):
         self.meeting_table.clearContents()
         self.meeting_table.setRowCount(0)
-        query = "SELECT meeting_id, meeting_name, meeting_date, meeting_time_slot FROM meeting WHERE teacher_id = %s ORDER BY meeting_date ASC"
+        query = "SELECT meeting_id, meeting_name, meeting_date, meeting_time_slot FROM meeting ORDER BY meeting_date ASC"
         self.cur.execute(query, (self.user.id,))
         meetings = self.cur.fetchall()
         for meeting_id, meeting_name, meeting_date, meeting_time_slot in meetings:
@@ -1587,10 +1587,6 @@ DELETE FROM users WHERE email = '{email}'
             QMessageBox.critical(self, 'Error', f'An error occurred while loading users: {e}')
 
 
-    def showAnnouncementTab(self):
-        self.tabWidget.setCurrentIndex(7)
-    def showTodoListTab(self):
-        self.tabWidget.setCurrentIndex(8)
     def showReportsTab(self):
         self.tabWidget.setCurrentIndex(10)
         self.fromDateEdit = self.findChild(QDateEdit, "dateEdit")
@@ -1605,7 +1601,6 @@ DELETE FROM users WHERE email = '{email}'
         self.selectedUserFilter = self.userFilter.currentText()
         self.reportTable = self.findChild(QTableWidget, 'tableWidget')
         self.generateReport = self.findChild(QPushButton, 'b6_2')
-        self.exportReport = self.findChild(QPushButton, 'b6_3')
 
         self.reportType.currentIndexChanged.connect(self.reportTypeChange)
         self.userFilter.currentIndexChanged.connect(self.userFilterChange)
