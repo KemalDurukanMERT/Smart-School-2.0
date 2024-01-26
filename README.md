@@ -67,60 +67,131 @@ The application includes various interfaces to facilitate the management of educ
    *Initial login screen for users to access their accounts.*
 </details>
 
+<details>
+  <summary>Click to view Student Registration</summary>
+
    ![Student Registration](visuals/image2.png)
    *Student registration interface for creating new student accounts.*
+</details>
+
+<details>
+  <summary>Click to view Teacher Registration</summary>
 
    ![Teacher Registration](visuals/image3.png)
    *Teacher registration interface for creating new teacher accounts.*
+</details>
+
+<details>
+  <summary>Click to view User Management</summary>
 
    ![User Management](visuals/image4.png)
    *User management interface for editing or deleting user details.*
+</details>
+
+<details>
+  <summary>Click to view Lesson Management</summary>
 
    ![Lesson Management](visuals/image5.png)
    *Interface for adding or editing lesson details.*
+</details>
+
+<details>
+  <summary>Click to view Attendance Details</summary>
 
    ![Attendance Details](visuals/image6.png)
    *Attendance details interface for tracking student attendance.*
+</details>
+
+<details>
+  <summary>Click to view Meeting Management</summary>
 
    ![Meeting Management](visuals/image7.png)
    *Meeting management interface for scheduling and editing meetings.*
+</details>
+
+<details>
+  <summary>Click to view Meeting Attendance Details</summary>
 
    ![Meeting Attendance Details](visuals/image8.png)
    *Interface for adding or editing meeting attendance details.*
+</details>
+
+<details>
+  <summary>Click to view Announcement Management</summary>
 
    ![Announcement Management](visuals/image9.png)
    *Announcement management interface for creating and editing announcements.*
+</details>
+
+<details>
+  <summary>Click to view Task Management</summary>
 
    ![Task Management](visuals/image10.png)
    *Task management interface for assigning and tracking tasks.*
+</details>
+
+<details>
+  <summary>Click to view Report Generation</summary>
 
    ![Report Generation](visuals/image12.png)
    *Reporting interface for generating various reports.*
+</details>
+
+<details>
+  <summary>Click to view Profile Editing</summary>
 
    ![Profile Editing](visuals/image13.png)
    *Profile editing interface for users to update their personal information.*
+</details>
+
+<details>
+  <summary>Click to view Lesson Schedule</summary>
 
    ![Lesson Schedule](visuals/image14.png)
    *View of the lesson schedule interface.*
+</details>
+
+<details>
+  <summary>Click to view Lesson Attendance</summary>
 
    ![Lesson Attendance](visuals/image15.png)
    *Lesson attendance records for students.*
+</details>
+
+<details>
+  <summary>Click to view Meeting Schedule</summary>
 
    ![Meeting Schedule](visuals/image16.png)
    *Meeting scheduling interface for various school activities.*
+</details>
+
+<details>
+  <summary>Click to view Meeting Attendance</summary>
 
    ![Meeting Attendance](visuals/image17.png)
    *Meeting attendance records showing participation status.*
+</details>
+
+<details>
+  <summary>Click to view To-Do List</summary>
 
    ![To-Do List](visuals/image18.png)
    *To-Do list interface for students to manage their tasks.*
+</details>
+
+<details>
+  <summary>Click to view Announcements</summary>
 
    ![Announcements](visuals/image19.png)
    *Announcements interface to broadcast important messages.*
+</details>
+
+<details>
+  <summary>Click to view Chat Interface</summary>
 
    ![Chat Interface](visuals/image20.png)
    *Chat interface for communication between users.*
-
+</details>
 
 
 ## Diagrams
