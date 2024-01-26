@@ -61,10 +61,11 @@ Ensure PostgreSQL is installed on your computer with the username (postgres) and
 The application includes various interfaces to facilitate the management of educational activities:
 
 <details>
-  <summary>Click to view application visuals</summary>
+  <summary>Click to view Login Screen</summary>
 
    ![Login Screen](visuals/image1.png)
    *Initial login screen for users to access their accounts.*
+</details>
 
    ![Student Registration](visuals/image2.png)
    *Student registration interface for creating new student accounts.*
@@ -120,12 +121,12 @@ The application includes various interfaces to facilitate the management of educ
    ![Chat Interface](visuals/image20.png)
    *Chat interface for communication between users.*
 
-</details>
+
 
 ## Diagrams
 The project documentation includes detailed diagrams:
 
-![Class Diagram](visuals/class_diagram.png)
+![Class Diagram](visuals/cclass_diagram.png)
 *Class diagram outlining the system architecture.*
 
 ![Use Case Diagram](visuals/use_case_diagram.png)
